@@ -4,9 +4,132 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>네이버 개발자 센터</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+
+    <script>
+        $(document) .ready(function(){
+            $(".slider").bxSlider();
+        });
+    </script>
 </head>
 <body>
-    안녕하세요
+    <div class="utilWrap clearfix">
+        <h1>
+            <a href="#">
+            <img src="images/naver_logo.jpg" alt="">
+        </a>
+        </h1>
+        <ul class="util clearfix">
+            <li><a href="#">Products</a></li>
+                <li><a href="#">Documents</a></li>
+                <li><a href="#">Application</a></li>
+                <li><a href="#">NAVER D2</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Forum</a></li>
+            </li>
+            <div class="login">
+                <p><a href="#">로그인</a></p>
+            </div>
+        </ul>
+    </div>
+
+    <div class="sliderWrap">
+        <div class="slider">
+            <img src="images/01 (1).png" alt="">
+            <img src="images/01 (2).png" alt="">
+            <img src="images/01 (3).png" alt="">
+            <img src="images/01 (4).png" alt="">
+            <img src="images/01 (5).png" alt="">
+            <img src="images/01 (6).png" alt="">
+            <img src="images/01 (7).png" alt="">
+            <img src="images/01 (8).png" alt="">
+        </div>
+    </div>
+    <div class="iconWrap">
+        <ul class="icon clearfix">
+            <li>
+                <a href="#"><img src="images/n_icon01.png" alt="">CLOVER</a>
+            </li>
+            <li>
+                <a href="#"><img src="images/n_icon02.png" alt="">네이버 로그인</a>
+            </li>
+            <li>
+                <a href="#"><img src="images/n_icon03.png" alt="">papago</a>
+            </li>
+            <li>
+                <a href="#"><img src="images/n_icon04.png" alt="">서비스 API</a>
+            </li>
+            <li>
+                <a href="#"><img src="images/n_icon05.png" alt="">네이버 클라우드 플랫폼</a>
+            </li>
+        </ul>
+    </div>
+    <div class="sectionWrap">
+        <div class="section">
+            <ul class="clearfix">
+                <li class="card">
+                    <img src="images/n_card01.png" alt="">
+                    <div class="card_body">
+                        <span>네이버 인증서 이용기관 약관 개정 안내</span>
+                        <p>2022.01.03</p>
+                    </div>
+                </li>
+                <li class="card">
+                    <img src="images/n_card02.png" alt="">
+                    <div class="card_body">
+                        <span>[네이버 로그인] 배송지 정보
+                            추가 제공 관련 안내</span>
+                        <p>2021.12.10</p>
+                    </div>
+                </li>
+                <li class="card">
+                    <img src="images/n_card03.png" alt="">
+                    <div class="card_body">
+                        <span>[네이버 로그인] 네이버 로그인 API파라미터
+                            처리방식 변경에 대한 안내</span>
+                        <p>2021.11.04</p>
+                    </div>
+                </li>
+                <li class="card">
+                    <img src="images/n_card02.png" alt="">
+                    <div class="card_body">
+                        <span>네이버 인증서 이용기관 약관 개정 안내</span>
+                        <p>2021.10.27</p>
+                    </div>
+                </li>
+                <div class="card_btn">
+                    <a href="#">VIEW ALL</a>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="footerWrap">
+         <ul class="clearfix">
+            <li><a href="#">이용기관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">제휴신청</a></li>
+            <li><a href="#">개발자포럼</a></li>
+            <li><a href="#">개발자채용</a></li>
+        </ul>
+        <div class="footerBottom">
+           <div class="fbWrap clearfix">
+               <a href="#">
+                <img src="images/n_logo.jpg" alt="">
+               </a>
+               <p>Copyright ©
+                   <a href="#">NAVER Corp.</a>
+                   All Rights Reserved.</p>
+           </div>
+       </div>
+    </div>
 </body>
 </html>

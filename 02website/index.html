@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이화여자대학교</title>
+    <link rel="stylesheet" href="css/reset.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            var myslider1 = $(".slider").bxSlider({
+                controls:false
+            });
+            $(".next").click(function(){
+                myslider1.goToNextSlide();
+            })
+            $(".prev").click(function(){
+                myslider1.goToPrevSlide();
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="linkWrap">
+        <ul class="link clearfix"> 
+            <div class="link_left">
+                <li><a href="#" class="active">대학교</a></li>
+                <li><a href="#">입학안내</a></li>
+                <li><a href="#">대학원</a></li>
+            </div>
+            <div class="link_right">
+                <li><a href="#">글자크기</a></li>
+                <li class="button1">
+                    <img class="minus" src="images/icon_minus.png" alt="">
+                    <img class="plus" src="images/icon_plus.png" alt="">
+                </li>
+                <li><a href="#">찾아오시는길</a></li>
+                <li><a href="#">ENGLISH</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </div>
+        </ul>
+    </div>
+    <div class="logoWrap">
+        <h1 class="clearfix">
+            <a href="#">
+                <img src="images/ehwa_logo.png" alt="" style="width: 244px; height: 70px;">
+            </a>
+        </h1>
+        <div class="navWrap">
+            <ul class="nav clearfix">
+                <li><a href="#">대학소개</a></li>
+                <li><a href="#">학과소개</a></li>
+                <li><a href="#">학사안내</a></li>
+                <li><a href="#">대학생활</a></li>
+                <li><a href="#">학생지원센터</a></li>
+                <div class="navimg">
+                    <a href="#"><img src="images/navicon01.png" alt="" style="width: 44px; height:45px; float: left;"></a>
+                    <a href="#"><img src="images/navicon02.png" alt="" style="width: 44px; height:45px; float: right;"></a>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <section class="section">
+        <div class="container titleWrap">
+            <div class="title">
+                <p>늘 세상의 앞에서</p>
+                <h2>시대를 선도하는 이화여자대학교</h2>
+            </div>
+            <ul>
+                <li><a href="#"><img src="images/section_icon01.png" alt="">입학절차안내</a></li>
+                <li><a href="#"><img src="images/section_icon02.png" alt="">입학설명회</a></li>
+                <li><a href="#"><img src="images/section_icon03.png" alt="">장학제도</a></li>
+                <li><a href="#"><img src="images/section_icon04.png" alt="">증명서발급</a></li>
+            </ul>
+        </div>
+        <div class="container contentWrap">
+            <ul class="clearfix">
+                <li>
+                    <ul class="slider">
+                        <li class="sliderWrap">
+                            <img src="images/slide01.png" alt="">
+                            <div class="txtWrap">
+                                <h1>이화에서<br>시작하는<br>새로운 꿈</h1>
+                                <div class="btn">
+                                    <p>자세히보기</p>
+                                    <img src="images/slide_btn.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <img src="images/slide01.png" alt="">
+                        <img src="images/slide01.png" alt="">
+                    </ul>
+                    <div class="next">
+                        <img src="images/icon01.png" alt="">
+                    </div>
+                    <div class="prev">
+                        <img src="images/icon02.png" alt="">
+                    </div>
+                </li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <style>
+        body{min-width:1200px}
+        .topNavWrap a{color:white}
+        .topNavWrap{background: blue;}
+        .navTop{
+            width: 1200px;margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .nav ul{display: flex;height: 40px;}
+        .nav ul li{background: pink;margin-right:5px;}
+        .nav a{
+            display: flex;justify-content: center;align-items: center;
+            height: 100%;padding: 0 20px;
+        }
+
+        .utilMenu ul{display: flex;height: 40px;}
+        .utilMenu a{
+            display: flex;justify-content: center;align-items: center;
+            height: 100%;padding:0 10px
+        }
+        header{height: 160px;}
+        section.section{
+            background: skyblue;
+            background-image: url(images/dot.png),url(images/main_bg1.jpg);
+            background-repeat: repeat,no-repeat;
+            background-position: center;
+            background-size: auto,cover;
+            padding:70px 0;
+        }
+        .container{width: 1200px;margin: 0 auto}
+        .titleWrap{
+            display: flex;justify-content: space-between;
+            height: 140px;background: white;
+            align-items:center;margin-bottom: 30px;}
+        .secBannerWrap ul{display: flex;}
+
+        /* section  */
+        .contentWrap>ul>li{
+            float: left;width: 25%;height: 225px; position: relative;
+        }
+        .contentWrap>ul>li:nth-child(1){
+            width: 75%;height: 450px;
+        }
+        .contentWrap>ul>li:nth-child(2){
+            height: 450px;
+        }
+        .contentWrap>ul>li:nth-child(8){
+            width: 75%;
+        }
+
+        .contentWrap>ul>li:nth-child(1){background-color: aqua;}
+        .contentWrap>ul>li:nth-child(2){background-color: skyblue;}
+        .contentWrap>ul>li:nth-child(3){background-color: darkcyan;}
+        .contentWrap>ul>li:nth-child(4){background-color: darkmagenta;}
+        .contentWrap>ul>li:nth-child(5){background-color: red;}
+        .contentWrap>ul>li:nth-child(6){background-color: yellowgreen;}
+        .contentWrap>ul>li:nth-child(7){background-color: violet;}
+        .contentWrap>ul>li:nth-child(8){background-color: #fff;}
+
+        .bx-wrapper {
+            -moz-box-shadow: 0 0 0 transparent;
+            -webkit-box-shadow: 0 0 0 transparent;
+            box-shadow: 0 0 0 transparent;
+            border: 0 none;
+        }
+        .bx-wrapper .bx-pager{bottom: 30px;}
+
+        .contentWrap>ul>li:nth-child(1) .next,
+        .contentWrap>ul>li:nth-child(1) .prev{
+            position: absolute; top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .contentWrap>ul>li:nth-child(1) .next{left: 0;}
+        .contentWrap>ul>li:nth-child(1) .prev{right: 0;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            var myslider1 = $(".slider").bxSlider({
+                controls:false
+            });
+            $(".next").click(function(){
+                myslider1.goToNextSlide();
+            })
+            $(".prev").click(function(){
+                myslider1.goToPrevSlide();
+            })
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="topNavWrap">
+            <div class="navTop">
+                <div class="nav">
+                    <ul>
+                        <li><a href="#">대학교</a></li>
+                        <li><a href="#">입학안내</a></li>
+                        <li><a href="#">대학원</a></li>
+                    </ul>
+                </div>
+                <div class="utilMenu">
+                    <ul>
+                        <li><a href="#">글자크기</a></li>
+                        <li><a href="#">찾아오시는길</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section">
+        <div class="container titleWrap">
+            <div class="title">
+                <h3>Lorem ipsum dolor sit.</h3>
+                <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            </div>
+        </div>
+        <div class="container contentWrap">
+            <ul class="clearfix">
+                <li>
+                    <!-- size 900*450 -->
+                    <ul class="slider">
+                        <img src="images/slide01.png" alt="">
+                        <img src="images/slide02.png" alt="">
+                        <img src="images/slide03.png" alt="">
+                    </ul>
+                    <div class="next">
+                        <img src="images/icon01.png" alt="">
+                    </div>
+                    <div class="prev">
+                        <img src="images/icon02.png" alt="">
+                    </div>
+                </li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+            </ul>
+        </div>
+    </section>
+
+</body>
+</html>

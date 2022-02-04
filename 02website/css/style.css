@@ -65,6 +65,7 @@ section.section{
     color: white; font-size: 12px;
     display: block; text-align: center;
 }
+.titleWrap li a:hover img{transform:scale(1.1)}
 /* .secBannerWrap ul{display: flex;} */
 .contentWrap>ul>li{
     float: left;width: 25%;height: 225px; position: relative;
@@ -96,6 +97,17 @@ section.section{
 }
 .bx-wrapper .bx-pager{bottom: 30px;}
 
+.bx-wrapper .bx-pager.bx-default-pager a{
+    background-color:#535352;
+    width: 10px; height: 10px;
+    transition:0.2s
+}
+.bx-wrapper .bx-pager.bx-default-pager a.active{
+    background-color: #222D29;
+    width: 10px; height: 10px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover{background-color: #222D29;}
+
 .contentWrap>ul>li:nth-child(1) .next,
 .contentWrap>ul>li:nth-child(1) .prev{
     position: absolute; top: 50%;
@@ -105,4 +117,60 @@ section.section{
 .contentWrap>ul>li:nth-child(1) .next{left: 0;}
 .contentWrap>ul>li:nth-child(1) .prev{right: 0;}
 
-.contentWrap .txtWrap{position: absolute; top: 400px;}
+.contentWrap .txtWrap{position: absolute; top: 70px; left: 100px;}
+.contentWrap .txtWrap h1{
+    font-size: 60px; letter-spacing: -0.08em;
+    color: #124432; font-weight: bold; margin-bottom: 15px;
+}
+.contentWrap .txtWrap .btn{
+    background: #222D29; border-radius: 5px;
+    width: 168px; height: 35px;
+    display: flex; justify-content: center; align-items: center;
+}
+.contentWrap .txtWrap .btn a{
+    color: #fff; font-size: 14px; letter-spacing: -0.075em;
+}
+.contentWrap .txtWrap .btn img, .btntwo img{
+    width: 8px; height: 10px; margin-left:5px;
+    cursor: pointer;
+}
+
+.contentWrap .card{position: absolute; top: 80px; left: 40px;}
+.contentWrap .card h2{
+    font-size: 36px; letter-spacing: -0.07em; 
+    color: #fff; margin-bottom: 30px;
+}
+.contentWrap .card p{
+    font-size: 16px; letter-spacing: -0.05em; 
+    color: #fff; margin-bottom: 30px;
+}
+.contentWrap .card .btntwo{
+    background: rgba(0, 0, 0, 0.5); width: 170px; height: 42px;
+    border: #aaa 1px solid;
+    display: flex; justify-content: center; align-items: center;
+}
+.contentWrap .card .btntwo a{
+    color: white; font-size: 14px;
+    letter-spacing: -0.08em; 
+}
+.contentWrap .card .btntwo:hover{transform:scale(1.1)}
+
+.contentWrap .boWrap{margin: 23px;}
+.contentWrap .banner_one h2{color: white; font-size: 20px;margin-bottom: 33px;}
+.contentWrap .boiconWrap{
+    display: flex; justify-content: center;
+}
+.contentWrap .boiconWrap img{margin-bottom: 8px;}
+.contentWrap .boiconWrap a{
+    color: white; font-size: 15px; letter-spacing: -0.1em;
+    text-align: center; margin-right: 20px;
+}
+.contentWrap .boiconWrap a:last-child{margin-right: 0;}
+.contentWrap .boiconWrap a:hover img{transform:scale(1.1)}
+
+.contentWrap .btWrap{margin: 23px;}
+.contentWrap .btWrap h2{color: white; font-size:22px; letter-spacing: -0.09em;}
+.contentWrap .btWrap ul>li{
+    color: white; font-size:15px; 
+    letter-spacing:-0.085em; list-style:inside;
+}

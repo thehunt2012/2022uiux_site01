@@ -104,3 +104,5 @@ section.section{
 }
 .contentWrap>ul>li:nth-child(1) .next{left: 0;}
 .contentWrap>ul>li:nth-child(1) .prev{right: 0;}
+
+.contentWrap .txtWrap{position: absolute; top: 400px;}

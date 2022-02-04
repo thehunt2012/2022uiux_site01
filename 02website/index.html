@@ -21,12 +21,12 @@
             var myslider1 = $(".slider").bxSlider({
                 controls:false
             });
-            $(".next").click(function(){
-                myslider1.goToNextSlide();
-            })
             $(".prev").click(function(){
-                myslider1.goToPrevSlide();
-            })
+                myslider1.goToNextSlide()
+            });
+            $(".next").click(function(){
+                myslider1.goToPrevSlide()
+            });
         });
     </script>
 </head>
@@ -92,28 +92,60 @@
                             <div class="txtWrap">
                                 <h1>이화에서<br>시작하는<br>새로운 꿈</h1>
                                 <div class="btn">
-                                    <p>자세히보기</p>
+                                    <a href="#">자세히보기</a>
                                     <img src="images/slide_btn.png" alt="">
                                 </div>
                             </div>
                         </li>
-                        <img src="images/slide01.png" alt="">
-                        <img src="images/slide01.png" alt="">
+                        <li class="sliderWrap">
+                            <img src="images/slide01.png" alt="">
+                            <div class="txtWrap">
+                                <h1>이화에서<br>시작하는<br>새로운 꿈</h1>
+                                <div class="btn">
+                                    <a href="#">자세히보기</a>
+                                    <img src="images/slide_btn.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="sliderWrap">
+                            <img src="images/slide01.png" alt="">
+                            <div class="txtWrap">
+                                <h1>이화에서<br>시작하는<br>새로운 꿈</h1>
+                                <div class="btn">
+                                    <a href="#">자세히보기</a>
+                                    <img src="images/slide_btn.png" alt="">
+                                </div>
+                            </div>
+                        </li>
                     </ul>
-                    <div class="next">
-                        <img src="images/icon01.png" alt="">
-                    </div>
                     <div class="prev">
                         <img src="images/icon02.png" alt="">
                     </div>
+                    <div class="next">
+                        <img src="images/icon01.png" alt="">
+                    </div>
                 </li>
-                <li>2</li>
+                <li>
+                    <img src="images/slide04.png" alt="">
+                    <div class="card">
+                        <h2>APP으로<br>스마트도서관<br>바로이용하자!</h2>
+                        <p>모바일 열람증은<br>도서관자료실 / 도서대출 등에<br>사용 할 수 있습니다.</p>
+                        <div class="btntwo">
+                            <a href="#">자세히보기</a>
+                            <img src="images/slide_btn.png" alt="">
+                        </div>
+                    </div>
+                </li>
                 <li>3</li>
                 <li>4</li>
                 <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
+                <li>
+                    <img src="images/banner02.png" alt="">
+                </li>
+                <li>
+                    <img src="images/vidieo01.png" alt="">
+                </li>
+                <li><img src="images/slide05.png" alt=""></li>
             </ul>
         </div>
     </section>

@@ -27,6 +27,8 @@
             $(".next").click(function(){
                 myslider1.goToPrevSlide()
             });
+
+            var myslider1 = $(".slidertwo").bxSlider({});
         });
     </script>
 </head>
@@ -150,6 +152,7 @@
                     <div class="btWrap">
                         <h2>공지사항</h2>
                         <ul>
+                            <div class="wall"></div>
                             <li>[공지] 이화여자대학교 웹진...  2016-06-12</li>
                             <li>[보도] 우수대학교선정 수상  2016-06-17</li>
                             <li>[공지] 대학입시 설명회  2016-06-05</li>
@@ -157,14 +160,45 @@
                         </ul>
                     </div>
                 </li>
-                <li>5</li>
-                <li>
+                <li class="banner_three">
+                    <div class="btrWrap">
+                        <h2>SNS NEWS</h2>
+                        <div class="btrBox">
+                            <img src="images/banner01.png" alt="">
+                            <p>이화여자대학교는<br>2017학년도 신입생<br>
+                            입학실을 3월2일(목)<br>본교 종합체육관...</p>
+                        </div>
+                        <div class="btricon">
+                            <a href="#"><img src="images/banner_three_icon01.png" alt=""></a>
+                            <a href="#"><img src="images/banner_three_icon02.png" alt=""></a>
+                            <a href="#"><img src="images/banner_three_icon03.png" alt=""></a>
+                            <a href="#"><img src="images/banner_three_icon04.png" alt=""></a>
+                    </div>
+                </div>
+                </li>
+                <li class="banner_four">
                     <img src="images/banner02.png" alt="">
+                    <a href="#">캠퍼스투어</a>
                 </li>
-                <li>
+                <li class="vidieoWrap">
                     <img src="images/vidieo01.png" alt="">
+                    <div class="vidieobtn">
+                        <img src="images/vidieoicon.png" alt="">
+                    </div>
                 </li>
-                <li><img src="images/slide05.png" alt=""></li>
+                <li class="slidertwo">
+                    <img src="images/slide05.png" alt="">
+                    <img src="images/slide05.png" alt="">
+                    <img src="images/slide05.png" alt="">
+                    <div class="slidertwotxtWrap">
+                        <p>2017년 신 · 편입생 2차 모집</p>
+                        <h2>2017.7.1 ~ 7.10</h2>
+                        <div class="slidertwobtn">
+                            <a href="#">입학사전예약</a>
+                            <img src="images/slide_btn.png" alt="">
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>

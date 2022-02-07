@@ -222,5 +222,22 @@ section.section{
 .slidetwoWrap .slidertwobtn a{
     color: white; font-size: 15px; letter-spacing: -0.095em;
 }
-.slidetwoWrap .slidertwobtn img{width: 8px; height: 10px; margin-left:5px;
-    cursor: pointer;}
+.slidetwoWrap .slidertwobtn img{width: 8px; height: 10px; margin-left:5px; cursor: pointer;}
+
+.footerWrap{width: 938px; margin: 0 auto; padding: 50px 0;}
+.footerWrap img{width: 80px; height: 80px; float: left; margin-right: 20px;}
+.footerWrap .footerrightWrap{float: left; margin-left: 80px;}
+.footerWrap .footerrightWrap li{float: left; position: relative;}
+.footerWrap .footerrightWrap li:after{
+    position: absolute;
+    width: 1px; height: 12px;
+    content: ""; display: block;
+    background-color: #444;
+    top: 10px;
+}
+.footerWrap .footerrightWrap li:first-child:after{content: ""; display: none;}
+.footerWrap .footerrightWrap li a{
+    color: #444; font-size: 14px; display: block; text-align: center;
+    line-height: 36px; margin: 0 10px;
+}
+.footerWrap p{color:#999; font-size: 13px; margin-left: 10px;}

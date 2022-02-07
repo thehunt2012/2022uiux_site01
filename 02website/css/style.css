@@ -27,8 +27,8 @@ body{font-family: 'Roboto', sans-serif; min-width:1200px}
     line-height: 40px;
 }
 .linkWrap .link_right .button1{width:34px; margin-top: 10px;}
-.linkWrap .link_right .minus{float: left; width: 16px; height: 16px;}
-.linkWrap .link_right .plus{float: right; width: 16px; height: 16px;}
+.linkWrap .link_right .minus{float: left; width: 16px; height: 16px; cursor: pointer;}
+.linkWrap .link_right .plus{float: right; width: 16px; height: 16px; cursor: pointer;}
 
 
 .logoWrap{width: 1200px; margin: 0 auto; padding: 21px 0; margin-bottom: 70px;}

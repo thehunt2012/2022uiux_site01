@@ -13,9 +13,11 @@
     <link rel="stylesheet" href="css/jquery.bxslider.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/colorbox.css">
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
     <script>
         $(document).ready(function(){
             var myslider1 = $(".slider").bxSlider({
@@ -27,8 +29,12 @@
             $(".next").click(function(){
                 myslider1.goToPrevSlide()
             });
-
-            var myslider1 = $(".slidertwo").bxSlider({});
+            $(".slidertwo").bxSlider({controls:false});
+            $(".youtube").colorbox({
+                inframe:true,
+                innerWidth:1000,
+                innerHeight:562.5
+            });
         });
     </script>
 </head>
@@ -153,10 +159,10 @@
                         <h2>공지사항</h2>
                         <ul>
                             <div class="wall"></div>
-                            <li>[공지] 이화여자대학교 웹진...  2016-06-12</li>
-                            <li>[보도] 우수대학교선정 수상  2016-06-17</li>
-                            <li>[공지] 대학입시 설명회  2016-06-05</li>
-                            <li>[공지] 2016년 1학기 성적...  2016-05-14</li>
+                            <span>2016-06-12</span><li>[공지] 이화여자대학교 웹진...</li>
+                            <span>2016-06-17</span><li>[보도] 우수대학교선정 수상</li>
+                            <span>2016-06-05</span><li>[공지] 대학입시 설명회</li>
+                            <span>2016-05-14</span><li>[공지] 2016년 1학기 성적...</li>
                         </ul>
                     </div>
                 </li>
@@ -183,21 +189,49 @@
                 <li class="vidieoWrap">
                     <img src="images/vidieo01.png" alt="">
                     <div class="vidieobtn">
-                        <img src="images/vidieoicon.png" alt="">
+                        <a href="https://www.youtube.com/embed/jSFxXAAJFbI" class="youtube"><img src="images/vidieoicon.png" alt=""></a>
                     </div>
                 </li>
-                <li class="slidertwo">
-                    <img src="images/slide05.png" alt="">
-                    <img src="images/slide05.png" alt="">
-                    <img src="images/slide05.png" alt="">
-                    <div class="slidertwotxtWrap">
-                        <p>2017년 신 · 편입생 2차 모집</p>
-                        <h2>2017.7.1 ~ 7.10</h2>
-                        <div class="slidertwobtn">
-                            <a href="#">입학사전예약</a>
-                            <img src="images/slide_btn.png" alt="">
-                        </div>
-                    </div>
+
+                <li class="slidetwoWrap">
+                     <ul class="slidertwo">
+                        <li>
+                            <img src="images/slide05.png" alt="">
+                            <div class="slidertwotxtWrap">
+                                <p>2017년 신 · 편입생 2차 모집</p>
+                                <h2>2017.7.1 ~ 7.10</h2>
+                                <div class="slidertwobtn">
+                                    <a href="#">입학사전예약</a>
+                                    <img src="images/slide_btn.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/slide05.png" alt="">
+                            <div class="slidertwotxtWrap">
+                                <p>2017년 신 · 편입생 2차 모집</p>
+                                <h2>2017.7.1 ~ 7.10</h2>
+                                <div class="slidertwobtn">
+                                    <a href="#">입학사전예약</a>
+                                    <img src="images/slide_btn.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/slide05.png" alt="">
+                            <div class="slidertwotxtWrap">
+                                <p>2017년 신 · 편입생 2차 모집</p>
+                                <h2>2017.7.1 ~ 7.10</h2>
+                                <div class="slidertwobtn">
+                                    <a href="#">입학사전예약</a>
+                                    <img src="images/slide_btn.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                   
+                    
                 </li>
             </ul>
         </div>

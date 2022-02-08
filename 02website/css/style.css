@@ -50,6 +50,7 @@ section.section{
 }
 
 .container{width: 1200px;margin: 0 auto}
+.contentWrap{margin-bottom: 20px;}
 .titleWrap{
     display: flex;justify-content: space-between;
     height: 140px; color: white;
@@ -223,6 +224,35 @@ section.section{
     color: white; font-size: 15px; letter-spacing: -0.095em;
 }
 .slidetwoWrap .slidertwobtn img{width: 8px; height: 10px; margin-left:5px; cursor: pointer;}
+
+.bar{
+    background-color: #fff; width: 1200px; height: 60px; 
+    margin: 0 auto; position: relative;
+
+}
+.bar .barleft{
+    float: left; padding: 20px 34px;
+    border: 2px solid #666; margin-right: 40px;
+    border-top: none; border-bottom: none; border-left:none;
+    
+}
+.bar h4{
+    font-size: 16px; color:#273E35;
+    float: left; margin-right: 40px;
+    }
+.bar .barleft .barday{float: left;}
+.bar .barleft .barday li{float: left;}
+.bar .barleft .barday li img{padding: 0 10px; cursor: pointer;}
+.bar h5{font-size: 14px; line-height: 60px; color: #777; float: left; margin-right: 50px;}
+.bar .barright ul{float: left;}
+.bar .barright .bx-wrapper .bx-pager{display: none;}
+.bar .brbtn{position: absolute; right: 0; top: 0px; cursor: pointer;}
+.bar .brbtn .brBottom{position: absolute; bottom: -30px;}
+.bar .barright .barslide li{
+    font-size: 14px; color:#777;
+}
+.bar .barright .brWrap{float: left; width: 560px;}
+.bar .bartxt{height: 60px;line-height: 60px; }
 
 .footerWrap{width: 938px; margin: 0 auto; padding: 50px 0;}
 .footerWrap img{width: 80px; height: 80px; float: left; margin-right: 20px;}

@@ -44,3 +44,9 @@ body{font-family: 'Assistant', sans-serif;}
 }
 .sliderWrap1 .next1{right: 120px;}
 .sliderWrap1 .prev1{left: 120px;}
+
+.banner{width: 1280px; margin: 0 auto;}
+.bannerWrap{display: flex; justify-content: space-between;}
+.bannerLeft .text, .bannerRight .text{font-weight: 400;}
+.bannerLeft .strong, .bannerRight strong{font-weight: 700;}
+

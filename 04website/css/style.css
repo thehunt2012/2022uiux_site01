@@ -1,0 +1,46 @@
+@charset "utf-8";
+body{font-family: 'Assistant', sans-serif;}
+
+.headerWrap{
+    width: 1280px; height: 134px; margin: 0 auto;
+    padding: 20px 0; position: relative;
+}
+.utilWrap{float: right; width: 1280px;}
+.utilWrap ul{display: flex; justify-content: flex-end;}
+.utilWrap li{margin-left: 20px;}
+.utilWrap li a{font-size: 14px; color: #888; font-weight: 400;}
+
+.navWrap{width: 1280px; display: flex; position: relative;}
+.logo{margin: 30px 100px 30px 0;}
+.nav{display: flex; line-height: 88px;}
+.nav li{margin-right: 40px; position: relative;}
+.nav a{font-size: 18px; color:#171717; font-weight:700;}
+.nav a:hover:before{
+    position: absolute;
+    content: ""; background: #171717; height: 2px; 
+    left: -1px; right: -1px; bottom: 30px;
+}
+
+.search{position: absolute; right: 0; display: flex; padding: 20px 0;}
+.searchWrap{
+    width: 258px; height: 48px; background: #eee; 
+    padding: 8px 60px 8px 18px; border-radius: 10px;
+}
+.searchbox{display: flex; position: relative; border: 2px solid #eee;}
+.searchbox p{
+    color:#aaa; font-size: 16px; 
+    width: 100%; line-height: 28px;
+}
+.searchbox a{position: absolute; right: -40px; top: 3px;}
+.search .ic_mypage{margin: 10px 0 10px 25px;}
+
+.sliderWrap1{position: relative;}
+.sliderWrap1 .bx-wrapper .bx-pager{display: none;}
+.sliderWrap1 .next1,
+.sliderWrap1 .prev1{
+    position: absolute; top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.sliderWrap1 .next1{right: 120px;}
+.sliderWrap1 .prev1{left: 120px;}

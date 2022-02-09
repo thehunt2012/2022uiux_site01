@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>닥터피엔티 공식 온라인몰</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            var myslider1 = $(".slider1").bxSlider({
+                controls:false
+            });
+            $(".next1").click(function(){
+                myslider1.goToNextSlide()
+            });
+            $(".prev1").click(function(){
+                myslider1.goToPrevSlide()
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <header class="headerWrap">
+        <div class="utilWrap clearfix">
+            <ul class="util">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">이용후기</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+        <div class="navWrap clearfix">
+            <div class="logo">
+                <a href="#"><img src="images/dr.logo.png" alt=""></a>
+            </div>
+            <ul class="nav">
+                <li><a href="#">제품</a></li>
+                <li><a href="#">닥터팩</a></li>
+                <li><a href="#">Dr.PNT스토리</a></li>
+                <li><a href="#">마이헬스체크</a></li>
+            </ul>
+            <div class="search">
+                <div class="searchWrap">
+                    <div class="searchbox">
+                        <p>Search</p>
+                        <a href="#"><img src="images/ic_search.png" alt=""></a>
+                    </div>
+                </div>
+                <a href="#"><img src="images/ic_mypage.png" alt="" class="ic_mypage"></a>
+            </div>
+        </div>
+    </header>
+    <div class="sliderWrap1">
+        <ul class="slider1">
+            <li><img src="images/slider1_01.jpg" alt=""></li>
+            <li><img src="images/slider1_02.jpg" alt=""></li>
+            <li><img src="images/slider1_03.jpg" alt=""></li>
+            <li><img src="images/slider1_04.jpg" alt=""></li>
+            <li><img src="images/slider1_05.jpg" alt=""></li>
+            <li><img src="images/slider1_06.jpg" alt=""></li>
+            <li><img src="images/slider1_07.jpg" alt=""></li>
+            <li><img src="images/slider1_08.jpg" alt=""></li>
+        </ul>
+        <div class="next1">
+            <img src="images/ic_next7.png" alt="">
+        </div>
+        <div class="prev1">
+            <img src="images/ic_prev7.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

@@ -179,7 +179,7 @@ section.section{
 .btWrap .wall{
     width: 260px; height: 2px; background:#fff; margin-bottom: 15px;
 }
-.btWrap span{float: right;}
+.btWrap span{position: absolute; right: 0;}
 .btWrap ul>li,span{
     color: white; font-size:15px; 
     letter-spacing:-0.085em; list-style:inside;

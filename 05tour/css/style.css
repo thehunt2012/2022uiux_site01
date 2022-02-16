@@ -1,0 +1,99 @@
+@charset "utf-8";
+body{font-family: 'Noto Sans KR', sans-serif;}
+
+
+/* header start */
+
+.topWrap{
+    background:#FED84B url(../images/topimg.png) no-repeat center;
+    /* background-color:#FED84B;
+    background-position:center;
+    background-repeat: no-repeat; */
+    width: 100%;
+}
+.top{
+    width: 980px; height: 110px; position: relative;
+    margin: 0 auto; display: flex; align-items: center;
+}
+.topleft{
+    background-image: url(../images/logo01.png);
+    background-repeat: no-repeat;
+    width: 155px; height: 42px;
+    text-indent: -9999px;
+    position: absolute; left: 0;
+}
+.topright{position: absolute; right: 0;}
+.topright ul{
+    width: 375px; margin-bottom: 10px;
+    display: flex; justify-content:space-between;
+    margin-left: auto;
+}
+.topright a{
+    font-size: 12px; color: #333;
+    letter-spacing: 0.04em;
+}
+
+.searchWrap{position: relative;}
+.searchWrap form{display: flex;}
+.searchWrap label{
+    display: block; width: 60px; height: 20px;
+    background-image: url(../images/search_txt.png);
+    text-indent: -9999px;
+    position: absolute;
+    align-self: center; left: 22px;
+}
+.searchWrap .inp-search{
+    width: 413px; height: 40px;
+    border-radius: 25px;
+    text-indent: 100px;
+    border: 0 none;
+    font-size: 14px;
+}
+.searchwrap .inp-search:focus{outline: 1 solid #684F0B;}
+.searchWrap .btn-search{
+    width: 18px; height: 19px;
+    position: absolute;
+    align-self: center; right: 22px;
+    border: 0 none;
+    background-image: url(../images/search_btn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+.wall1{width: 100%; height: 2px; background: #684F0B;}
+
+
+/* nav start */
+
+.navWrap{width: 980px; margin: 0 auto; position: relative;}
+.nav{display: flex;}
+.nav ul{width: 876px; display: flex;}
+.nav li{
+    height: 71px;
+    border-left: 1px solid #e5e5e5;
+}
+.nav li:last-child{border-right: 1px solid #e5e5e5;}
+.nav li:hover{background:#eee;}
+.nav a{
+    font-size: 18px; color: #858585;
+    line-height: 45px; display: block; text-align: center;
+    padding: 13px 25px;
+}
+.nav li:last-child a{
+    color: #6870BA;
+    display: flex; justify-content: center;
+    align-items: center;
+}
+.nav a img{margin-right: 2px;}
+.nav .hbgicon{
+    position: absolute;
+    top: 50%; right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.wall2{width: 100%; height: 2px; background: #333;}
+
+/* header end */

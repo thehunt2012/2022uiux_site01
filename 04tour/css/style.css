@@ -77,7 +77,6 @@ body{font-family: 'Noto Sans KR', sans-serif;
     border-left: 1px solid #e5e5e5;
 }
 .nav li:last-child{border-right: 1px solid #e5e5e5;}
-.nav li:hover{background:#eee;}
 .nav a{
     font-size: 18px; color: #858585;
     line-height: 45px; display: block; text-align: center;
@@ -89,6 +88,7 @@ body{font-family: 'Noto Sans KR', sans-serif;
     align-items: center;
 }
 .nav a img{margin-right: 2px;}
+.nav a:hover{color:#333}
 .nav .hbgicon{
     position: absolute;
     top: 50%; right: 0;

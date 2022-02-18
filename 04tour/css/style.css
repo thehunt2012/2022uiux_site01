@@ -1,5 +1,6 @@
 @charset "utf-8";
-body{font-family: 'Noto Sans KR', sans-serif;}
+body{font-family: 'Noto Sans KR', sans-serif;
+    min-width: 1400px;}
 
 
 /* header start */
@@ -304,10 +305,118 @@ section.section{
 
 .section3{width: 980px; margin: 0 auto; margin-top: 16px; z-index: 1;}
 .section3>ul{display: flex; justify-content: space-between;}
-.section3>ul>li{width: 233px; height: 240px;}
-.section3 .content1 .view{
+.section3>ul>li{width: 233px; height: 240px; position: relative; overflow: hidden;}
+.section3 .bicon{display: flex; justify-content: center; align-items: center; color: #fff;}
+.section3 .bicon i{margin-right: 5px;}
+.section3 h3{font-size: 20px; margin-bottom: 5px;}
+.section3 p{color: #fff; font-size: 14px; display: block; text-align: center;}
+.section3 .barWrap{
+    width: 40px; height: 40px;
+    position: absolute; left: 50%; top: 50%;
+    transform:translate(-50%,-50%) rotate(0);
+    border-radius: 25px;
+    border: 3px solid #fff;
+    display: flex; justify-content: center;
+    align-items: center;
+    transition: 0.5s; cursor: pointer;
+}
+.section3 .barWrap:after{
+    content:""; width: 20px; height: 4px; border-radius: 2px;
+    position: absolute; background: #fff;
+}
+.section3 .barWrap:before{
+    content:""; position: absolute; width: 20px; height: 4px;
+    background: #fff; border-radius: 2px;
+    transform: rotate(90deg);
+}
+
+.content1 .view{
     position: absolute; width: 233px; height: 240px;
     background: rgba(36, 135, 156, 0.5);
-    transition:0.5s;
+    transition:0.7s; top: 0;
 }
-.section3 .content1:hover .view{top: 0;}
+.content2 .view{
+    position: absolute; width: 233px; height: 240px;
+    background: rgba(142, 43, 43, 0.5);
+    transition:0.7s; top: 0;
+}
+.content3 .view{
+    position: absolute; width: 233px; height: 240px;
+    background: rgba(38, 67, 112, 0.5);
+    transition:0.7s; top: 0;
+}
+.content4 .view{
+    position: absolute; width: 233px; height: 240px;
+    background: rgba(56, 103, 55, 0.5);
+    transition:0.7s; top: 0;
+}
+li:hover .view{background: rgba(0, 0, 0, 0.5);}
+
+.content1 .viewtxt,.content4 .viewtxt{
+    padding: 20px 25px 0 25px; position: absolute; 
+    top:0px; transition:0.7s;
+}
+.content2 .viewtxt,.content3 .viewtxt{
+    padding: 144px 25px 0 25px; position: absolute; 
+    top: 0; transition:0.7s;
+}
+
+.section3>ul>li:hover .barWrap{
+    transform: translate(-50%,-50%) rotate(180deg);
+}
+.content1:hover .viewtxt,
+.content4:hover .viewtxt{padding: 144px 25px 0 25px; position: absolute; top: 0;}
+.content2:hover .viewtxt,
+.content3:hover .viewtxt{padding: 20px 25px 0 25px; position: absolute; top:0;}
+
+/* footer start */
+.footerWrap{background: #333;}
+.footer{width: 980px; margin: 0 auto; position: relative;}
+.footerTop{display: flex; padding: 10px 0;}
+.fTleft{
+    width: 660px; height: 40px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.fTleft li{position: relative;}
+.fTleft li:after{
+    position: absolute; width: 1px; height: 20px;
+    content: ""; display: block;
+    background-color: #545454;
+    top: 10px;
+}
+.fTleft li:first-child:after{content:""; display: none;}
+.fTleft a{
+    font-size: 14px; color:#666; letter-spacing:-0.01em;
+    display: block; text-align: center;
+    padding: 10px;
+}
+.fTleft .ftxt{color: #FFC72C !important;}
+.fTright{
+    width: 166px; height: 30px;
+    display: flex; justify-content: space-between;
+    position: absolute; right: 0; top: 14px;
+}
+.footerBottom{display: flex; padding: 16px 0;}
+.footerBottom .fBleft h4{color:#fff; font-size: 14px; margin-bottom: 10px;}
+.footerBottom .fBright{position: absolute; right: 0;}
+.footerBottom address{font-style:normal; font-size: 12px; color:#787878;}
+
+.wall3{
+    width: 1903px; height: 1px; background: #545454;
+    position: absolute; left: -465px;
+}
+
+.bal03{
+    position: absolute;
+    transform: translateX(1127px) translateY(294px);
+    animation-name:ballons03;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transform-origin:center bottom;
+
+}
+@keyframes ballons03{
+    from{transform:translateX(1117px) translateY(294px) rotate(-15deg);}
+    to{transform:translateX(1157px) translateY(294px) rotate(15deg);}
+}

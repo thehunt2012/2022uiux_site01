@@ -426,7 +426,7 @@ section.visual{
 }
 section.visual h3{
     font-size: 48px; letter-spacing:-0.04em; transform:translateY(-35px);
-    color: #fff;
+    color: #fff; text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.6);
 }
 
 section.content{

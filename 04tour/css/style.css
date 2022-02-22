@@ -16,13 +16,7 @@ body{font-family: 'Noto Sans KR', sans-serif;
     width: 980px; height: 110px; position: relative;
     margin: 0 auto; display: flex; align-items: center;
 }
-.topleft{
-    background-image: url(../images/logo01.png);
-    background-repeat: no-repeat;
-    width: 155px; height: 42px;
-    text-indent: -9999px;
-    position: absolute; left: 0;
-}
+.topleft{width: 155px; height: 42px;}
 .topright{position: absolute; right: 0;}
 .topright ul{
     width: 375px; margin-bottom: 10px;
@@ -419,4 +413,57 @@ li:hover .view{background: rgba(0, 0, 0, 0.5);}
 @keyframes ballons03{
     from{transform:translateX(1117px) translateY(294px) rotate(-15deg);}
     to{transform:translateX(1157px) translateY(294px) rotate(15deg);}
+}
+
+body.sub{background: #F3F3F3;}
+
+section.visual{
+   height: 300px;
+   display: flex;justify-content: center;align-items: center;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+section.visual h3{
+    font-size: 48px; letter-spacing:-0.04em; transform:translateY(-35px);
+    color: #fff;
+}
+
+section.content{
+    width: 980px; margin: 0 auto; 
+    margin-top: -70px; margin-bottom: 70px;
+    background: #fff;
+    border-top: 4px solid #333;
+    border-bottom: 4px solid #333;
+    padding: 2em 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: relative;
+}
+section.content.h858{height: 858px;}
+section.content.h977{height: 977px;}
+section.content.h930{height: 930px;}
+section.content img{
+   display: block; margin: 0 auto;
+    margin-top: 50px;
+}
+section.content .img601{margin-bottom: 26px;}
+
+section.content .titleWrap{
+    width: 860px; margin: 0 auto; color:#333;
+    display: flex; align-items: center; margin-bottom: 30px;
+    position: relative;
+}
+section.content .titleWrap h3{font-size: 28px; letter-spacing:-0.03em;}
+section.content .titleWrap h3:after{
+    content: ""; position: absolute;
+    width: 450px; height: 2px; background: #333;
+    left: 0; top: 45px;
+}
+section.content .titleWrap .locat{
+    font-size: 14px; margin-left: auto;
+    letter-spacing: -0.04em;
+}
+section.content .titleWrap span{
+    font-size: 14px; margin-left: auto;
+    color:#5778BB;
 }

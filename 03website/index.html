@@ -23,7 +23,8 @@
     <script>
         $(document).ready(function(){
             var myslider1 = $(".slider1").bxSlider({
-                controls:false
+                controls:false,
+                auto:true
             });
             $(".next1").click(function(){
                 myslider1.goToNextSlide()
@@ -58,11 +59,10 @@
             <div class="navRight">
                 <div class="searchWrap">
                     <form action="#">
-                        <label for="search">search</label>
-                        <input type="text" id="search" name="search" placeholder="search" class="inp-search">
+                        <input type="text" id="search" name="search" placeholder="Search" class="inp-search">
                         <input type="submit" class="btn-search" value="button">
                     </form>
-                    <img src="images/ic_mypage.png" alt="">
+                    <img src="images/ic_mypage.png" alt="" class="mypage">
                 </div>
             </div>
         </div>
@@ -126,10 +126,13 @@
             </a>
         </div>
         <div class="contentWrap">
-            <h2>
-                <span>Dr.PNT 베스트</span><br>
-                가장 많이 구매했어요
-            </h2>
+            <div class="contentTxt">
+                <h2>
+                    <span>Dr.PNT 베스트</span><br>
+                    가장 많이 구매했어요
+                </h2>
+                <a href="#">+ 전체보기</a>
+            </div>
             <ul class="content">
                 <li>
                     <div class="product">
@@ -142,10 +145,7 @@
                     <p class="login">로그인 후 구매가능</p>
                     <p class="tag">#미국컨슈머랩 #클레어랩스 #장건강 #유산균<br>
                         #변비 #Lgg유산균 #락토바실러스 #람노서스</p>
-                    <p class="recommend">
-                        <img src="images/ic_recommend.png" alt="">
-                        4.8
-                    </p>
+                    <p class="recommend"> 4.8</p>
                 </li>
                 <li>
                     <div class="product">
@@ -158,10 +158,7 @@
                     <p class="login">로그인 후 구매가능</p>
                     <p class="tag">#오메가3 #rTG오메가 #눈건강 #건조한눈 #혈행<br>
                         #혈행개선 #기억력 #EPA 및 DHA 함유 유지</p>
-                    <p class="recommend">
-                        <img src="images/ic_recommend.png" alt="">
-                        5.0
-                    </p>
+                    <p class="recommend">5.0</p>
                 </li>
                 <li>
                     <div class="product">
@@ -174,10 +171,7 @@
                     <p class="login">로그인 후 구매가능</p>
                     <p class="tag">#미국컨슈머랩 #클레어랩스 #장건강 #유산균<br>
                         #변비 #면역력관리 #배변활동 #뚱보균</p>
-                    <p class="recommend">
-                        <img src="images/ic_recommend.png" alt="">
-                        4.8
-                    </p>
+                    <p class="recommend"> 4.8</p>
                 </li>
                 <li>
                     <div class="product">
@@ -189,12 +183,59 @@
                     <p class="login">로그인 후 구매가능</p>
                     <p class="tag">#메가그린산 #비타민C #순수비타민C #스틱<br>
                         #에너지 #면역력 #면역력관리 #에너지 #항산화</p>
-                    <p class="recommend">
-                        <img src="images/ic_recommend.png" alt="">
-                        5.0
-                    </p>
+                    <p class="recommend">5.0</p>
                 </li>
             </ul>
+        </div>
+        <div class="videoWrap">
+            <div class="videoTxt">
+                <h2>
+                    <span>Dr.PNT 매거진</span><br>
+                    나를 위한 작은 습관
+                </h2>
+                <a href="#">+ 더보기</a>
+            </div>
+            <div class="videoTop">
+                <div class="main_video">
+                    <img src="images/main_video.png" alt="" class="m_video">
+                    <img src="images/ic_play2.png" alt="" class="playbtn01">
+                </div>
+                <div class="videoRight">
+                    <h3>남녀갱년기 자가진단법</h3>
+                    <p>인생의 전환전 갱년기를 미릴 준비하자!</p>
+                    <div class="btnWrap">
+                        <div class="btn btn01"><a href="#">#갱년기영양소</a></div>
+                        <div class="btn btn02"><a href="#">#남자갱년기증상</a></div>
+                        <div class="btn btn03"><a href="#">#여자갱년기증상</a></div>
+                    </div>
+                    <ul>
+                        <li class="sliderWrap2">
+                            <ul class="slider2">
+                                <li>
+                                    <a href="#"><img src="images/video_product01.png" alt=""></a>
+                                    <a href="#"><span>#여성갱년기</span></a>
+                                    <a href="#"><span>#갱년기</span></a>
+                                    <a href="#"><span>#피크놀제놀</span></a>
+                                    <a href="#"><span>#대두이소플라본</span></a>
+                                    <a href="#"><span>#비타민D</span></a>
+                                    <a href="#"><span>#비타민B6</span></a>
+                                    <p>클리마젠 플러스 [1개월분]</p>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/video_product02.png" alt=""></a>
+                                    <a href="#"><span>#남성갱년기</span></a>
+                                    <a href="#"><span>#갱년기</span></a>
+                                    <a href="#"><span>#남성건강</span></a>
+                                    <a href="#"><span>#호로파종자추출물</span></a>
+                                    <a href="#"><span>#로르산</span></a>
+                                    <a href="#"><span>#옥타코사놀</span></a>
+                                    <p>타스마젠 [1개월분]</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </body>

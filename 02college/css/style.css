@@ -208,10 +208,10 @@ section.section{
 .banner_four:hover img{transform:scale(1.1); transition: 0.2s;}
 
 
-.vidieoWrap .vidieobtn{
+.videoWrap .videobtn{
     position: absolute; top: 85px; left: 120px;
 }
-.vidieoWrap .vidieobtn:hover{transform:scale(1.1); cursor: pointer;}
+.videoWrap .videobtn:hover{transform:scale(1.1); cursor: pointer;}
 
 
 .slidetwoWrap .bx-wrapper .bx-pager{bottom:initial; top: 0; width: 180px; right: 0;}

@@ -415,6 +415,7 @@ li:hover .view{background: rgba(0, 0, 0, 0.5);}
     to{transform:translateX(1157px) translateY(294px) rotate(15deg);}
 }
 
+#header{background: #fff;}
 body.sub{background: #F3F3F3;}
 
 section.visual{

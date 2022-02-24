@@ -37,7 +37,7 @@
 </head>
 <body>
     <header class="headerWrap">
-        <div class="utilWrap clearfix">
+        <div class="utilWrap">
             <ul class="util">
                 <li><a href="#">로그인</a></li>
                 <li><a href="#">회원가입</a></li>
@@ -45,7 +45,7 @@
                 <li><a href="#">고객센터</a></li>
             </ul>
         </div>
-        <div class="navWrap clearfix">
+        <div class="navWrap">
             <div class="logo">
                 <a href="#"><img src="images/dr.logo.png" alt=""></a>
             </div>
@@ -55,14 +55,15 @@
                 <li><a href="#">Dr.PNT스토리</a></li>
                 <li><a href="#">마이헬스체크</a></li>
             </ul>
-            <div class="search">
+            <div class="navRight">
                 <div class="searchWrap">
-                    <div class="searchbox">
-                        <p>Search</p>
-                        <a href="#"><img src="images/ic_search.png" alt=""></a>
-                    </div>
+                    <form action="#">
+                        <label for="search">search</label>
+                        <input type="text" id="search" name="search" placeholder="search" class="inp-search">
+                        <input type="submit" class="btn-search" value="button">
+                    </form>
+                    <img src="images/ic_mypage.png" alt="">
                 </div>
-                <a href="#"><img src="images/ic_mypage.png" alt="" class="ic_mypage"></a>
             </div>
         </div>
     </header>

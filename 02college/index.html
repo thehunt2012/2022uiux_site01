@@ -29,11 +29,12 @@
             $(".next").click(function(){
                 myslider1.goToPrevSlide()
             });
-            $(".slidertwo").bxSlider({controls:false});
+            $(".slidertwo").bxSlider({controls:false,auto:true});
 
             var myslider2 = $(".barslide").bxSlider({
                 mode:'vertical',
-                controls:false
+                controls:false,
+                auto:true
                 });
 
             $(".brTop").click(function(){

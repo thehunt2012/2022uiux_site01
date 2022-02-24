@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>노랑풍선여행사</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -29,13 +30,13 @@
                 controls:false,
                 pagerCustom:".boxPager",
                 mode:"vertical",
-                touchEnabled:false
-
+                touchEnabled:false,
             });
 
             var myslider2 = $(".sliderOne").bxSlider({
                 controls:false,
-                pager:false
+                pager:false,
+                auto:true
             });
             $(".next1").click(function(){
                 myslider2.goToNextSlide()
@@ -46,7 +47,8 @@
 
             var myslider3 = $(".sliderTwo").bxSlider({
                 controls:false,
-                pager:false
+                pager:false,
+                auto:true
             });
             $(".next2").click(function(){
                 myslider3.goToNextSlide()
@@ -346,13 +348,13 @@
                 </div>
             </div>
             <div class="card1">
-                <div class="card1_right">
+                <div class="card1_right" onclick="location.href='sub01.html'">
                     <img src="images/slide_spain.png" alt="">
                     <a href="#">스페인<span class="txt1">1,399,000</span><span class="txt2">원~</span>
                         <i class="fas fa-angle-right"></i>
                     </a>
                 </div>
-                <div class="card1_left">
+                <div class="card1_left" onclick="location.href='sub01.html'">
                     <img src="images/slide_hawaii.png" alt="">
                     <a href="#">하와이<span class="txt1">2,499,000</span><span class="txt2">원~</span>
                         <i class="fas fa-angle-right"></i>
@@ -363,7 +365,7 @@
                 <img src="images/02bal01.png" alt="" class="bal01">
                 <img src="images/02bal03.png" alt="" class="bal03">
                 <div class="title">
-                    <h1>ENJOY TRAVEL!</h1>
+                    <h2>ENJOY TRAVEL!</h2>
                     <P>기분좋은 여행의 시작<br>노랑풍선과 함께</P>
                 </div>
             </div>
@@ -372,21 +374,21 @@
             <ul>
                 <li class="sliderOneWrap">
                     <ul class="sliderOne">
-                        <li>
+                        <li onclick="location.href='sub01.html'">
                             <img src="images/slide_hiking.png" alt="">
                             <div class="slideBox one">
                                 <p>[하이킹] 서유럽3국<span>(10일)</span></p>
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                         </li>
-                        <li>
+                        <li onclick="location.href='sub01.html'">
                             <img src="images/slide_uzbek.png" alt="">
                             <div class="slideBox two">
                                 <p>[고대도시] 우즈베키스탄<span>(7박9일)</span></p>
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                         </li>
-                        <li>
+                        <li onclick="location.href='sub01.html'">
                             <img src="images/slide_aurora.png" alt="">
                             <div class="slideBox three">
                                 <p>[오로라] 노르웨이+핀란드<span>(5박7일)</span></p>
@@ -403,21 +405,21 @@
                 </li>
                 <li class="sliderTwoWrap">
                     <ul class="sliderTwo">
-                        <li>
+                        <li onclick="location.href='sub02.html'">
                             <img src="images/slide_jeju.png" alt="">
                             <div class="slideBox one">
                                 <p>국내여행<span>(제주도)</span></p>
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                         </li>
-                        <li>
+                        <li onclick="location.href='sub02.html'">
                             <img src="images/slide_uljin.png" alt="">
                             <div class="slideBox two">
                                 <p>국내여행<span>(울진)</span></p>
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                         </li>
-                        <li>
+                        <li onclick="location.href='sub02.html'">
                             <img src="images/slide_yeosu.png" alt="">
                             <div class="slideBox three">
                                 <p>국내여행<span>(여수)</span></p>

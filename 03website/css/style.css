@@ -22,8 +22,30 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     left: -1px; right: -1px; bottom: 30px;
 }
 
-.navRight{position: absolute; right: 0;}
-.serchWrap{display: flex;}
+.navRight{position: absolute; right: 0; margin: 20px 0;}
+.searchWrap{position: relative; display: flex;}
+.searchWrap form{display: flex; align-items: center;}
+.searchWrap .inp-search{
+    width: 258px; height: 48px; background: #eee; 
+    border-radius: 10px; border: 2px solid #eee;
+    padding: 8px 60px 8px 18px;
+    font-size: 16px;
+}
+.searchWrap .inp-search:focus{outline: 2px solid #ff5a00;}
+.searchWrap .btn-search{
+    width: 26px; height: 26px;
+    align-items: center;
+    position: absolute; right: 75px;
+    border: 0 none;
+    text-indent: -9999px;
+    background-image: url(../images/ic_search.png);
+    cursor: pointer;
+}
+
+.mypage{
+    margin: 10px auto 0 25px; width: 26px; height: 27px;
+    cursor: pointer;
+}
 
 .sliderWrap1{position: relative;}
 .sliderWrap1 .bx-wrapper .bx-pager{display: none;}
@@ -63,16 +85,19 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 .bannerBottom .text{font-size: 18px; color: #111; margin-bottom: 20px;}
 
 .contentWrap{margin: 100px 0; position: relative;}
-.contentWrap h2{
-    font-size: 34px; color: #111; margin-bottom: 40px;
-}
-.contentWrap span{font-size: 16px; color: #111; font-weight: 700;}
-.contentWrap span:before{
+.contentTxt{width: 1280px; margin-bottom: 40px; position: relative;}
+.contentTxt h2{font-size: 34px; color: #111;}
+.contentTxt span{font-size: 16px; color: #111; font-weight: 700;}
+.contentTxt span:before{
     content: ""; position: absolute;
     width: 103px; height: 10px; 
     background: rgba(128, 159, 216, 0.3);
-    bottom: 0; left: 0; right: 0; top: 35px;
-    border-radius: 3px;
+    top: 35px; border-radius: 3px;
+}
+.contentTxt a{
+    position: absolute; right: 0; top: 50px;
+    font-size: 14px;
+    color: #111;
 }
 .content{display: flex; justify-content: space-between;}
 .content .product{
@@ -82,9 +107,22 @@ body{font-family: 'Noto Sans KR', sans-serif;}
     margin-bottom: 16px;
 }
 .content a img{width: 235px; height: 235px;}
-.product p{position: absolute; top: 16px; left: 16px;}
-.content h3{font-size: 18px; color: #171717;}
-.content .txt1{font-size: 14px; color: #888;}
-.content .login{font-size: 14px; color: #111;}
-.content .tag{font-size: 14px; color: #888;}
-.content .recommend{font-size: 12px;}
+.content .product p{position: absolute; top: 16px; left: 16px;}
+.content h3{font-size: 18px; color: #171717; margin-bottom: 4px;}
+.content .txt1{font-size: 14px; color: #888; margin-bottom: 10px;}
+.content .login{
+    font-size: 14px; color: #111; margin-bottom: 5px; 
+    position: relative;
+}
+.content .login:before{
+    content: ""; position: absolute; top: 12px; left: 0;
+    width: 110px; height: 8px; background: #eee;
+    z-index: -1; border-radius: 4px;
+}
+.content .tag{font-size: 14px; color: #888; margin-bottom: 10px;}
+.content .recommend{
+    font-size: 12px; padding-left: 15px;
+    background-image: url(../images/ic_recommend.png);
+    background-repeat: no-repeat;
+    line-height: 15px; color: #888;
+}

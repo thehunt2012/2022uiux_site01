@@ -408,7 +408,6 @@ li:hover .view{background: rgba(0, 0, 0, 0.5);}
     animation-iteration-count: infinite;
     animation-direction: alternate;
     transform-origin:center bottom;
-
 }
 @keyframes ballons03{
     from{transform:translateX(1117px) translateY(294px) rotate(-15deg);}

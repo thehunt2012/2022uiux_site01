@@ -1,0 +1,27 @@
+@charset "utf-8";
+.header{
+    width: 100vw; height: 100vh; overflow: hidden;
+    position: absolute; background: #E4D52D;
+}
+.header .layer{
+    width: 100vw; height: 100vh;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 1080px;
+}
+.layer.pic0{background-image: url(../images/parallax0.png);}
+.layer.pic1{background-image: url(../images/parallax1.png);}
+.layer.pic2{background-image: url(../images/parallax2.png);}
+.layer.pic3{background-image: url(../images/parallax3.png);}
+.layer.pic4{background-image: url(../images/parallax4.png);}
+.layer.pic5{background-image: url(../images/parallax5.png);}
+.layer.pic6{background-image: url(../images/parallax6.png);}
+.layer.pic7{background-image: url(../images/parallax7.png);}
+.layer.pic8{background-image: url(../images/parallax8.png);}
+
+
+.container{width: 100vw; height: 100vh;}
+.darkgreen{background:#061300;}
+.gray{background: gray;}
+.pink{background: pink;}

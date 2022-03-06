@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구세군</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var visualslider = $(".visualslider").bxSlider({
+                controls:false,
+                pagerCustom:".boxPager",
+                // auto:true
+            });
+            $(".next1").click(function(){
+                visualslider.goToNextSlide()
+            });
+            $(".prev1").click(function(){
+                visualslider.goToPrevSlide()
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="visual">
+        <ul>
+            <li class="vsWrap">
+                <ul class="visualslider">
+                    <li>
+                        <img src="images/slide01_1.png" alt="">
+                        <div class="vsTxt">
+                            <h1>세상 가장 낮을 곳을 향한<br>가장 선한 손길</h1>
+                            <p>세상의 낮은 곳을 향해 당신의 손을 뻗어주세요.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/slide01_2.png" alt="">
+                        <div class="vsTxt">
+                            <h1>행복을 꿈꾸게 하는<br>아이들의 웃음</h1>
+                            <p>아이들을 위해 더 나은 미래를 만들어갑니다. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/slide01_3.png" alt="">
+                        <div class="vsTxt">
+                            <h1>내일의 희망을 꿈꿉니다.</h1>
+                            <p>작은 나눔을 통해 따뜻한 희망을 전달해주세요.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="prev1">
+                    <img src="images/prev1.png" alt="">
+                </div>
+                <div class="next1">
+                    <img src="images/next1.png" alt="">
+                </div>
+                <div class="header">
+                    <img src="images/header_logo.png" alt="">
+                    <nav>
+                        <ul>
+                            <li><a href="#">구세군</a></li>
+                            <li>
+                                <a href="#">후원하기</a>
+                                <ul class="submenu">
+                                    <li><a href="#">후원하기</a></li>
+                                    <li><a href="#">국내후원</a></li>
+                                    <li><a href="#">해외후원</a></li>
+                                    <li><a href="#">캠페인후원</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">좋은 사람들</a>
+                                <ul class="submenu">
+                                    <li><a href="#">사관/병사</a></li>
+                                    <li><a href="#">함께 하는 사람들</a></li>
+                                    <li><a href="#">홍보대사/자문위원</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">좋은 이야기</a>
+                                <ul class="submenu">
+                                    <li><a href="#">후원소식</a></li>
+                                    <li><a href="#">후원결과보고</a></li>
+                                    <li><a href="#">경영보고</a></li>
+                                    <li><a href="#">윤리경영</a></li>
+                                </ul>
+                            </li>
+                            <li class="lang">
+                                <div class="active">KOR</div>
+                                <div>ENG</div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="section">
+        <ul class="clearfix">
+            <li class="icon1" style="background-color:#111;"></li>
+            <li class="video">
+                <img src="images/video_img.png" alt="">
+            </li>
+            <li class="s_newsWrap" style="background-color:#888;"></li>
+            <li class="icon2" style="background-color:#222;"></li>
+            <li class="banner1">
+                <img src="images/banner01.png" alt="">
+            </li>
+            <li class="icon3" style="background-color:#555;"></li>
+            <li class="banner2">
+                <img src="images/banner02.png" alt="">
+            </li>
+            <li class="icon4" style="background-color:#666;"></li>
+            <li class="banner3">
+                <img src="images/banner03.png" alt="">
+            </li>
+            <li class="banner4">
+                <img src="images/banner04.png" alt="">
+            </li>
+            <li class="icon5" style="background-color:#444;"></li>
+        </ul>
+    </section>
+
+    <script>
+        $("nav > ul > li").hover(function(){
+            $(this).find(".submenu").show();
+        },function(){
+            $(this).find(".submenu").hide();
+        });
+
+        $(".lang div").click(function(){
+            console.log($(this).index());
+
+            $(".lang div").removeClass("active");
+            $(this).addClass("active");
+        });
+    </script>
+</body>
+</html>

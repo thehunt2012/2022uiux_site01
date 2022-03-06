@@ -1,0 +1,80 @@
+@charset "utf-8";
+body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
+
+.vsWrap{position: relative;}
+.visualslider .vsTxt{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.visualslider h1{
+    text-align: center; font-size: 60px; color: #fff;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.05em;
+    margin-bottom: 20px;
+}
+.visualslider p{
+    font-size: 30px; color: #fff;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.05em;
+}
+.vsWrap .prev1,
+.vsWrap .next1{
+    position: absolute;
+    top: 50%; transform:translateY(-50%);
+    cursor: pointer;
+}
+.vsWrap .prev1{left: 0; margin-left: 60px;}
+.vsWrap .next1{right: 0; margin-right: 60px;}
+
+/* header start */
+
+.header{
+    position: absolute; top: 40px; left: 312px;
+    display: flex; width: 1280px;
+}
+.header nav{position: absolute; right: 0; width: 606px;}
+.header nav > ul{display: flex;}
+.header nav > ul > li{width: calc( 100% / 5 ); _flex: 1; height: 60px;}
+.header nav > ul > li > a{
+    font-weight: bold; font-size: 20px; color: #fff; position: relative;
+    display: flex; justify-content: center; align-items: center;
+}
+.header nav > ul > li > a:hover:before{
+    position: absolute;
+    content: ""; background: #fff; height: 3px;
+    left: -1px; right: -1px; bottom: -10px;
+}
+.header .submenu{display: none; margin-top: 10px;}
+.header .submenu > li > a{
+    display: block; text-align: center; position: relative;
+    color: #fff; font-size: 18px; line-height: 40px;
+}
+.header .submenu a:hover:before{
+    position: absolute;
+    content: ""; background: #fff; height: 2px;
+    left: -1px; right: -1px; bottom: -1px;
+}
+.header .lang{display: flex;}
+.lang div{
+    width: 60px; height: 60px; color: #fff;
+    border: 1px solid #E2000E; font-size: 20px;
+    padding: 13px 10px; cursor: pointer;
+}
+.lang div.active{background: #E2000E;}
+
+/* header end */
+
+/* section start */
+
+.section{
+    width: 1280px; height: 1280px; margin: 0 auto; background: pink;
+    margin-top: -380px; margin-bottom: 80px;
+}
+.section li{width: 320px; height: 320px; float: left;}
+.section li:nth-child(3),
+.section li:nth-child(5),
+.section li:nth-child(9),
+.section li:nth-child(10){width: 640px;}
+.section li:nth-child(7){height: 640px;}

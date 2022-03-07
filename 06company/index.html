@@ -24,7 +24,6 @@
         $(document).ready(function(){
             var visualslider = $(".visualslider").bxSlider({
                 controls:false,
-                pagerCustom:".boxPager",
                 // auto:true
             });
             $(".next1").click(function(){
@@ -37,78 +36,74 @@
     </script>
 </head>
 <body>
-    <div class="visual">
-        <ul>
-            <li class="vsWrap">
-                <ul class="visualslider">
+    <header class="header">
+        <div class="headerWrap">
+            <h1><a href="#" class="logo">logo</a></h1>
+            <nav class="navWrap">
+                <ul class="navbar">
+                    <li><a href="#">구세군</a></li>
                     <li>
-                        <img src="images/slide01_1.png" alt="">
-                        <div class="vsTxt">
-                            <h1>세상 가장 낮을 곳을 향한<br>가장 선한 손길</h1>
-                            <p>세상의 낮은 곳을 향해 당신의 손을 뻗어주세요.</p>
-                        </div>
+                        <a href="#">후원하기</a>
+                        <!-- <ul class="submenu">
+                            <li><a href="#">후원하기</a></li>
+                            <li><a href="#">국내후원</a></li>
+                            <li><a href="#">해외후원</a></li>
+                            <li><a href="#">캠페인후원</a></li>
+                        </ul> -->
                     </li>
                     <li>
-                        <img src="images/slide01_2.png" alt="">
-                        <div class="vsTxt">
-                            <h1>행복을 꿈꾸게 하는<br>아이들의 웃음</h1>
-                            <p>아이들을 위해 더 나은 미래를 만들어갑니다. </p>
-                        </div>
+                        <a href="#">좋은 사람들</a>
+                        <!-- <ul class="submenu">
+                            <li><a href="#">사관/병사</a></li>
+                            <li><a href="#">함께 하는 사람들</a></li>
+                            <li><a href="#">홍보대사/자문위원</a></li>
+                        </ul> -->
                     </li>
                     <li>
-                        <img src="images/slide01_3.png" alt="">
-                        <div class="vsTxt">
-                            <h1>내일의 희망을 꿈꿉니다.</h1>
-                            <p>작은 나눔을 통해 따뜻한 희망을 전달해주세요.</p>
-                        </div>
+                        <a href="#">좋은 이야기</a>
+                        <!-- <ul class="submenu">
+                            <li><a href="#">후원소식</a></li>
+                            <li><a href="#">후원결과보고</a></li>
+                            <li><a href="#">경영보고</a></li>
+                            <li><a href="#">윤리경영</a></li>
+                        </ul> -->
                     </li>
                 </ul>
-                <div class="prev1">
-                    <img src="images/prev1.png" alt="">
+                <div class="lang">
+                    <div class="active">KOR</div>
+                    <div>ENG</div>
                 </div>
-                <div class="next1">
-                    <img src="images/next1.png" alt="">
+            </nav>
+        </div>
+    </header>
+    <div class="visual">
+        <ul class="visualslider">
+            <li class="container slide1">
+                <div class="title">
+                    <h1>세상 가장 낮을 곳을 향한<br>가장 선한 손길</h1>
+                    <p>세상의 낮은 곳을 향해 당신의 손을 뻗어주세요.</p>
                 </div>
-                <div class="header">
-                    <img src="images/header_logo.png" alt="">
-                    <nav>
-                        <ul>
-                            <li><a href="#">구세군</a></li>
-                            <li>
-                                <a href="#">후원하기</a>
-                                <ul class="submenu">
-                                    <li><a href="#">후원하기</a></li>
-                                    <li><a href="#">국내후원</a></li>
-                                    <li><a href="#">해외후원</a></li>
-                                    <li><a href="#">캠페인후원</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">좋은 사람들</a>
-                                <ul class="submenu">
-                                    <li><a href="#">사관/병사</a></li>
-                                    <li><a href="#">함께 하는 사람들</a></li>
-                                    <li><a href="#">홍보대사/자문위원</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">좋은 이야기</a>
-                                <ul class="submenu">
-                                    <li><a href="#">후원소식</a></li>
-                                    <li><a href="#">후원결과보고</a></li>
-                                    <li><a href="#">경영보고</a></li>
-                                    <li><a href="#">윤리경영</a></li>
-                                </ul>
-                            </li>
-                            <li class="lang">
-                                <div class="active">KOR</div>
-                                <div>ENG</div>
-                            </li>
-                        </ul>
-                    </nav>
+            </li>
+            <li class="container slide2">
+                <div class="title">
+                    <h1>행복을 꿈꾸게 하는<br>아이들의 웃음</h1>
+                    <p>아이들을 위해 더 나은 미래를 만들어갑니다. </p>
+                </div>
+            </li>
+            <li class="container slide3">
+                <div class="title">
+                    <h1>내일의 희망을 꿈꿉니다.</h1>
+                    <p>작은 나눔을 통해 따뜻한 희망을 전달해주세요.</p>
                 </div>
             </li>
         </ul>
+        <div class="prev1">
+            <img src="images/prev1.png" alt="">
+        </div>
+        <div class="next1">
+            <img src="images/next1.png" alt="">
+        </div>
+    
     </div>
     <section class="section">
         <ul class="clearfix">
@@ -149,6 +144,17 @@
             $(".lang div").removeClass("active");
             $(this).addClass("active");
         });
+
+        window.addEventListener("scroll",function(){
+            let scrollY = window.pageYOffset;
+
+            if(scrollY > 300){
+                document.querySelector(".header").classList.add("fixed");
+            }else{
+                document.querySelector(".header").classList.remove("fixed");
+            }
+        });
+        
     </script>
 </body>
 </html>

@@ -33,12 +33,12 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
     width: 180px;
 }
 .visual .bx-wrapper .bx-pager.bx-default-pager a{
-    background-color:#535352;
-    width: 12px; height: 12px; border-radius: 50%;
+    background-color:#EFEDE9;
+    width: 14px; height: 14px; border-radius: 50%;
 }
 .visual .bx-wrapper .bx-pager.bx-default-pager a.active{
-    background-color: #E2000E;
-    width: 14px; height: 14px;
+    background-color: #E2000E; border-radius: 10px;
+    width: 30px; height: 14px;
 }
 .visual .bx-wrapper .bx-pager.bx-default-pager a:hover{background-color: #E2000E;}
 

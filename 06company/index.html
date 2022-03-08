@@ -39,7 +39,7 @@
 <body>
     <header class="header">
         <div class="headerWrap">
-            <h1><a href="#" class="logo">logo</a></h1>
+            <h1><a href="#" title="홈 바로가기">logo</a></h1>
             <div class="toggle">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -159,38 +159,37 @@
             }else{
                 document.querySelector(".header").classList.remove("fixed");
             }
+        });
+        const toggleElem = document.querySelector(".toggle");
+        const submenuElem = document.querySelector(".navbar");
+        let chk = true;
 
-        // const toggleElem = document.querySelector(".toggle");
-        // const submenuElem = document.querySelector(".navbar");
-        // let chk = true;
-
-        // document.querySelector(".toggle").addEventListener("click",function(){
-        //     if(chk == true){
-        //         toggleElem.classList.add("active");
-        //         // submenuElem.style.right = "0"
-        //         chk = false;
+        document.querySelector(".toggle").addEventListener("click",function(){
+            if(chk == true){
+                toggleElem.classList.add("active");
+                submenuElem.style.right = "0"
+                chk = false;
+            }else{
+                toggleElem.classList.remove("active");
+                submenuElem.style.right = "-500px"
+                chk = true;
+            }
+        });
+       
+        // let chk = 0;
+        // $(".toggle").click(function(){
+        //     console.log(chk)
+        //     if( chk == 0 ){
+        //         $(".toggle").addClass("active");
+        //         $(".navbar").style.right = "0"
+        //         chk = 1;
         //     }else{
-        //         toggleElem.classList.remove("active");
-        //         // submenuElem.style.right = "-400px"
-        //         chk = true;
+        //         $(".toggle").removeClass("active");
+        //         $(".navbar").style.right = "-500px"
+        //         chk = 0;
         //     }
         // });
 
-        let chk = 0;
-        $(".toggle").click(function(){
-            console.log(chk)
-            if( chk == 0 ){
-                $(".toggle").addClass("active");
-                // $(".navbar").style.right = "0"
-                chk = 1;
-            }else{
-                $(".toggle").removeClass("active");
-                // $(".navbar").style.right = "-400px"
-                chk = 0;
-            }
-        });
-
-        });
         
     </script>
 </body>

@@ -55,8 +55,8 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 /* header start */
 
 .header{
-    width: 100%; position: absolute; left: 50%; top: 40px;
-    transform: translateX(-50%); z-index: 1; transition: 0.3s;
+    width: 100%; position: absolute;  top: 40px;
+     z-index: 1; transition: 0.3s;
 }
 .headerWrap{
     width: 1280px; margin: 0 auto;
@@ -88,15 +88,19 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 .header.fixed .lang div{color: #E2000E;}
 .header.fixed .lang div.active{color: #fff;}
 
+/* .navWrap{margin-left: auto;}
+.navWrap .navbar{width: 436px; display: flex;}
+.navWrap .navbar > li{flex: 1;} */
+
 .navWrap{width: 606px; display: flex; justify-content: space-between;}
 .navWrap .navbar{
     width: 436px; display: flex; 
     justify-content: space-between; align-items: center;
 }
-.navWrap .navbar a{
+.navWrap .navbar > li > a{
     font-size: 20px; font-weight: bold;
-    color: #fff; height: 45px;
-    display: flex;justify-content: center;align-items: center;
+    color: #fff; line-height: 45px;
+    display: block; text-align: center;
 }
 
 

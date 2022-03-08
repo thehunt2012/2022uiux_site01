@@ -46,6 +46,7 @@
                 <div class="bar3"></div>
             </div>
             <nav class="navWrap">
+                <div class="close">x</div>
                 <ul class="navbar">
                     <li><a href="#">구세군</a></li>
                     <li>
@@ -151,44 +152,66 @@
             $(this).addClass("active");
         });
 
-        window.addEventListener("scroll",function(){
-            let scrollY = window.pageYOffset;
+        let wWidth = $(window).width();
+        console.log(wWidth)
 
-            if(scrollY > 200){
-                document.querySelector(".header").classList.add("fixed");
-            }else{
-                document.querySelector(".header").classList.remove("fixed");
-            }
-        });
-        const toggleElem = document.querySelector(".toggle");
-        const submenuElem = document.querySelector(".navbar");
-        let chk = true;
+        
+                window.addEventListener("scroll",function(){
+                    let scrollY = window.pageYOffset;
 
-        document.querySelector(".toggle").addEventListener("click",function(){
-            if(chk == true){
-                toggleElem.classList.add("active");
-                submenuElem.style.right = "0"
-                chk = false;
-            }else{
-                toggleElem.classList.remove("active");
-                submenuElem.style.right = "-500px"
-                chk = true;
-            }
-        });
+                    if(wWidth > 700 ){
+                        if(scrollY > 200){
+                            document.querySelector(".header").classList.add("fixed");
+                        }else{
+                            document.querySelector(".header").classList.remove("fixed");
+                        }
+                    }
+
+
+                });
+
+
+        $(window).resize(function(){
+            wWidth = $(window).width();
+            console.log(wWidth)
+
+            window.addEventListener("scroll",function(){
+                    let scrollY = window.pageYOffset;
+
+                    if(wWidth > 700 ){
+                        if(scrollY > 200){
+                            document.querySelector(".header").classList.add("fixed");
+                        }else{
+                            document.querySelector(".header").classList.remove("fixed");
+                        }
+                    }
+
+
+                });
+        })
+
        
-        // let chk = 0;
-        // $(".toggle").click(function(){
-        //     console.log(chk)
-        //     if( chk == 0 ){
-        //         $(".toggle").addClass("active");
-        //         $(".navbar").style.right = "0"
-        //         chk = 1;
-        //     }else{
-        //         $(".toggle").removeClass("active");
-        //         $(".navbar").style.right = "-500px"
-        //         chk = 0;
-        //     }
-        // });
+       
+        let chk = 0;
+        $(".toggle").click(function(){
+            console.log(chk)
+            if( chk == 0 ){
+                $(this).addClass("active");
+                $(".navWrap").css("right",0)
+                chk = 1;
+            }else{
+                $(this).removeClass("active");
+                $(".navWrap").css("right","-100%")
+                chk = 0;
+            }
+        });
+
+
+        $(".close").click(function(){
+           
+                $(".navWrap").css("right","-100%")
+
+        });
 
         
     </script>

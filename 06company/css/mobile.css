@@ -1,17 +1,18 @@
 @charset "utf-8";
 
-@media  screen and (max-width:1024px){
-    
-    body{max-width: 1024px; height: 100%;}
-    .header .navWrap{display: none;}
+@media  screen and (max-width:768px){
+    .header{
+        position: absolute;
+        
+        padding: 10px 16px;
+    }
+    body{height: 100%;}
     .header .lang{display: none;}
     .header.fixed{display: none;}
 
-    /* .header{width:100%;} */
     .headerWrap{
         width: 100%; margin: 0 auto;
         display: flex; justify-content:space-between; padding: 0 20px;
-
     }
     .headerWrap .toggle{
         width: 50px; height: 40px; cursor: pointer; _background: #000;
@@ -27,11 +28,19 @@
     .toggle.active .bar1{transform:translateY(0px) rotate(45deg);}
     .toggle.active .bar2{opacity: 0;}
     .toggle.active .bar3{transform:translateY(0px) rotate(-45deg);}
+    .toggle{display: flex;  top: 0; right: 20px;z-index: 2;}
 
-    .navbar{
-        width: 500px; height: 100%; background: #222;
-        position: fixed; top: 0; right: 0; transition: 0.3s;
+    .navWrap{
+        width: 60%; height: 100%; background: #222;
+        position: fixed; top: 0; right:-100%; transition: 0.3s;
         display: flex; justify-content: center; align-items: center;
+        z-index: 1;
+    }
+
+
+
+    .navWrap .navbar{
+        display: block;
     }
 
     .visual{background-size: 300%; height: 1083px; position: relative;}

@@ -31,17 +31,32 @@
     .toggle{display: flex;  top: 0; right: 20px;z-index: 2;}
 
     .navWrap{
-        width: 60%; height: 100%; background: #222;
+        width: 60%; height: 100%; background: #4e0303;
         position: fixed; top: 0; right:-100%; transition: 0.3s;
-        display: flex; justify-content: center; align-items: center;
         z-index: 1;
     }
-
-
-
-    .navWrap .navbar{
-        display: block;
+    .navWrap .navbar{display: block; position: absolute; top: 130px; right: 50px;}
+    .navWrap .navbar > li:after{
+        content: ""; display: block; width: 300px; height: 1px;
+        background: #eee; position: absolute; top: 45px; right: -30px;
     }
+    .navWrap .navbar > li > a{
+        font-weight: normal; letter-spacing: -0.08em;
+        margin-bottom: 20px;
+    }
+
+    .navWrap .close{
+        width: 50px; height: 40px; cursor: pointer;
+        display: flex; justify-content: center; align-items: center;
+        position: absolute; top: 50px; right: 35px;
+    }
+    .navWrap .close div{
+        width: 40px; height: 5px; background: #fff;
+        border-radius: 5px; position: absolute;
+    }
+    .navWrap .close .bar1{transform:rotate(45deg);}
+    .navWrap .close .bar2{transform:rotate(-45deg);}
+
 
     .visual{background-size: 300%; height: 1083px; position: relative;}
     .visual .prev1,

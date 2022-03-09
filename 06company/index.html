@@ -46,7 +46,10 @@
                 <div class="bar3"></div>
             </div>
             <nav class="navWrap">
-                <div class="close">x</div>
+                <div class="close">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                </div>
                 <ul class="navbar">
                     <li><a href="#">구세군</a></li>
                     <li>
@@ -153,42 +156,39 @@
         });
 
         let wWidth = $(window).width();
-        console.log(wWidth)
-
-        
-                window.addEventListener("scroll",function(){
-                    let scrollY = window.pageYOffset;
-
-                    if(wWidth > 700 ){
-                        if(scrollY > 200){
-                            document.querySelector(".header").classList.add("fixed");
-                        }else{
-                            document.querySelector(".header").classList.remove("fixed");
-                        }
-                    }
-
-
-                });
-
-
-        $(window).resize(function(){
-            wWidth = $(window).width();
             console.log(wWidth)
 
-            window.addEventListener("scroll",function(){
+
+            window.addEventListener("scroll", function () {
+                let scrollY = window.pageYOffset;
+
+                if (wWidth > 700) {
+                    if (scrollY > 200) {
+                        document.querySelector(".header").classList.add("fixed");
+                    } else {
+                        document.querySelector(".header").classList.remove("fixed");
+                    }
+                }
+
+            });
+
+
+        $(window).resize(function () {
+                wWidth = $(window).width();
+                console.log(wWidth)
+
+                window.addEventListener("scroll", function () {
                     let scrollY = window.pageYOffset;
 
-                    if(wWidth > 700 ){
-                        if(scrollY > 200){
+                    if (wWidth > 700) {
+                        if (scrollY > 200) {
                             document.querySelector(".header").classList.add("fixed");
-                        }else{
+                        } else {
                             document.querySelector(".header").classList.remove("fixed");
                         }
                     }
-
-
                 });
-        })
+            })
 
        
        
@@ -201,15 +201,14 @@
                 chk = 1;
             }else{
                 $(this).removeClass("active");
-                $(".navWrap").css("right","-100%")
+                $(".navWrap").css("right","-100%") 
                 chk = 0;
             }
         });
 
 
         $(".close").click(function(){
-           
-                $(".navWrap").css("right","-100%")
+            $(".navWrap").css("right", "-100%")
 
         });
 

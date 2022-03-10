@@ -20,21 +20,8 @@
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+    <script src="js/script.js"></script>
 
-    <script>
-        $(document).ready(function(){
-            var visualslider = $(".visualslider").bxSlider({
-                controls:false,
-                // auto:true
-            });
-            $(".next1").click(function(){
-                visualslider.goToNextSlide()
-            });
-            $(".prev1").click(function(){
-                visualslider.goToPrevSlide()
-            });
-        });
-    </script>
 </head>
 <body>
     <header class="header">
@@ -45,45 +32,47 @@
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
-            <nav class="navWrap">
+            <div class="navWrap">
                 <div class="close">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                 </div>
-                <ul class="navbar">
-                    <li><a href="#">구세군</a></li>
-                    <li>
-                        <a href="#">후원하기</a>
-                        <!-- <ul class="submenu">
-                            <li><a href="#">후원하기</a></li>
-                            <li><a href="#">국내후원</a></li>
-                            <li><a href="#">해외후원</a></li>
-                            <li><a href="#">캠페인후원</a></li>
-                        </ul> -->
-                    </li>
-                    <li>
-                        <a href="#">좋은 사람들</a>
-                        <!-- <ul class="submenu">
-                            <li><a href="#">사관/병사</a></li>
-                            <li><a href="#">함께 하는 사람들</a></li>
-                            <li><a href="#">홍보대사/자문위원</a></li>
-                        </ul> -->
-                    </li>
-                    <li>
-                        <a href="#">좋은 이야기</a>
-                        <!-- <ul class="submenu">
-                            <li><a href="#">후원소식</a></li>
-                            <li><a href="#">후원결과보고</a></li>
-                            <li><a href="#">경영보고</a></li>
-                            <li><a href="#">윤리경영</a></li>
-                        </ul> -->
-                    </li>
-                </ul>
+                <nav class="navbar">
+                    <ul class="clearfix">
+                        <li><a href="#">구세군</a></li>
+                        <li>
+                            <a href="#">후원하기</a>
+                            <!-- <ul class="submenu">
+                                <li><a href="#">후원하기</a></li>
+                                <li><a href="#">국내후원</a></li>
+                                <li><a href="#">해외후원</a></li>
+                                <li><a href="#">캠페인후원</a></li>
+                            </ul> -->
+                        </li>
+                        <li>
+                            <a href="#">좋은 사람들</a>
+                            <!-- <ul class="submenu">
+                                <li><a href="#">사관/병사</a></li>
+                                <li><a href="#">함께 하는 사람들</a></li>
+                                <li><a href="#">홍보대사/자문위원</a></li>
+                            </ul> -->
+                        </li>
+                        <li>
+                            <a href="#">좋은 이야기</a>
+                            <!-- <ul class="submenu">
+                                <li><a href="#">후원소식</a></li>
+                                <li><a href="#">후원결과보고</a></li>
+                                <li><a href="#">경영보고</a></li>
+                                <li><a href="#">윤리경영</a></li>
+                            </ul> -->
+                        </li>
+                    </ul>
+                </nav>
                 <div class="lang">
                     <div class="active">KOR</div>
                     <div>ENG</div>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
     <div class="visual">
@@ -140,79 +129,5 @@
             <li class="icon5" style="background-color:#444;"></li>
         </ul>
     </section>
-
-    <script>
-        $("nav > ul > li").hover(function(){
-            $(this).find(".submenu").show();
-        },function(){
-            $(this).find(".submenu").hide();
-        });
-
-        $(".lang div").click(function(){
-            console.log($(this).index());
-
-            $(".lang div").removeClass("active");
-            $(this).addClass("active");
-        });
-
-        let wWidth = $(window).width();
-            console.log(wWidth)
-
-
-            window.addEventListener("scroll", function () {
-                let scrollY = window.pageYOffset;
-
-                if (wWidth > 700) {
-                    if (scrollY > 200) {
-                        document.querySelector(".header").classList.add("fixed");
-                    } else {
-                        document.querySelector(".header").classList.remove("fixed");
-                    }
-                }
-
-            });
-
-
-        $(window).resize(function () {
-                wWidth = $(window).width();
-                console.log(wWidth)
-
-                window.addEventListener("scroll", function () {
-                    let scrollY = window.pageYOffset;
-
-                    if (wWidth > 700) {
-                        if (scrollY > 200) {
-                            document.querySelector(".header").classList.add("fixed");
-                        } else {
-                            document.querySelector(".header").classList.remove("fixed");
-                        }
-                    }
-                });
-            })
-
-       
-       
-        let chk = 0;
-        $(".toggle").click(function(){
-            console.log(chk)
-            if( chk == 0 ){
-                $(this).addClass("active");
-                $(".navWrap").css("right",0)
-                chk = 1;
-            }else{
-                $(this).removeClass("active");
-                $(".navWrap").css("right","-100%") 
-                chk = 0;
-            }
-        });
-
-
-        $(".close").click(function(){
-            $(".navWrap").css("right", "-100%")
-
-        });
-
-        
-    </script>
 </body>
 </html>

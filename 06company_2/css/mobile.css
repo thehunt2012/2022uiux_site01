@@ -1,0 +1,7 @@
+@media screen and (max-width:768px){
+    #header{display: none;}
+    .visualWrap{height: 400px;}
+    .visualWrap .sImg{height: 400px;min-height: initial;}
+    .visualWrap .bx-wrapper .bx-pager{bottom:10px}
+    .visualWrap .txtBody{text-align: left;transform: translateY(0);}
+}

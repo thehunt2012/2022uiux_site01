@@ -35,14 +35,17 @@
         position: fixed; top: 0; right:-100%; transition: 0.3s;
         z-index: 1;
     }
-    .navWrap .navbar{display: block; position: absolute; top: 130px; right: 50px;}
-    .navWrap .navbar > li:after{
-        content: ""; display: block; width: 300px; height: 1px;
-        background: #eee; position: absolute; top: 45px; right: -30px;
+    .navWrap .navbar > ul{
+        display: block; position: absolute; top: 130px; left: 20px;
     }
-    .navWrap .navbar > li > a{
+    .navWrap .navbar > ul > li:after{
+        content: ""; display: block; width: 250px; height: 1px;
+        background: #eee; position: absolute; top: 45px; 
+    }
+    /* width 사이즈가 늘어났을때 밑줄도 같이 늘어났으면, 왼쪽으로 정렬됐으면 */
+    .navWrap .navbar > ul > li > a{
         font-weight: normal; letter-spacing: -0.08em;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .navWrap .close{
@@ -61,13 +64,6 @@
     .visual{background-size: 300%; height: 1083px; position: relative;}
     .visual .prev1,
     .visual .next1{display: none;}
-    .visual .prev1 img,
-    .container .title h1{
-        text-align: center; font-size: 5.5vw; color: #fff; width: 600px;
-        text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-        letter-spacing: -0.05em;
-        margin-bottom: 20px;
-    }
     .container .title p{display: none;}
 
 

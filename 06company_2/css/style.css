@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* header */
+.toggle{display: none;}
+
+#header{
+    position: absolute; z-index: 1; width: 100%; top: 20px; background: #fff;
+    padding: 10px 0; 
+}
+#header .fixed{
+    position: fixed; top: 0; padding: 5px 0; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#header .navbarWrap{
+    width: 1240px; margin: 0 auto; _background: skyblue;
+    display: flex;
+}
+#header .navbar{margin-left: auto; margin-right: 10px;}
+#header .navbar ul{display: flex; width: 700px;}
+#header .navbar li{width: calc(100% / 5); position: relative;}
+/* #header .navbar li:after{
+    content: ""; display: block; width: 100%; height: 3px;
+    background: red; opacity: 0; transition: 0.3s;
+}
+#header .navbar li:hover:after{opacity: 1;} */
+
+/* #header .navbar li:after{
+    content: ""; position: absolute; width:0; height: 3px;
+    background: red; transition: 0.3s; left: 0;
+}
+#header .navbar li:hover:after{width: 100%;} */
+
+#header .navbar li:after{
+    content: ""; position: absolute; height: 3px; width: 100%;
+    background: red; transition: 0.3s; transform: scale(0);
+}
+#header .navbar li:hover:after{transform: scale(1);}
+#header .navbar li a{
+    display: flex; justify-content: center; align-items: center; 
+    height: 40px;
+}
+
+#header .lang{display: flex; width: 80px;}
+#header .lang .kor,
+#header .lang .eng{
+    width: 80px; height: 40px; 
+    display: flex; justify-content: center; align-items: center;
+    border: 1px solid #f00; margin-left: -1px; background: #fff;
+    font-size: 14px; color: #f00; font-weight: bold; cursor: pointer;
+}
+#header .lang .active{background: #f00; color:#fff}
+
+/* visual */
+.visualWrap .bx-wrapper {
+    -moz-box-shadow: 0 0 0px #ccc;
+    -webkit-box-shadow: 0 0 0px #ccc;
+    box-shadow: 0 0 0px #ccc;
+    border: 0 none;
+}
+.visualWrap .sImg{
+    height: 100vh; min-height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; justify-content: center; align-items: center;
+}
+.visualWrap .bx-wrapper .bx-pager{bottom: 350px;}
+.visualWrap .txtBody{text-align: center; transform: translateY(-160px);}
+.visualWrap .txtBody .txt{font-size: 6vw;}
+.visualWrap .txtBody .stxt{width: 80vw;}

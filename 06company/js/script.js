@@ -89,8 +89,7 @@ $(document).ready(function(){
     });
 
     $(".close").click(function(){
-        $(".navWrap").css("right", "-100%")
-
+        $(".navWrap").css("right", "-100%");
     });
     
 }); // ready

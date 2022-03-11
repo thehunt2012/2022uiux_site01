@@ -28,19 +28,21 @@
     .toggle.active .bar3{transform:translateY(0px) rotate(-45deg);}
     .toggle{display: flex;  top: 0; right: 20px;z-index: 2;}
 
-    .navWrap{
-        width: 60%; height: 100%; background: #6b0505;
-        position: fixed; top: 0; right:-100%; transition: 0.3s;
-        z-index: 1;
+    .navWrap{width: 100%; padding: 0 100px;}
+    .navWrap .navbar{
+        position: fixed; margin:initial;
+        width: 60%; height: 100%;
+        background: #6b0505;
+        top:0; right: -100%; transition:0.3s;
+        display: flex; justify-content: center; align-items: center;
     }
-    .navWrap .navbar > ul{
-        display: block; position: absolute; top: 130px; left: 20px;
-    }
+    .navWrap .navbar > ul{display: block;}
+    .navWrap .navbar > ul > li{width: 100%;}
     .navWrap .navbar > ul > li:after{
-        content: ""; display: block; width: 250px; height: 1px;
-        background: #eee; position: absolute; top: 45px; 
+        content: ""; display: block; width: 40%; height: 1px;
+        background: #eee; position: absolute; top: 45px; left: 30%;
     }
-    /* width 사이즈가 늘어났을때 밑줄도 같이 늘어났으면, 왼쪽으로 정렬됐으면 */
+    /* width 사이즈가 늘어났을때 밑줄도 같이 늘어났으면, 왼쪽으로 정렬됐으면ㅜㅜ */
     .navWrap .navbar > ul > li > a{
         font-weight: normal; letter-spacing: -0.08em;
         margin-bottom: 30px;

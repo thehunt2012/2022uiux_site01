@@ -78,12 +78,12 @@ $(document).ready(function(){
     $(".toggle").click(function(){
         if( chk == 0 ){
             $(this).addClass("active");
-            $(".navWrap").css("right",0);
+            $(".navbar").css("right",0);
             $(".lang").css("display","flex");
             chk = 1;
         }else{
             $(this).removeClass("active");
-            $(".navWrap").css("right","-100%");
+            $(".navbar").css("right","-100%");
             $(".lang").hide();
             chk = 0;
         }

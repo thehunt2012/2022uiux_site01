@@ -1,24 +1,24 @@
 $(document).ready(function(){
-    $(".slider").bxSlider()
+    $(".slider").bxSlider();
+
 
     $(".lang div").click(function(){
         let i = $(this).index();
-
         $(".lang div").removeClass("active");
         $(this).addClass("active");
 
         if(i == 1){
-           // $(".navbar ul li").eq(0).find("a").html("COMPANY")
-           $(".navbar ul").html(`
-                    <li><a href="#">COMPANY</a></li>
-                    <li><a href="#">MANAGE  </a></li>
-                    <li><a href="#">PRODUCT</a></li>
-                    <li><a href="#">COMMUNITY</a></li>
-                    <li><a href="#">ONLINE</a></li>
-                    `)
+            //$(".navbar ul li").eq(0).find("a").html("COMPANY")
+            $(".navbar ul").html(`
+                        <li><a href="#">COMPANY</a></li>
+                        <li><a href="#">MANAGE</a></li>
+                        <li><a href="#">PRODUCT</a></li>
+                        <li><a href="#">COMMUNITY</a></li>
+                        <li><a href="#">ONLINE</a></li>
+                        `)
         }else{
-           // $(".navbar ul li").eq(0).find("a").html("회사소개")
-           $(".navbar ul").html(`
+            //$(".navbar ul li").eq(0).find("a").html("회사소개")
+            $(".navbar ul").html(`
                     <li><a href="#">회사소개</a></li>
                     <li><a href="#">윤리경영</a></li>
                     <li><a href="#">제품/기술</a></li>
@@ -27,7 +27,8 @@ $(document).ready(function(){
                     `)
         }
 
-    }) //lang
+    }); // lang
+
 
     $(window).scroll(function(){
         let scrollY = window.pageYOffset;
@@ -36,8 +37,35 @@ $(document).ready(function(){
         if(scrollY > 200){
             $("#header").addClass("fixed");
         }else{
-            $("#header").removeClass("fixed");
+            $("#header").removeClass("fixed")
         }
     })
+
+        const $toElem = $(".toggle");
+        let chk = true;
+
+        $toElem.click(function(){
+            console.log("click")
+
+            if(chk == true){
+                $(this).addClass("active");
+                $(".navbar").css({left:0});
+                $(".lang").css("display","flex");
+                chk = false;
+            }else{
+                $(this).removeClass("active");
+                $(".navbar").css({left:"-100%"});
+                $(".lang").hide();
+                chk = true;
+            }
+        })
+
+        
+        $(window).resize(function(){
+            $(".toggle").removeClass("active");
+            $(".navbar").removeAttr("style");
+            $(".lang").removeAttr("style");
+        })
+
 
 }); //ready

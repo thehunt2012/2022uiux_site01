@@ -17,9 +17,11 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/colorbox.css">
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
     <script src="js/script.js"></script>
 
 </head>
@@ -32,11 +34,9 @@
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
+            <div id="menu" >
+            </div>
             <div class="navWrap">
-                <div class="close">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                </div>
                 <nav class="navbar">
                     <ul class="clearfix">
                         <li><a href="#">구세군</a></li>
@@ -104,30 +104,69 @@
         </div>
     
     </div>
-    <section class="section">
-        <ul class="clearfix">
-            <li class="icon1" style="background-color:#111;"></li>
-            <li class="video">
-                <img src="images/video_img.png" alt="">
+    <div class="contents">
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="card">
+                        <img src="images/icon01.png" alt="">
+                        <p>아동결연</p>
+                    </div>
+                </a>
             </li>
-            <li class="s_newsWrap" style="background-color:#888;"></li>
-            <li class="icon2" style="background-color:#222;"></li>
-            <li class="banner1">
-                <img src="images/banner01.png" alt="">
+            <li>
+                <div class="videoBtn">
+                    <a href="https://youtu.be/AuvORa4cA60" class="youtube">
+                        <img src="images/play_btn.png" alt="">
+                    </a>
+                </div>
             </li>
-            <li class="icon3" style="background-color:#555;"></li>
-            <li class="banner2">
-                <img src="images/banner02.png" alt="">
+            <li>3</li>
+            <li>
+                <a href="#">
+                    <div class="card red">
+                        <img src="images/icon02.png" alt="">
+                        <p>자선냄비</p>
+                    </div>
+                </a>
             </li>
-            <li class="icon4" style="background-color:#666;"></li>
-            <li class="banner3">
-                <img src="images/banner03.png" alt="">
+            <li style="background-image: url(images/card01.png);">
+                <a href="#"><h3>드림해피 해외봉사</h3></a>
             </li>
-            <li class="banner4">
-                <img src="images/banner04.png" alt="">
+            <li>
+                <a href="#">
+                    <div class="card">
+                        <img src="images/icon03.png" alt="">
+                        <p>캠페인</p>
+                    </div>
+                </a>
             </li>
-            <li class="icon5" style="background-color:#444;"></li>
+            <li style="background-image: url(images/card02.png);" class="cardTwo">
+                <a href="#"><h3>청소년캠프</h3></a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="card">
+                        <img src="images/icon04.png" alt="">
+                        <p>자원봉사</p>
+                    </div>
+                </a>
+            </li>
+            <li style="background-image: url(images/card03.png);">
+                <a href="#"><h3>해외선교</h3></a>
+            </li>
+            <li style="background-image: url(images/card04.png);">
+                <a href="#"><h3>약물중독 재활사업</h3></a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="card red">
+                        <img src="images/icon05.png" alt="">
+                        <p>기업사회공헌</p>
+                    </div>
+                </a>
+            </li>
         </ul>
-    </section>
+    </div>
 </body>
 </html>

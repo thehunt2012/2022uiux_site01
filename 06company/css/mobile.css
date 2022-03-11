@@ -1,29 +1,27 @@
 @charset "utf-8";
 
 @media  screen and (max-width:768px){
-    .header{
-        position: absolute;
-        
-        padding: 10px 16px;
-    }
     body{height: 100%;}
-    .header .lang{display: none;}
+
+    /* header */
+    .header{z-index: 9999; padding: 0px 16px;}
     .header.fixed{display: none;}
 
     .headerWrap{
         width: 100%; margin: 0 auto;
-        display: flex; justify-content:space-between; padding: 0 20px;
+        display: flex; justify-content:space-between;
     }
+    .headerWrap h1 a{background-size: 150px;}
     .headerWrap .toggle{
-        width: 50px; height: 40px; cursor: pointer; _background: #000;
+        width: 36px; height: 36px; cursor: pointer; position: fixed; top: 40px;
         display: flex; justify-content: center; align-items: center;
     }
     .headerWrap .toggle div{
-        width: 40px; height: 5px; background: #fff;
+        width: 30px; height: 3px; background: #fff;
         border-radius: 5px; position: absolute; transition: 0.3s;
     }
-    .headerWrap .toggle .bar1{transform: translateY(-15px);}
-    .headerWrap .toggle .bar3{transform: translateY(15px);}
+    .headerWrap .toggle .bar1{transform: translateY(-10px);}
+    .headerWrap .toggle .bar3{transform: translateY(10px);}
 
     .toggle.active .bar1{transform:translateY(0px) rotate(45deg);}
     .toggle.active .bar2{opacity: 0;}
@@ -31,7 +29,7 @@
     .toggle{display: flex;  top: 0; right: 20px;z-index: 2;}
 
     .navWrap{
-        width: 60%; height: 100%; background: #4e0303;
+        width: 60%; height: 100%; background: #6b0505;
         position: fixed; top: 0; right:-100%; transition: 0.3s;
         z-index: 1;
     }
@@ -47,23 +45,14 @@
         font-weight: normal; letter-spacing: -0.08em;
         margin-bottom: 30px;
     }
+    .navWrap .lang{position: fixed; right: 20px; bottom: 30px; display: none; transition: 0.3s;}
+    .lang div{width: 40px; height: 40px; font-size: 12px; padding: 9px 7px;}
 
-    .navWrap .close{
-        width: 50px; height: 40px; cursor: pointer;
-        display: flex; justify-content: center; align-items: center;
-        position: absolute; top: 50px; right: 35px;
-    }
-    .navWrap .close div{
-        width: 40px; height: 5px; background: #fff;
-        border-radius: 5px; position: absolute;
-    }
-    .navWrap .close .bar1{transform:rotate(45deg);}
-    .navWrap .close .bar2{transform:rotate(-45deg);}
-
-
+    /* visual */
     .visual{background-size: 300%; height: 1083px; position: relative;}
     .visual .prev1,
     .visual .next1{display: none;}
+    .container .title h1{font-size: 7vw;}
     .container .title p{display: none;}
 
 

@@ -1,6 +1,8 @@
 @charset "utf-8";
 body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 
+/* visual */
+
 .container{
     height: 100vh; min-height: 1000px;
     background-repeat: no-repeat;
@@ -48,7 +50,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 .visual .prev1{left: 0; margin-left: 60px;}
 .visual .next1{right: 0; margin-right: 60px;}
 
-/* header start */
+/* header */
 
 .header{
     width: 100%; position: absolute; top: 40px;
@@ -110,9 +112,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 }
 .lang div.active{background: #E2000E;}
 
-/* header end */
-
-/* contents start */
+/* contents */
 
 .contents{
     width: 1280px; height: 1280px; margin: 0 auto;
@@ -159,6 +159,26 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 .contents .videoBtn:hover{transform:scale(1.1);}
 /* 왜 X 아이콘이 안뜨는지!!!! 동영상 업로드가 안된다...........*/
 
+/* article */
+.main-article.one{background: #fff; padding: 80px 0;}
+.maTxt{text-align: center; margin-bottom: 50px;}
+.maTxt p{font-size: 28px; letter-spacing: -0.035em;}
+.maTxt h4{font-size: 36px; letter-spacing: -0.035em;}
+.maWrap{
+    display: flex; justify-content: space-between; align-items: center; 
+    width: 1222px; margin: 0 auto; margin-bottom: 50px; cursor: pointer;
+}
+.maWrap:hover{transform: scale(1.05); transition: 0.5s;}
+.wrapTxt .mainT{font-size: 24px; letter-spacing:-0.035em; color: #111; margin-bottom: 15px;}
+.wrapTxt .subT{font-size: 18px; letter-spacing:-0.035em; color: #333;}
 
+.mb-none{margin-bottom:0;}
 
-
+.main-article.two{
+    padding: 80px 0;
+    background-image: url(../images/news_bgi.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.main-article.two .newsWrap{width: 1280px; height: 640px; margin: 0 auto; background: #ccc;}

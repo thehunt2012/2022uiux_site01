@@ -55,5 +55,28 @@
     .container .title h1{font-size: 7vw;}
     .container .title p{display: none;}
 
+    /* contents */
+    .contents{width: 100%; padding: 0 20px; margin-top: -313px;}
+    .contents>ul>li{
+        width: 50%; order: 10; 
+        background-position: center; 
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .contents>ul>li:nth-child(1){order: 1; height: 230px;}
+    .contents>ul>li:nth-child(2){display: none;}
+    .contents>ul>li:nth-child(3){display: none;}
+    .contents>ul>li:nth-child(4){order: 2; height: 230px;}
+    .contents>ul>li:nth-child(5){orphans:5; width: 100%; height: 200px;}
+    .contents>ul>li:nth-child(6){order: 3; height: 230px;}
+    .contents>ul>li:nth-child(7){display: none;}
+    .contents>ul>li:nth-child(8){order: 4; height: 230px;}
+    .contents>ul>li:nth-child(9){orphans:6; width: 100%; height: 200px;}
+    .contents>ul>li:nth-child(10){orphans:7; width: 100%; height: 200px; position: relative; left: 0;}
+    .contents>ul>li:nth-child(11){display: none;}
+
+    .contents .card img{width: 70%;}
+    .contents .card p{font-size: 24px;}
+
 
 }

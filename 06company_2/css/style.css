@@ -66,7 +66,7 @@
 .contents>ul{display: flex; flex-wrap: wrap; position: relative;}
 .contents>ul>li{width: 25%; height: 310px;}
 .contents>ul>li:nth-child(1){background: #92c1d5;}
-.contents>ul>li:nth-child(2){}
+
 .contents>ul>li:nth-child(3){width: 50%; background: #ccc;}
 .contents>ul>li:nth-child(4){background: #b8307c;}
 .contents>ul>li:nth-child(5){background: #413d4e;}

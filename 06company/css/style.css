@@ -155,8 +155,10 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
     width: 100%; height: 3px; background: #fff;
     margin: 5px 0; box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
-.contents .cardTwo h3{top: 577px; left: 192px;}
+.contents .cardTwo h3{position: absolute; top: 577px; left: 192px;}
 .contents .videoBtn:hover{transform:scale(1.1);}
-/* 왜 X 아이콘이 안뜨는지!!!! */
+/* 왜 X 아이콘이 안뜨는지!!!! 동영상 업로드가 안된다...........*/
+
+
 
 

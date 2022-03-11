@@ -13,13 +13,12 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 .container.slide3{background-image: url(../images/slide01_3.png);}
 .container .title{text-align: center; transform: translateY(-161px);}
 .container .title h1{
-    text-align: center; font-size:4vw; color: #fff;
+    text-align: center; font-size:54px; color: #fff;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
     letter-spacing: -0.05em; margin-bottom: 20px;
 }
-/* 폰트크기 질문해야함 */
 .container .title p{
-    font-size: 1.5vw; color: #fff;
+    font-size: 24px; color: #fff;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
     letter-spacing: -0.05em; text-align: center;
 }
@@ -52,7 +51,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 /* header start */
 
 .header{
-    width: 100%; position: absolute;  top: 40px;
+    width: 100%; position: absolute; top: 40px;
      z-index: 1; transition: 0.3s;
 }
 .headerWrap{
@@ -70,7 +69,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 }
 .header.fixed{
     background: #fff; position: fixed;
-    width: 100%; height: 80px; top: 0; padding: 15px;
+    width: 100%; height: 80px; top: 0; padding: 15px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .header.fixed h1 a{
@@ -113,22 +112,51 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 
 /* header end */
 
+/* contents start */
 
-
-
-
-
-/* section start */
-
-.section{
+.contents{
     width: 1280px; height: 1280px; margin: 0 auto;
-    margin-top: -380px; margin-bottom: 80px; position: relative;
+    margin-top: -380px; margin-bottom: 80px;
 }
-.section li{width: 320px; height: 320px; float: left;}
-.section li:nth-child(3),
-.section li:nth-child(5),
-.section li:nth-child(9),
-.section li:nth-child(10){width: 640px;}
-.section li:nth-child(7){height: 640px;}
+.contents>ul{display: flex; flex-wrap: wrap; position: relative;}
+.contents>ul>li{width: 25%; height: 320px; position: relative;}
+.contents>ul>li:nth-child(1){background: #EFEDE9;}
+.contents>ul>li:nth-child(2){
+    background-image: url(../images/video_img.png);
+    display: flex; justify-content: center; align-items: center;
+}
+.contents>ul>li:nth-child(3){width: 50%; background: #ccc;}
+.contents>ul>li:nth-child(4){background: #E2000E;}
+.contents>ul>li:nth-child(5){width: 50%;}
+.contents>ul>li:nth-child(6){background: #D2D0CC;}
+.contents>ul>li:nth-child(7){height: 640px;}
+.contents>ul>li:nth-child(8){background: #EFEDE9;}
+.contents>ul>li:nth-child(9){width: 50%;}
+.contents>ul>li:nth-child(10){width: 50%; position: absolute; right: 320px; bottom: 0;}
+.contents>ul>li:nth-child(11){background: #C00000; position: absolute; right: 0; bottom: 0;}
+
+.contents>ul>li>a{
+    height: 100%; 
+    display: flex; justify-content: center; align-items: center;
+}
+.contents .card img{margin: 0 auto; margin-bottom: 20px;}
+.contents .card p{
+    color: #29303E; text-align: center;
+    font-size: 20px; font-weight: bold; letter-spacing: -0.035em;
+}
+.contents .card.red p{color: #fff;}
+.contents h3{
+    color: #fff; font-size: 24px; letter-spacing: -0.035em;
+    position: absolute; top: 20px; left: 30px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+.contents h3:after{
+    content: ""; display: block;
+    width: 100%; height: 3px; background: #fff;
+    margin: 5px 0; box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+.contents .cardTwo h3{top: 577px; left: 192px;}
+.contents .videoBtn:hover{transform:scale(1.1);}
+/* 왜 X 아이콘이 안뜨는지!!!! */
 
 

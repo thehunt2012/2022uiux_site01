@@ -32,15 +32,15 @@
     .navWrap .navbar{
         position: fixed; margin:initial;
         width: 60%; height: 100%;
-        background: #6b0505;
+        background: #383F4B;
         top:0; right: -100%; transition:0.3s;
         display: flex; justify-content: center; align-items: center;
     }
-    .navWrap .navbar > ul{display: block;}
+    .navWrap .navbar > ul{display: block; position: absolute; top: 100px; right: -20px;}
     .navWrap .navbar > ul > li{width: 100%;}
     .navWrap .navbar > ul > li:after{
         content: ""; display: block; width: 40%; height: 1px;
-        background: #eee; position: absolute; top: 45px; left: 30%;
+        background: #eee; position: absolute; top: 45px; left: 40%;
     }
     /* width 사이즈가 늘어났을때 밑줄도 같이 늘어났으면, 왼쪽으로 정렬됐으면ㅜㅜ */
     .navWrap .navbar > ul > li > a{

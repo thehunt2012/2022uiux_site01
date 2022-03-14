@@ -10,8 +10,13 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/animate.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+    <script src="js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     
 </head>
 <body>
@@ -80,10 +85,33 @@
                     <img src="images/icon01_06.png" alt="">
                 </a>
             </li>
-            <li>
+            <li class="news">
                 <!-- 3 -->
+                <ul class="nSlider">
+                    <li class="item"> <!-- 1 -->
+                        <ul>
+                            <li>
+                                <p>Lorem, ipsum dolor.</p>
+                            </li>
+                            <li><img src="images/img01_02.jpg" alt=""></li>
+                        </ul>
+                    </li>
+                    <li class="item"> <!-- 2 -->
+                        <ul>
+                            <li>
+                                <p>Lorem ipsum dolor sit.</p>
+                            </li>
+                            <li><img src="images/img01_02.jpg" alt=""></li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3 class="title">NEWS</h3>
+                <div class="btnWrap">
+                    <div class="left"><img src="images/btn01_01.jpg" alt=""></div>
+                    <div class="right"><img src="images/btn01_02.jpg" alt=""></div>
+                </div>
             </li>
-            <li>
+            <li class="wow fadeInLeft">
                 <a href="#">
                     <div class="card">
                         <img src="images/icon01_02.png" alt="">
@@ -92,14 +120,14 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" >
                     <div class="card">
                         <img src="images/icon01_03.png" alt="">
                         <p>투자정보</p>
                     </div>
                 </a>
             </li>
-            <li style="background-image: url(images/img01_03.jpg);">
+            <li class="wow fadeInRight" data-wow-offset="100" style="background-image: url(images/img01_03.jpg);">
                 <!-- 6 -->
                 <a href="#" class="flex-none pt30 pl30">
                     <div class="txtcard">

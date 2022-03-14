@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $(".slider").bxSlider();
+    $(".nSlider").bxSlider();
 
 
     $(".lang div").click(function(){

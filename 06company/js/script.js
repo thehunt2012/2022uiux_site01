@@ -3,12 +3,24 @@ $(document).ready(function(){
         controls:false,
         auto:true
     });
+    
     $(".next1").click(function(){
         visualslider.goToNextSlide()
     });
     $(".prev1").click(function(){
         visualslider.goToPrevSlide()
     }); // visualslider
+
+    var news1Slider = $(".news1Slider").bxSlider({
+        controls:false,
+        pager:false
+    });
+    $(".left").click(function(){
+        news1Slider.goToPrevSlide()
+    });
+    $(".right").click(function(){
+        news1Slider.goToNextSlide()
+    });
 
     $("nav > ul > li").hover(function(){
         $(this).find(".submenu").show();
@@ -45,7 +57,7 @@ $(document).ready(function(){
     //     let scrollY = window.pageYOffset;
     //     console.log(scrollY)
 
-    //     if(scrollY > 10){
+    //     if(scrollY > 200){
     //         $(".header").addClass("fixed");
     //     }else{
     //         $(".header").removeClass("fixed")
@@ -84,6 +96,9 @@ $(document).ready(function(){
         }
     });
 
+    $(".close").click(function(){
+        $(".navbar").css("right", "-100%");
+    });
 
     $(window).resize(function(){
         $(".toggle").removeClass("active");

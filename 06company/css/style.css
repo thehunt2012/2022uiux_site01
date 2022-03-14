@@ -139,6 +139,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
     height: 100%; 
     display: flex; justify-content: center; align-items: center;
 }
+.contents .card:hover{transform: scale(1.03); transition: 0.3s;}
 .contents .card img{margin: 0 auto; margin-bottom: 20px;}
 .contents .card p{
     color: #29303E; text-align: center;
@@ -158,6 +159,35 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 .contents .cardTwo h3{position: absolute; top: 577px; left: 192px;}
 .contents .videoBtn:hover{transform:scale(1.1);}
 /* 왜 X 아이콘이 안뜨는지!!!! 동영상 업로드가 안된다...........*/
+
+.contents .news1{position: relative;}
+.contents .news1 .item ul{display: flex;}
+.contents .news1 .item ul>li{width: 50%; background: #fff;}
+.contents .news1 .item ul>li:nth-child(1){position: relative;}
+.contents .news1 .item ul>li:nth-child(1):after{
+    content:"";display: block; position: absolute;
+    border-width:15px;
+    border-color:transparent transparent transparent #fff;
+    border-style:solid;
+    right: -30px; top: 50%;
+    transform:translateY(-50%)
+}
+.contents .news1 .newsBox{position: absolute; top: 90px; left: 20px;}
+.contents .news1 .newsBox .txt1{
+    font-size: 16px; letter-spacing: -0.035em; color:#111;
+    margin-bottom: 15px;
+}
+.contents .news1 .newsBox .txt2{font-size: 14px; letter-spacing: -0.035em; color:#333;}
+
+.contents .news1 .news1_title{display: flex; position: absolute; top: 30px; left: 20px;}
+.contents .news1 .news1_title p{
+    font-size: 20px; letter-spacing: -0.035em; color:#111;
+    font-weight: bold; margin-left: 5px;
+}
+.contents .news1 .btnWrap{
+    display: flex; cursor: pointer;
+    position: absolute; bottom: 30px; right: 350px;
+}
 
 /* article */
 .main-article.one{background: #fff; padding: 80px 0;}

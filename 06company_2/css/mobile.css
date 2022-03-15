@@ -8,10 +8,11 @@
     #header .navbarWrap{width: 100%;padding:0 20px}
     #header .navbar{
         position: fixed;margin:initial;
-        width: 100%;height: 100%;
+        width: 70%;height: 100%;
         background: #eee;
         top:0;left: -100%;transition:0.3s;
         display: flex;justify-content: center;align-items: center;
+        z-index: 11; box-shadow: 0 0 20px rgba(0,0,0,0.7);
     }
     
     #header .navbar ul{
@@ -21,10 +22,17 @@
     #header .navbar li:after{display: none;}
     #header .navbar li a{color:#666;font-size:20px}
 
+    .overLayer{
+        width: 100%; height: 100%;
+        position: fixed; left: 0; top: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 10; display: none;
+    }
+
     .toggle{
         display: block;position: fixed;top:18px;right:16px;
         width: 24px;height: 24px;cursor: pointer;
-        display: flex;justify-content: center;align-items: center;
+        display: flex;justify-content: center;align-items: center; z-index: 999999;
         }
     .toggle div{
         width: 20px;height: 2px;background: #000;
@@ -66,5 +74,14 @@
     .contents>ul>li:nth-child(11){_display: none; width: 100%; position: relative; height: 250px;}
 
     .contents .card img{width: 50%;}
+
+    /* vision */
+    .container .section{width: 100%; padding: 0 16px;}
+    .container .section .ban{flex-wrap: wrap;}
+    .container .section .ban li{
+        width:calc( (100% - 15px) / 2 ); cursor: pointer; 
+        transition: 0.5s; margin-bottom: 30px;
+    }
+    .container .section .card{padding: 20px 0;}
 
 }

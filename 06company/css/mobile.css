@@ -4,7 +4,7 @@
     body{height: 100%; background: #fff;}
 
     /* header */
-    .header{z-index: 9999; padding: 0px 16px;}
+    .header{z-index: 99999; padding: 0px 16px;}
     .header.fixed{display: none;}
 
     .headerWrap{
@@ -14,7 +14,7 @@
     .headerWrap h1 a{background-size: 150px;}
     .headerWrap .toggle{
         width: 36px; height: 36px; cursor: pointer; position: absolute; top: 0px;
-        display: flex; justify-content: center; align-items: center;
+        display: flex; justify-content: center; align-items: center; _z-index: 11;
     }
     .headerWrap .toggle div{
         width: 30px; height: 3px; background: #fff;
@@ -47,20 +47,32 @@
         background: #383F4B;
         top:0; right: -100%; transition:0.3s;
         display: flex; justify-content: center; align-items: center;
+        z-index: 11; box-shadow: 0 0 10px rgba(0,0,0,0.8);
     }
     .navWrap .navbar > ul{display: block; position: absolute; top: 200px;}
     .navWrap .navbar > ul > li{width: 100%;}
     .navWrap .navbar > ul > li:after{
-        content: ""; display: block; width: 100%; height: 1px;
-        background: #666; position: absolute; top: 40px; left: 165px; transform: scale(1);
+        /* content: ""; display: block; width: 100%; height: 1px;
+        background: #666; position: absolute; top: 40px; left: 165px; transform: scale(1); */
+        display: none;
     }
     .navWrap .navbar > ul > li:hover:after{}
     .navWrap .navbar > ul > li > a{
         font-weight: normal; letter-spacing: -0.08em;
         margin-bottom: 10px;
     }
-    .navWrap .lang{position: fixed; right: 20px; bottom: 30px; display: none; transition: 0.3s;}
+    .navWrap .lang{
+        position: fixed; right: 20px; bottom: 30px; display: none; 
+        transition: 0.3s; z-index: 11;
+    }
     .lang div{width: 40px; height: 40px; font-size: 12px; padding: 9px 7px;}
+
+    .overLayer{
+        width: 100%; height: 100%;
+        position: fixed; top: 0; left: 0;
+        background: rgba(0,0,0,0.5);
+        display: none; z-index: 10;
+    }
 
     /* visual */
     .visual{background-size: 300%; height: 1083px; position: relative;}

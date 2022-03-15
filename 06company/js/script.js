@@ -87,23 +87,28 @@ $(document).ready(function(){
             $(this).addClass("active");
             $(".navbar").css("right",0);
             $(".lang").css("display","flex");
+            $(".overLayer").show();
             chk = 1;
         }else{
             $(this).removeClass("active");
             $(".navbar").css("right","-100%");
             $(".lang").hide();
+            $(".overLayer").hide();
             chk = 0;
         }
     });
 
     $(".close").click(function(){
+        $(".toggle").removeClass("active");
         $(".navbar").css("right", "-100%");
+        $(".overLayer").hide();
     });
 
     $(window).resize(function(){
         $(".toggle").removeClass("active");
         $(".navWrap").removeAttr("style");
         $(".lang").removeAttr("style");
+        $(".overLayer").hide();
     })
     
     $(".youtube").colorbox({

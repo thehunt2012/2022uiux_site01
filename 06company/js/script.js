@@ -60,7 +60,7 @@ $(document).ready(function(){
         if(scrollY > 200){
             $(".header").addClass("fixed");
         }else{
-            $(".header").removeClass("fixed")
+            $(".header").removeClass("fixed");
         }
     })
 

@@ -20,15 +20,18 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/colorbox.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <script src="js/jquery.colorbox-min.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <script>
-        new WOW().init()
+        new WOW().init();
     </script>
 </head>
 <body>
@@ -37,7 +40,7 @@
             <h1><a href="#" title="홈 바로가기">logo</a></h1>
             <div class="navWrap">
                 <nav class="navbar">
-                    <ul class="clearfix">
+                    <ul>
                         <li><a href="#">구세군</a></li>
                         <li>
                             <a href="#">후원하기</a>
@@ -292,7 +295,7 @@
             <p>구세군과 함께하는</p>
             <h4>사람들을 만나보세요</h4>
         </div>
-        <div class="newsWrap">
+        <div class="swiperWrap">
             <ul>
                 <li>
                     <div class="titleBox">
@@ -308,17 +311,17 @@
                         우리는 구세군입니다.
                     </p>
                     <div class="btnWrap">
-                        <div class="prev2"><img src="images/news_prev.png" alt=""></div>
-                        <div class="next2"><img src="images/news_next.png" alt=""></div>
+                        <div class="prev2 swiper-button-prev"></div>
+                        <div class="next2 swiper-button-next"></div>
                     </div>
                 </li>
                 <li>
                     <ul>
-                        <li class="news2">
-                            <ul class="news2Slider">
-                                <li>
+                        <li class="swiper swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
                                     <img src="images/news01.png" alt="">
-                                    <div class="news2Box">
+                                    <div class="swiperBox">
                                         <p>
                                             사람들이 찾아오며 단순히 매출만 오르는 것을<br>
                                             기대하지는 않았습니다. <br>
@@ -340,8 +343,8 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="news2Box top">
+                                <li class="swiper-slide">
+                                    <div class="swiperBox top">
                                         <p>
                                             서울후생원은  100여년의 역사 만큼<br>
                                             많은 이야기들을 담고 있는데요. <br>
@@ -360,9 +363,9 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li>
+                                <li class="swiper-slide">
                                     <img src="images/news03.png" alt="">
-                                    <div class="news2Box">
+                                    <div class="swiperBox">
                                         <p>
                                             상생공존, 문화나눔, 환경지향, 공익상품의 주제로<br>
                                             사회공헌활동을 전개하는 신한은행은 <br>
@@ -382,8 +385,8 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="news2Box top">
+                                <li class="swiper-slide">
+                                    <div class="swiperBox top">
                                         <p>
                                             앞으로 후원금을 통해 수혜자에게 어떤 변화가 <br>
                                             일어나길 바라시는지? <br>
@@ -413,5 +416,82 @@
             </ul>
         </div>
     </div>
+    <div class="main-article three">
+        <div class="maTxt">
+            <p>변화된 세상,</p>
+            <h4>작은 나눔이 이끌어갑니다.</h4>
+        </div>
+        <div class="banner">
+            <div class="left">
+                <div class="bBox">
+                    <img src="images/banner01.png" alt="" class="img">
+                    <h5>세상 가장 낮은 곳에 있는<br>이웃과 함께</h5>
+                </div>
+                <div class="bn_btn">
+                    <img src="images/bn_icon.png" alt="">
+                    <p>구세군 자선 냄비</p>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="right">
+                <div class="bBox">
+                    <img src="images/banner02.png" alt="" class="img">
+                    <h5>우리 이웃의 건강한 내일을 위해<br>함께합니다.</h5>
+                </div>
+                <div class="bn_btn">
+                    <img src="images/bn_icon.png" alt="">
+                    <p>온라인 기부</p>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="utilWrap">
+            <div class="util">
+                <ul class="uNav">
+                    <li><a href="#">후원 가이드</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">1:1문의</a></li>
+                    <li><a href="#">자원봉사 신청</a></li>
+                </ul>
+                <div class="fSite">
+                    <span class="arrow"></span>
+                    <button>Family Site</button>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <img src="images/logo_footer 1.png" alt="">
+            <div class="wrap">
+                <p>03737 서울특별시 서대문구 충정로 7 구세군빌딩 16-17층</p>
+                <p>
+                    대표전화 : 02-6364-4000
+                    <span class="blank"></span>
+                    팩스 : 02-6364-4099
+                    <span class="blank"></span>
+                    이메일 : info@salvationarmy.kr
+                </p>
+                <p>
+                    대표 : CHANG MAN HEE
+                    <span class="blank"></span>
+                    구세군 한국군국
+                    <span class="blank"></span>
+                    고유번호 : 102-82-03430
+                </p>
+                <div class="call">
+                    <p>후원문의</p>
+                    <h5>02.6364.4072</h5>
+                </div>
+            </div>
+            <ul class="sns clearfix">
+                <li><img src="images/ir_icon 1.png" alt=""></li>
+                <li><img src="images/ir_icon 2.png" alt=""></li>
+                <li><img src="images/ir_icon 3.png" alt=""></li>
+                <li><img src="images/ir_icon 4.png" alt=""></li>
+            </ul>
+            <p class="copy">Copyright © 2018 Salvation Army all rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

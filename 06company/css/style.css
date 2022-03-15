@@ -190,6 +190,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 }
 
 /* article */
+/* one */
 .main-article.one{background: #fff; padding: 80px 0;}
 .maTxt{text-align: center; margin-bottom: 50px;}
 .maTxt p{font-size: 28px; letter-spacing: -0.035em;}
@@ -204,49 +205,63 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 
 .mb-none{margin-bottom:0;}
 
+/* two */
+
 .main-article.two{
     padding: 80px 0;
     background: url(../images/news_bgi.png) no-repeat center fixed;
     background-size: cover;
 }
-.main-article.two .newsWrap{
+.main-article.two .swiperWrap{
     width: 1280px; height: 640px; margin: 0 auto; background: #EFEDE9;
     overflow: hidden;
 }
-.main-article.two .newsWrap > ul{display: flex;}
-.main-article.two .newsWrap > ul > li{height: 640px;}
-.main-article.two .newsWrap > ul >li:nth-child(1){
+.main-article.two .swiperWrap > ul{display: flex;}
+.main-article.two .swiperWrap > ul > li{height: 640px;}
+.main-article.two .swiperWrap > ul >li:nth-child(1){
     background: #E2000E; width: 320px; padding: 90px 44px 50px 44px;
     position: relative;
 }
-.newsWrap .titleBox{margin-bottom: 107px;}
-.newsWrap .titleBox img{display: block; margin: 0 auto;}
-.newsWrap .titleBox h3{
+.swiperWrap .titleBox{margin-bottom: 107px;}
+.swiperWrap .titleBox img{display: block; margin: 0 auto;}
+.swiperWrap .titleBox h3{
     text-align: center; color: #fff; 
     font-size: 36px; letter-spacing: -0.035em;
 }
-.newsWrap .txt{
+.swiperWrap .txt{
     color:#fff; font-size: 16px; 
     letter-spacing:-0.035em; margin-bottom: 107px;
 }
-.newsWrap .btnWrap{
-    display: flex; position: absolute; 
+.swiperWrap .btnWrap{
+    position: absolute; 
     right: 44px; cursor: pointer;
 }
-
-.main-article.two .newsWrap .news2 > ul{width: 960px; display: flex;}
-.main-article.two .newsWrap .news2 .news2Box{height: 320px;}
-.news2 .news2Box{padding: 37px 22px;}
-.news2 .news2Box p{font-size: 14px; letter-spacing: -0.035em; color:#222;}
-.news2 .news2Box span{
+.swiperWrap .btnWrap .prev2{
+    background-image: url(../images/news_prev.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.swiperWrap .btnWrap .next2{
+    background-image: url(../images/news_next.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* 왜 화살표 방향이 반대인지 */
+.main-article.two .swiperWrap .swiper > ul{width: 960px; display: flex;}
+.main-article.two .swiperWrap .swiper .swiperBox{height: 320px;}
+.swiper .swiperBox{padding: 37px 22px;}
+.swiper .swiperBox p{font-size: 14px; letter-spacing: -0.035em; color:#222;}
+.swiper .swiperBox span{
     font-size: 12px; letter-spacing: -0.035em; color:#444;
     position: absolute; bottom: 40px;
 }
-.news2 .news2Box.top span{top: 270px;}
-.news2 .news2Box i{color:#E2000E; margin-right: 5px;}
-.news2 > ul > li{position: relative; cursor: pointer;}
-.news2 > ul > li:nth-child(1):after,
-.news2 > ul > li:nth-child(3):after{
+.swiper .swiperBox.top span{top: 270px;}
+.swiper .swiperBox i{color:#E2000E; margin-right: 5px;}
+.swiper > ul > li{position: relative; cursor: pointer;}
+.swiper > ul > li:nth-child(1):after,
+.swiper > ul > li:nth-child(3):after{
     content:"";display: block; position: absolute;
     border-width:15px;
     border-color: transparent transparent #EFEDE9 transparent;
@@ -254,7 +269,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
     left: 50%; bottom: 50%;
     transform:translateX(-50%)
 }
-.news2 > ul > li:nth-child(2n):after{
+.swiper > ul > li:nth-child(2n):after{
     content:"";display: block; position: absolute;
     border-width:15px;
     border-color: #EFEDE9 transparent transparent transparent;
@@ -263,23 +278,100 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
     transform:translateX(-50%)
 }
 
-.news2 .view{
+.swiper .view{
     width: 320px; height: 320px;
     position: absolute;
     background:rgba(0,0,0,0.6);
     transition: 0.7s;
 }
-.news2 > ul > li:nth-child(1) .view,
-.news2 > ul > li:nth-child(3) .view{top: -100%;}
-.news2 > ul > li:nth-child(2n) .view{top: 100%;}
-.news2 > ul > li:nth-child(1):hover .view,
-.news2 > ul > li:nth-child(3):hover .view{top: 0;}
-.news2 > ul > li:nth-child(2n):hover .view{top: 50%;}
+.swiper > ul > li:nth-child(1) .view,
+.swiper > ul > li:nth-child(3) .view{top: -100%;}
+.swiper > ul > li:nth-child(2n) .view{top: 100%;}
+.swiper > ul > li:nth-child(1):hover .view,
+.swiper > ul > li:nth-child(3):hover .view{top: 0;}
+.swiper > ul > li:nth-child(2n):hover .view{top: 50%;}
 
-.news2 .viewTxt{position: absolute; bottom: 25px; left: 25px; color:#EFEDE9;}
-.news2 .viewTxt h5{font-size: 24px; letter-spacing:-0.05em;}
-.news2 .viewTxt h5:before{
+.swiper .viewTxt{position: absolute; bottom: 25px; left: 25px; color:#EFEDE9;}
+.swiper .viewTxt h5{font-size: 24px; letter-spacing:-0.05em;}
+.swiper .viewTxt h5:before{
     content: ""; display: block; background:#EFEDE9;
     width: 45px; height: 2px; margin-bottom: 5px;
 }
-.news2 .viewTxt p{font-size: 16px; letter-spacing: -0.05em;}
+.swiper .viewTxt p{font-size: 16px; letter-spacing: -0.05em;}
+
+/* three */
+.main-article.three{background: #fff; padding: 80px 0;}
+.banner{
+    width: 1280px; margin: 0 auto; 
+    display: flex; justify-content: space-between;
+}
+.banner > div{position: relative; overflow: hidden;}
+.banner h5{
+    font-size: 28px; letter-spacing:-0.05em; color:#fff;
+    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.3);
+    position: absolute; top: 40px; left: 40px;
+}
+.banner .bn_btn{
+    width: 280px; height: 55px; background: #E2000E;
+    display: flex; align-items: center; cursor: pointer;
+    color:#fff; border-radius:5px; padding: 10px;
+    position: absolute; bottom: 30px; right: 30px;
+}
+.banner .bn_btn img{width: 45px; height: 35px;}
+.banner .bn_btn p{
+    font-size: 18px; font-weight:bold; letter-spacing: -0.05em;
+    margin: 0 30px;
+}
+.banner .left .bn_btn{padding-left: 26px;}
+.banner .right .bn_btn{padding-left: 40px;}
+.banner div:hover .img{transform: scale(1.1); transition: 0.5s;}
+
+/* footer */
+footer{background: #333;}
+footer .utilWrap{width: 1280px; margin: 0 auto; padding: 18px 0;}
+.utilWrap:after{
+    content: ""; display: block; height: 1px;
+    background: #444; margin-top: 18px;
+}
+/* ㅜㅜ??? */
+footer .util{display: flex; justify-content: space-between;}
+footer .uNav{width: 308px; display: flex; justify-content: space-between;}
+footer .uNav li{position: relative; padding: 0 11px;}
+footer .uNav li:after{
+    content: ""; display: block; width: 1px; height: 7px;
+    background: #c4c4c4; position: absolute; top:10px; left: 0;
+}
+footer .uNav li:first-child:after{content:""; display: none;}
+footer .uNav a{
+    font-size: 14px; letter-spacing: -0.1em; color:#eee;
+}
+footer .fSite{position: relative;}
+footer .fSite button{
+    width: 180px; height: 30px; border: 1px solid #888;
+    background: #333; color: #888; font-size: 14px; font-weight: bold;
+    letter-spacing: -0.05em; text-align: left; padding: 0 0 0 10px;
+}
+footer .fSite .arrow{
+    content:""; display: block; 
+    position: absolute;
+    border-width: 6px;
+    border-color:transparent transparent #888 transparent;
+    border-style:solid;
+    right: 10px; top: 50%;
+    transform:translateY(-70%);
+}
+footer .info{width: 1280px; margin: 0 auto; padding: 18px 250px; position: relative;}
+footer .info > img{position: absolute; left: 0;}
+footer .info .wrap p{font-size: 14px; letter-spacing: -0.1em; color:#888;}
+footer .info .wrap p > span{content: ""; display: inline-block; width: 15px;}
+footer .call{
+    position: absolute; right: 0; top: 18px;
+    letter-spacing: -0.05em;
+}
+footer .call h5{font-size: 28px; color:#fff;}
+footer .sns{margin:14px 0 10px;}
+footer .sns li{float: left;}
+footer .copy{
+    font-size: 12px; letter-spacing: -0.05em; color: #444;
+
+}

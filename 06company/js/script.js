@@ -53,33 +53,6 @@ $(document).ready(function(){
  
     });
 
-    $(window).scroll(function(){
-        let scrollY = window.pageYOffset;
-        console.log(scrollY)
-
-        if(scrollY > 200){
-            $(".header").addClass("fixed");
-        }else{
-            $(".header").removeClass("fixed");
-        }
-    })
-
-    $(window).resize(function(){
-        wWidth = $(window).width();
-        console.log(wWidth)
-
-        window.addEventListener("scroll",function(){
-            let scrollY = window.pageYOffset;
-
-            if(wWidth > 700){
-                if(scrollY > 200){
-                    document.querySelector(".header").classList.add("fixed");
-                }else{
-                    document.querySelector(".header").classList.remove("fixed");
-                }
-            }
-        });
-    })
    
     let chk = 0;
     $(".toggle").click(function(){
@@ -102,6 +75,7 @@ $(document).ready(function(){
         $(".toggle").removeClass("active");
         $(".navbar").css("right", "-100%");
         $(".overLayer").hide();
+        $(".lang").hide();
     });
 
     $(window).resize(function(){
@@ -109,12 +83,45 @@ $(document).ready(function(){
         $(".navWrap").removeAttr("style");
         $(".lang").removeAttr("style");
         $(".overLayer").hide();
+        $(".header").removeClass("fixed");
+
+        wSize();
     })
+
+    function wSize(){
+        let wWidth = $(window).width();
+        console.log(wWidth);
+
+        if(wWidth > 700){
+            $(window).scroll(function(){
+                let scrollY = window.pageYOffset;
+                console.log(scrollY)
+        
+                if(scrollY > 200){
+                    $(".header").addClass("fixed");
+                }else{
+                    $(".header").removeClass("fixed");
+                }
+            });
+        }else{
+            $(window).off("scroll")
+        }
+    }
+    wSize();
     
     $(".youtube").colorbox({
         iframe:true,
         innerWidth:1000,
         innerHeight:562.5
     });
+
+    var swiper = new swiper('.swiper-container',{
+        loop: true,
+        
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        }
+    })
 
 }); // ready

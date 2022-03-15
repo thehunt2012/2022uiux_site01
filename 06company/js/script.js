@@ -53,16 +53,16 @@ $(document).ready(function(){
  
     });
 
-    // $(window).scroll(function(){
-    //     let scrollY = window.pageYOffset;
-    //     console.log(scrollY)
+    $(window).scroll(function(){
+        let scrollY = window.pageYOffset;
+        console.log(scrollY)
 
-    //     if(scrollY > 200){
-    //         $(".header").addClass("fixed");
-    //     }else{
-    //         $(".header").removeClass("fixed")
-    //     }
-    // })
+        if(scrollY > 200){
+            $(".header").addClass("fixed");
+        }else{
+            $(".header").removeClass("fixed")
+        }
+    })
 
     $(window).resize(function(){
         wWidth = $(window).width();

@@ -1,5 +1,5 @@
 @charset "utf-8";
-body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
+body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; _overflow-x:hidden;}
 
 /* visual */
 
@@ -54,7 +54,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 
 .header{
     width: 100%; position: absolute; top: 40px;
-     z-index: 1; transition: 0.3s;
+     z-index: 999; transition: 0.3s;
 }
 .headerWrap{
     width: 1280px; margin: 0 auto;
@@ -235,6 +235,10 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 .swiperWrap .btnWrap{
     position: absolute; 
     right: 44px; cursor: pointer;
+    display: flex;
+}
+.swiperWrap .btnWrap div{
+    width: 40px;height: 40px; background: block;
 }
 .swiperWrap .btnWrap .prev2{
     background-image: url(../images/news_prev.png);
@@ -248,7 +252,6 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* 왜 화살표 방향이 반대인지 */
 .main-article.two .swiperWrap .swiper > ul{width: 960px; display: flex;}
 .main-article.two .swiperWrap .swiper .swiperBox{height: 320px;}
 .swiper .swiperBox{padding: 37px 22px;}
@@ -259,9 +262,9 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 }
 .swiper .swiperBox.top span{top: 270px;}
 .swiper .swiperBox i{color:#E2000E; margin-right: 5px;}
-.swiper > ul > li{position: relative; cursor: pointer;}
-.swiper > ul > li:nth-child(1):after,
-.swiper > ul > li:nth-child(3):after{
+.swiper .basic{position: relative; cursor: pointer;}
+.swiper .basic .img{overflow: hidden;}
+.swiper .basic:after{
     content:"";display: block; position: absolute;
     border-width:15px;
     border-color: transparent transparent #EFEDE9 transparent;
@@ -269,27 +272,23 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
     left: 50%; bottom: 50%;
     transform:translateX(-50%)
 }
-.swiper > ul > li:nth-child(2n):after{
+.swiper .change:after{
     content:"";display: block; position: absolute;
     border-width:15px;
     border-color: #EFEDE9 transparent transparent transparent;
     border-style:solid;
     left: 50%; top: 50%;
-    transform:translateX(-50%)
 }
-
-.swiper .view{
+.swiper .basic .view{
     width: 320px; height: 320px;
     position: absolute;
-    background:rgba(0,0,0,0.6);
+    background:rgba(0,0,0,0.4);
     transition: 0.7s;
+    top: 0; left: 0;
 }
-.swiper > ul > li:nth-child(1) .view,
-.swiper > ul > li:nth-child(3) .view{top: -100%;}
-.swiper > ul > li:nth-child(2n) .view{top: 100%;}
-.swiper > ul > li:nth-child(1):hover .view,
-.swiper > ul > li:nth-child(3):hover .view{top: 0;}
-.swiper > ul > li:nth-child(2n):hover .view{top: 50%;}
+.swiper .basic.change .view{top: 320px; left: 0;}
+.swiper .basic:hover img{transform: scale(1.1); transition: 0.3s;}
+.swiper .basic:hover .view{background:rgba(0,0,0,0.2);}
 
 .swiper .viewTxt{position: absolute; bottom: 25px; left: 25px; color:#EFEDE9;}
 .swiper .viewTxt h5{font-size: 24px; letter-spacing:-0.05em;}
@@ -298,6 +297,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
     width: 45px; height: 2px; margin-bottom: 5px;
 }
 .swiper .viewTxt p{font-size: 16px; letter-spacing: -0.05em;}
+.swiper-pagination{display: none;}
 
 /* three */
 .main-article.three{background: #fff; padding: 80px 0;}
@@ -329,11 +329,6 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9;}
 /* footer */
 footer{background: #333;}
 footer .utilWrap{width: 1280px; margin: 0 auto; padding: 18px 0;}
-.utilWrap:after{
-    content: ""; display: block; height: 1px;
-    background: #444; margin-top: 18px;
-}
-/* ㅜㅜ??? */
 footer .util{display: flex; justify-content: space-between;}
 footer .uNav{width: 308px; display: flex; justify-content: space-between;}
 footer .uNav li{position: relative; padding: 0 11px;}
@@ -344,6 +339,10 @@ footer .uNav li:after{
 footer .uNav li:first-child:after{content:""; display: none;}
 footer .uNav a{
     font-size: 14px; letter-spacing: -0.1em; color:#eee;
+}
+.wall{
+    content: ""; display: block; height: 1px;
+    background: #444;
 }
 footer .fSite{position: relative;}
 footer .fSite button{
@@ -368,10 +367,10 @@ footer .call{
     position: absolute; right: 0; top: 18px;
     letter-spacing: -0.05em;
 }
+footer .call p{font-size: 14px; letter-spacing: -0.1em; color:#888;}
 footer .call h5{font-size: 28px; color:#fff;}
 footer .sns{margin:14px 0 10px;}
 footer .sns li{float: left;}
 footer .copy{
     font-size: 12px; letter-spacing: -0.05em; color: #444;
-
 }

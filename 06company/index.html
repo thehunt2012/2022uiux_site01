@@ -15,15 +15,15 @@
     
     <link rel="stylesheet" href="css/jquery.bxslider.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/colorbox.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/colorbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
 
 
     <script src="js/jquery-3.1.1.min.js"></script>
@@ -131,7 +131,7 @@
             </li>
             <li>
                 <div class="videoBtn">
-                    <a href="https://youtu.be/AuvORa4cA60" class="youtube">
+                    <a href="https://www.youtube.com/embed/AuvORa4cA60" class="youtube">
                         <img src="images/play_btn.png" alt="">
                     </a>
                 </div>
@@ -299,6 +299,7 @@
             <h4>사람들을 만나보세요</h4>
         </div>
         <div class="swiperWrap">
+            <div class="swiper-pagination" style="--swiper-theme-color: #E2000E;"></div>
             <ul>
                 <li>
                     <div class="titleBox">
@@ -314,16 +315,17 @@
                         우리는 구세군입니다.
                     </p>
                     <div class="btnWrap">
-                        <div class="prev2 swiper-button-prev"></div>
-                        <div class="next2 swiper-button-next"></div>
+                        <div class="prev2"></div>
+                        <div class="next2"></div>
                     </div>
+                    
                 </li>
                 <li>
                     <ul>
                         <li class="swiper swiper-container">
                             <ul class="swiper-wrapper">
-                                <li class="swiper-slide">
-                                    <img src="images/news01.png" alt="">
+                                <li class="swiper-slide basic">
+                                    <div class="img"><img src="images/news01.png" alt=""></div>
                                     <div class="swiperBox">
                                         <p>
                                             사람들이 찾아오며 단순히 매출만 오르는 것을<br>
@@ -346,7 +348,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="swiper-slide">
+                                <li class="change swiper-slide basic">
                                     <div class="swiperBox top">
                                         <p>
                                             서울후생원은  100여년의 역사 만큼<br>
@@ -358,7 +360,7 @@
                                         </p>
                                         <span><i class="fas fa-heart"></i>105</span>
                                     </div>
-                                    <img src="images/news02.png" alt="">
+                                    <div class="img"><img src="images/news02.png" alt=""></div>
                                     <div class="view">
                                         <div class="viewTxt">
                                             <h5>김지현</h5>
@@ -366,8 +368,8 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="swiper-slide">
-                                    <img src="images/news03.png" alt="">
+                                <li class="swiper-slide basic">
+                                    <div class="img"><img src="images/news03.png" alt=""></div>
                                     <div class="swiperBox">
                                         <p>
                                             상생공존, 문화나눔, 환경지향, 공익상품의 주제로<br>
@@ -388,7 +390,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="swiper-slide">
+                                <li class="change swiper-slide basic">
                                     <div class="swiperBox top">
                                         <p>
                                             앞으로 후원금을 통해 수혜자에게 어떤 변화가 <br>
@@ -401,7 +403,7 @@
                                         </p>
                                         <span><i class="fas fa-heart"></i>105</span>
                                     </div>
-                                    <img src="images/news04.png" alt="">
+                                    <div class="img"><img src="images/news04.png" alt=""></div>
                                     <div class="view">
                                         <div class="viewTxt">
                                             <h5>즐거운 녀석들</h5>
@@ -464,8 +466,9 @@
                 </div>
             </div>
         </div>
+        <div class="wall"></div>
         <div class="info">
-            <img src="images/logo_footer 1.png" alt="">
+            <img src="images/logo_footer 1.png" alt="" class="logo">
             <div class="wrap">
                 <p>03737 서울특별시 서대문구 충정로 7 구세군빌딩 16-17층</p>
                 <p>
@@ -482,10 +485,10 @@
                     <span class="blank"></span>
                     고유번호 : 102-82-03430
                 </p>
-                <div class="call">
-                    <p>후원문의</p>
-                    <h5>02.6364.4072</h5>
-                </div>
+            </div>
+            <div class="call">
+                <p>후원문의</p>
+                <h5>02.6364.4072</h5>
             </div>
             <ul class="sns clearfix">
                 <li><img src="images/ir_icon 1.png" alt=""></li>

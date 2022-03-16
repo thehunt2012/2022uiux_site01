@@ -117,11 +117,23 @@ $(document).ready(function(){
 
     var swiper = new Swiper('.swiper-container',{
         loop: true,
-        slidesPerView:3,
+        slidesPerView:2,
         
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: '.next2',
+            prevEl: '.prev2'
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          spaceBetween: 20,
+        breakpoints: {
+            768: {
+                slidesPerView:3,
+                spaceBetween: 0,
+               
+            }
         }
     })
 

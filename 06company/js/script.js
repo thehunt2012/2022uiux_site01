@@ -115,8 +115,9 @@ $(document).ready(function(){
         innerHeight:562.5
     });
 
-    var swiper = new swiper('.swiper-container',{
+    var swiper = new Swiper('.swiper-container',{
         loop: true,
+        slidesPerView:3,
         
         navigation: {
             nextEl: '.swiper-button-next',

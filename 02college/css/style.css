@@ -127,7 +127,7 @@ section.section{
 }
 .txtWrap .btn{
     background: #222D29; border-radius: 5px;
-    width: 168px; height: 35px;
+    width: 168px; height: 35px; cursor: pointer;
     display: flex; justify-content: center; align-items: center;
 }
 .txtWrap .btn a{
@@ -157,7 +157,7 @@ section.section{
     color: white; font-size: 14px;
     letter-spacing: -0.08em; 
 }
-.card .btntwo:hover{transform:scale(1.1)}
+.card .btntwo:hover{transform:scale(1.1); transition: 0.2s;}
 
 
 .boWrap{margin: 23px;}

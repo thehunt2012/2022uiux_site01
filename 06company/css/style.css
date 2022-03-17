@@ -373,3 +373,47 @@ footer .sns li{float: left;}
 footer .copy{
     font-size: 12px; letter-spacing: -0.05em; color: #444;
 }
+
+/* sub */
+body.sub{background: #fff;}
+
+section.sub-visual{
+    height: 25.5vw; position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+section.sub-visual .inner{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff; letter-spacing: -0.035em;
+}
+section.sub-visual .inner h2{font-size: 48px;}
+section.sub-visual .inner p{font-size: 24px; text-align: center;}
+section.sub-visual::after{
+    content:""; display: block;
+    width: 100%; height: 3px; background: #E2000E;
+    position: absolute; bottom: 0; left: 0;
+}
+section.content{margin-top: 30px;}
+section.content .locat{
+    display: flex; align-items: center; 
+    width: 1280px; margin: 0 auto;
+}
+section.content .locat ul{display: flex;}
+section.content .locat ul li{position: relative;}
+section.content .locat ul li::after{
+    content:""; display: block; width: 1px; height: 13px;
+    background: #111; position: absolute; top: 10px;
+}
+section.content .locat ul li:first-child::after{display: none;}
+section.content .locat ul li a{
+    display: block; padding: 0 10px; color: #111;
+    font-size: 20px;
+}
+section.content .locat ul li:last-child a{color:#E2000E;}
+section.content h3{
+    font-size: 36px; text-align: center; color: #111;
+    margin:50px 0 80px 0;
+}

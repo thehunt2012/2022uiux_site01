@@ -14,7 +14,7 @@
     .headerWrap h1 a{background-size: 150px;}
     .headerWrap .toggle{
         width: 36px; height: 36px; cursor: pointer; position: absolute; top: 0px;
-        display: flex; justify-content: center; align-items: center; _z-index: 11;
+        display: flex; justify-content: center; align-items: center;
     }
     .headerWrap .toggle div{
         width: 30px; height: 3px; background: #fff;
@@ -52,7 +52,7 @@
     }
     .navWrap .navbar > ul > li a:after{
         content: ""; display: block; width: 100%; height: 1px;
-        background: #535963; position: absolute; top: 45px; left: -2%; transform: scale(1);
+        background: #535963; position: absolute; top: 45px; left: -5px; transform: scale(1);
     }
     .navWrap .lang{
         position: fixed; right: 20px; bottom: 30px; display: none; 
@@ -176,4 +176,9 @@
         display: flex; justify-content: space-between; align-items: center;
     }
     footer .mobile.infoBox .fSite .arrow{top: 20px;}
+}
+
+/* sub */
+section.sub-visual{
+    width: 100%; _height: 50vw;
 }

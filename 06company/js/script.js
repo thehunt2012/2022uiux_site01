@@ -42,6 +42,7 @@ $(document).ready(function(){
                      <li><a href="#">GOOD-PEOPLE</a></li>
                      <li><a href="#">GOOD-STORY</a></li>
                      `)
+            $(".navbar > ul > li > a").css("margin"," 0 15px");
          }else{
             $(".navbar > ul").html(`
                      <li><a href="#">구세군</a></li>
@@ -53,22 +54,10 @@ $(document).ready(function(){
  
     });
 
-   
-    let chk = 0;
     $(".toggle").click(function(){
-        if( chk == 0 ){
-            $(this).addClass("active");
-            $(".navbar").css("right",0);
-            $(".lang").css("display","flex");
-            $(".overLayer").show();
-            chk = 1;
-        }else{
-            $(this).removeClass("active");
-            $(".navbar").css("right","-100%");
-            $(".lang").hide();
-            $(".overLayer").hide();
-            chk = 0;
-        }
+        $(".navbar").css("right",0);
+        $(".lang").css("display","flex");
+        $(".overLayer").show();
     });
 
     $(".close").click(function(){

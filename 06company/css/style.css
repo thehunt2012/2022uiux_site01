@@ -1,5 +1,5 @@
 @charset "utf-8";
-body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; _overflow-x:hidden;}
+body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hidden;}
 
 /* visual */
 
@@ -88,20 +88,20 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; _overflow-x:h
 .header.fixed .lang div.active{color: #fff;}
 
 .navWrap{width: 1000px; display: flex;}
-.navWrap .navbar{margin-left: auto; margin-right: 50px;}
+.navWrap .navbar{margin-left: auto; margin-right: 0px;}
 .navWrap .navbar > ul{width: 620px; display: flex;}
-.navWrap .navbar > ul > li{width:calc(100% / 4); position: relative;}
-.navWrap .navbar > ul > li:after{
-    content: ""; position: absolute; height: 3px; width: 100%;
-    background: #fff; transition: 0.3s; transform: scale(0);
-}
-.navWrap .navbar > ul > li:hover:after{transform: scale(1);}
 .navWrap .navbar > ul > li > a{
     font-size: 20px; font-weight: bold;
     color: #fff; line-height: 45px; letter-spacing: -0.05em;
-    display: flex; justify-content: center; align-items: center; 
+    display: flex; justify-content: center; align-items: center;
+    margin: 0 30px; position: relative;
 }
-/* a태그에는 왜 after 적용이 안되는지 */
+.navWrap .navbar > ul > li > a:after{
+    content: ""; position: absolute; height: 2px; width: 100%;
+    background: #fff; transition: 0.3s; transform: scale(0);
+    bottom: -5px;
+}
+.navWrap .navbar > ul > li > a:hover:after{transform: scale(1);}
 
 
 .header .lang{display: flex;}
@@ -158,7 +158,6 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; _overflow-x:h
 }
 .contents .cardTwo h3{position: absolute; top: 577px; left: 192px;}
 .contents .videoBtn:hover{transform:scale(1.1);}
-/* 왜 X 아이콘이 안뜨는지!!!! 동영상 업로드가 안된다...........*/
 
 .contents .news1{position: relative;}
 .contents .news1 .item ul{display: flex;}
@@ -199,7 +198,6 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; _overflow-x:h
     display: flex; justify-content: space-between; align-items: center; 
     width: 1222px; margin: 0 auto; margin-bottom: 50px;
 }
-/* .maWrap:hover{transform: scale(1.05); transition: 0.5s;} */
 .wrapTxt .mainT{font-size: 24px; letter-spacing:-0.035em; color: #111; margin-bottom: 15px;}
 .wrapTxt .subT{font-size: 18px; letter-spacing:-0.035em; color: #333;}
 
@@ -316,28 +314,29 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; _overflow-x:h
     display: flex; align-items: center; cursor: pointer;
     color:#fff; border-radius:5px; padding: 10px;
     position: absolute; bottom: 30px; right: 30px;
+    display: flex; justify-content: center;
 }
 .banner .bn_btn img{width: 45px; height: 35px;}
 .banner .bn_btn p{
     font-size: 18px; font-weight:bold; letter-spacing: -0.05em;
     margin: 0 30px;
 }
-.banner .left .bn_btn{padding-left: 26px;}
-.banner .right .bn_btn{padding-left: 40px;}
 .banner div:hover .img{transform: scale(1.1); transition: 0.5s;}
 
 /* footer */
-footer{background: #333;}
-footer .utilWrap{width: 1280px; margin: 0 auto; padding: 18px 0;}
+footer .mobile{display: none;}
+footer{background: #333; position: relative;}
+footer .utilWrap{width: 1280px; margin: 0 auto; padding: 10px 0;}
 footer .util{display: flex; justify-content: space-between;}
-footer .uNav{width: 308px; display: flex; justify-content: space-between;}
-footer .uNav li{position: relative; padding: 0 11px;}
+footer .uNav{float: left;}
+footer .uNav li{position: relative; float: left;}
 footer .uNav li:after{
     content: ""; display: block; width: 1px; height: 7px;
-    background: #c4c4c4; position: absolute; top:10px; left: 0;
+    background: #c4c4c4; position: absolute; top:17px; left: 0px;
 }
 footer .uNav li:first-child:after{content:""; display: none;}
 footer .uNav a{
+    display: block; padding: 10px;
     font-size: 14px; letter-spacing: -0.1em; color:#eee;
 }
 .wall{
@@ -346,7 +345,7 @@ footer .uNav a{
 }
 footer .fSite{position: relative;}
 footer .fSite button{
-    width: 180px; height: 30px; border: 1px solid #888;
+    width: 180px; height: 30px; border: 1px solid #888; margin-top: 5px;
     background: #333; color: #888; font-size: 14px; font-weight: bold;
     letter-spacing: -0.05em; text-align: left; padding: 0 0 0 10px;
 }
@@ -357,7 +356,7 @@ footer .fSite .arrow{
     border-color:transparent transparent #888 transparent;
     border-style:solid;
     right: 10px; top: 50%;
-    transform:translateY(-70%);
+    transform:translateY(-80%);
 }
 footer .info{width: 1280px; margin: 0 auto; padding: 18px 250px; position: relative;}
 footer .info > img{position: absolute; left: 0;}

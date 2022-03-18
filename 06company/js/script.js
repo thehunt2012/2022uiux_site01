@@ -37,18 +37,18 @@ $(document).ready(function(){
 
         if(i == 1){
             $(".navbar > ul").html(`
-                     <li><a href="#">ABOUT US</a></li>
-                     <li><a href="#">PARTICIPATION</a></li>
-                     <li><a href="#">GOOD-PEOPLE</a></li>
-                     <li><a href="#">GOOD-STORY</a></li>
+                     <li><a href="sub_salvationarmy.html">ABOUT US</a></li>
+                     <li><a href="sub_participation.html">PARTICIPATION</a></li>
+                     <li><a href="sub_goodPeople.html">GOOD-PEOPLE</a></li>
+                     <li><a href="sub_goodStory.html">GOOD-STORY</a></li>
                      `)
             $(".navbar > ul > li > a").css("margin"," 0 15px");
          }else{
             $(".navbar > ul").html(`
-                     <li><a href="#">구세군</a></li>
-                     <li><a href="#">후원하기</a></li>
-                     <li><a href="#">좋은 사람들</a></li>
-                     <li><a href="#">좋은 이야기</a></li>
+                     <li><a href="sub_salvationarmy.html">구세군</a></li>
+                     <li><a href="sub_participation.html">후원하기</a></li>
+                     <li><a href="sub_goodPeople.html">좋은 사람들</a></li>
+                     <li><a href="sub_goodStory.html">좋은 이야기</a></li>
                      `)
          }
  
@@ -102,7 +102,7 @@ $(document).ready(function(){
         iframe:true,
         innerWidth:1000,
         innerHeight:562.5
-    });
+    }); //colorbox
 
     var swiper = new Swiper('.swiper-container',{
         loop: true,
@@ -124,6 +124,28 @@ $(document).ready(function(){
                
             }
         }
+    }) //swiper
+
+    // $(".sub-nav-content .depth2").hide().eq(0).show();
+    // $(".sub-nav li").click(function(){
+    function view(i){
+        //var i = 1;
+
+        $(".sub-nav li").removeClass("active").eq(i).addClass("active");
+        $(".sub-nav-content .depth2").hide().eq(i).show();
+        }
+    // });
+    $(".sub-nav li").click(function(){
+        let i = $(this).index();
+
+        view(i);
     })
+    function searchParam(key) {
+        return new URLSearchParams(location.search).get(key);
+      };
+    
+    
+    view(searchParam('tab'));
+
 
 }); // ready

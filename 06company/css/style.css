@@ -103,6 +103,15 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 }
 .navWrap .navbar > ul > li > a:hover:after{transform: scale(1);}
 
+.navWrap .navbar .submenu{
+    display: none; padding: 10px 0;
+}
+.navWrap .navbar:hover .submenu{display: block;}
+.navWrap .navbar .submenu a{
+    display: block; text-align: center; line-height: 20px;
+    font-size: 16px; padding: 10px 0; color: #fff; letter-spacing: -0.05em;
+}
+
 
 .header .lang{display: flex;}
 .lang div{

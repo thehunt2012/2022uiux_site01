@@ -84,6 +84,9 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
     text-indent: -9999px;
 }
 .header.fixed .navWrap a{color: #2b2b2b;}
+.header.fixed .submenu{background: #fff;}
+.header.fixed .navWrap .navbar .submenu a{color: #2b2b2b;}
+
 .header.fixed .lang div{color: #E2000E;}
 .header.fixed .lang div.active{color: #fff;}
 
@@ -107,11 +110,17 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
     display: none; padding: 10px 0;
 }
 .navWrap .navbar:hover .submenu{display: block;}
+.navWrap .navbar:hover .submenu li{display: flex; justify-content: center; align-items: center;}
 .navWrap .navbar .submenu a{
-    display: block; text-align: center; line-height: 20px;
-    font-size: 16px; padding: 10px 0; color: #fff; letter-spacing: -0.05em;
+    line-height: 20px; font-size: 16px; padding: 10px 0; 
+    color: #fff; letter-spacing: -0.05em; position: relative;
 }
-
+.navWrap .navbar .submenu a:after{
+    content: ""; position: absolute; height: 2px; width: 100%;
+    background: #fff; transition: 0.3s; transform: scale(0);
+    bottom: 3px; left: 0;
+}
+.navWrap .navbar .submenu a:hover:after{transform: scale(1);}
 
 .header .lang{display: flex;}
 .lang div{

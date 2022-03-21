@@ -6,6 +6,8 @@
     /* header */
     .header{z-index: 99999; padding: 0px 16px;}
     .header.fixed{display: none;}
+    .navWrap .navbar .submenu{display: none;}
+    .navWrap .navbar li:hover .submenu{display: none;}
 
     .headerWrap{
         width: 100%; margin: 0 auto;
@@ -199,9 +201,9 @@
     .sub-nav{width: 100%; padding: 0 20px; bottom: -20%;}
     .sub-nav ul{flex-wrap: wrap;}
     .sub-nav ul li{width: 50%; height: 10vw; font-size: 3.2vw;}
-    .sub-nav ul li:nth-child(2){border-right:2px solid #E2000E;}
-    .sub-nav ul li:nth-child(3){border-bottom:2px solid #E2000E; border-top: none;}
-    .sub-nav ul li:nth-child(4){border-bottom:2px solid #E2000E; border-top: none;}
+    .sub-nav ul li:nth-child(2){border-right:1px solid #E2000E;}
+    .sub-nav ul li:nth-child(3){border-bottom:1px solid #E2000E; border-top: none;}
+    .sub-nav ul li:nth-child(4){border-bottom:1px solid #E2000E; border-top: none;}
 
     .sub-nav.gp ul > li{width: 50%;}
     .sub-nav.gp ul > li:nth-child(3){width: 100%;}

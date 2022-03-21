@@ -83,10 +83,14 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
     width: 152px; height: 40px; margin: 5px 0 0 20px;
     text-indent: -9999px;
 }
-.header.fixed:after{
+.header.fixed:before{
     content: ""; display: block;
     width: 100%; height: 1px; background: #c4c4c4;
     position: absolute; left: 0; bottom: 0;
+}
+.header.fixed:after:hover{
+    /* content: ""; display: block; width: 100%; height: 100px; background:#fff;
+    position: absolute; left: 0; bottom: 100px; */
 }
 .header.fixed .navWrap a{color: #2b2b2b; position: relative;}
 .header.fixed .navWrap .navbar > ul > li > a:after{
@@ -108,7 +112,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 .header.fixed .lang div{color: #E2000E;}
 .header.fixed .lang div.active{color: #fff;}
 
-.navWrap{width: 1000px; display: flex;}
+.navWrap{width: 1000px; display: flex; position: relative;}
 .navWrap .navbar{margin-left: auto; margin-right: 0px;}
 .navWrap .navbar > ul{width: 620px; display: flex;}
 .navWrap .navbar > ul > li > a{
@@ -125,9 +129,16 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 .navWrap .navbar > ul > li > a:hover:after{transform: scale(1);}
 
 .navWrap .navbar .submenu{
-    display: none; padding: 10px 0;
+    _display: none; padding: 10px 0;
+    transition: 0.3s; opacity: 0; visibility: hidden; 
+    position: absolute; top: 70px; left: 0; width: 100%;
+
 }
-.navWrap .navbar li:hover .submenu{display: block;}
+.navWrap .navbar li:hover .submenu{
+    _display: block;
+    opacity: 1; visibility: visible; top: 40px;
+}
+/* 적용이 안됨!!! 위치값이 이상함!!!! */
 .navWrap .navbar:hover .submenu li{display: flex; justify-content: center; align-items: center;}
 .navWrap .navbar .submenu a{
     line-height: 20px; font-size: 16px; padding: 10px 0; 
@@ -429,7 +440,7 @@ section.sub-visual .inner h2{font-size: 3vw;}
 section.sub-visual .inner p{font-size: 1.5vw; text-align: center;}
 section.sub-visual::after{
     content:""; display: block;
-    width: 100%; height: 3px; background: #E2000E;
+    width: 100%; height: 2px; background: #E2000E;
     position: absolute; bottom: 0; left: 0;
 }
 section.content{margin-top: 30px;}
@@ -463,14 +474,14 @@ section.content h3{
 .sub-nav > ul{display: flex; justify-content: space-between; align-items: center;}
 .sub-nav ul > li{
     width: calc(100% / 4); height: 70px; 
-    border: 2px solid #E2000E; border-bottom: none; border-right: none;
+    border: 1px solid #E2000E; border-bottom: none; border-right: none;
     font-size: 24px; letter-spacing: -0.05em; color:#E2000E;
     display: flex; justify-content: center; align-items: center;
     background-color: #fff; cursor: pointer;
 }
-.sub-nav ul > li:last-child{border-right:2px solid;}
+.sub-nav ul > li:last-child{border-right:1px solid;}
 .sub-nav ul > li.active{background: #E2000E; color:#fff}
-.sub-nav ul > li.active:last-child{border-right:2px solid #E2000E;}
+.sub-nav ul > li.active:last-child{border-right:1px solid #E2000E;}
 
 .content .sub-nav-content .depth2{display: none;}
 .content .sub-nav-content .depth2.active{display: block;}

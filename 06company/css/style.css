@@ -13,7 +13,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 .container.slide1{background-image: url(../images/slide01_1.png);}
 .container.slide2{background-image: url(../images/slide01_2.png);}
 .container.slide3{background-image: url(../images/slide01_3.png);}
-.container .title{text-align: center; transform: translateY(-161px);}
+.container .title{text-align: center; transform: translateY(-140px);}
 .container .title h1{
     text-align: center; font-size:54px; color: #fff;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
@@ -83,9 +83,27 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
     width: 152px; height: 40px; margin: 5px 0 0 20px;
     text-indent: -9999px;
 }
-.header.fixed .navWrap a{color: #2b2b2b;}
-.header.fixed .submenu{background: #fff;}
+.header.fixed:after{
+    content: ""; display: block;
+    width: 100%; height: 1px; background: #c4c4c4;
+    position: absolute; left: 0; bottom: 0;
+}
+.header.fixed .navWrap a{color: #2b2b2b; position: relative;}
+.header.fixed .navWrap .navbar > ul > li > a:after{
+    content: ""; position: absolute; height: 2px; width: 100%;
+    background: #444; transition: 0.3s; transform: scale(0);
+    top: 50px; left: 0;
+}
+.header.fixed .navWrap .navbar > ul > li > a:after:hover{transform: scale(1);}
+
+.header.fixed .submenu{width: 100%; background: #fff; margin-top: 20px;}
 .header.fixed .navWrap .navbar .submenu a{color: #2b2b2b;}
+.header.fixed .navWrap .navbar .submenu > li > a:after{
+    content: ""; position: absolute; height: 2px; width: 100%;
+    background: #888; transition: 0.3s; transform: scale(0);
+    bottom: -5px;
+}
+.header.fixed .navWrap .navbar .submenu > li > a:after:hover{transform: scale(1);}
 
 .header.fixed .lang div{color: #E2000E;}
 .header.fixed .lang div.active{color: #fff;}
@@ -109,7 +127,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 .navWrap .navbar .submenu{
     display: none; padding: 10px 0;
 }
-.navWrap .navbar:hover .submenu{display: block;}
+.navWrap .navbar li:hover .submenu{display: block;}
 .navWrap .navbar:hover .submenu li{display: flex; justify-content: center; align-items: center;}
 .navWrap .navbar .submenu a{
     line-height: 20px; font-size: 16px; padding: 10px 0; 

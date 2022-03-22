@@ -89,19 +89,22 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
     position: absolute; left: 0; bottom: 0;
 }
 .header.fixed:after:hover{
-    /* content: ""; display: block; width: 100%; height: 100px; background:#fff;
-    position: absolute; left: 0; bottom: 100px; */
+    content: ""; display: block; width: 100%; height: 100px; background:#fff;
+    position: absolute; left: 0; bottom: 100px;
 }
 .header.fixed .navWrap a{color: #2b2b2b; position: relative;}
 .header.fixed .navWrap .navbar > ul > li > a:after{
-    content: ""; position: absolute; height: 2px; width: 100%;
+    /* content: ""; position: absolute; height: 2px; width: 100%;
     background: #444; transition: 0.3s; transform: scale(0);
-    top: 50px; left: 0;
+    top: 50px; left: 0; */
 }
-.header.fixed .navWrap .navbar > ul > li > a:after:hover{transform: scale(1);}
+.header.fixed .navWrap .navbar > ul > li > a:after:hover{_transform: scale(1);}
 
-.header.fixed .submenu{width: 100%; background: #fff; margin-top: 20px;}
-.header.fixed .navWrap .navbar .submenu a{color: #2b2b2b;}
+.header.fixed .submenu{
+    display: none;
+    /* width: 100%; background: #fff; margin-top: 20px; */
+}
+.header.fixed .navWrap .navbar .submenu a{display: none; _color: #2b2b2b;}
 .header.fixed .navWrap .navbar .submenu > li > a:after{
     content: ""; position: absolute; height: 2px; width: 100%;
     background: #888; transition: 0.3s; transform: scale(0);
@@ -113,7 +116,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 .header.fixed .lang div.active{color: #fff;}
 
 .navWrap{width: 1000px; display: flex; position: relative;}
-.navWrap .navbar{margin-left: auto; margin-right: 0px;}
+.navWrap .navbar{margin-left: auto;}
 .navWrap .navbar > ul{width: 620px; display: flex;}
 .navWrap .navbar > ul > li > a{
     font-size: 20px; font-weight: bold;
@@ -129,14 +132,14 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 .navWrap .navbar > ul > li > a:hover:after{transform: scale(1);}
 
 .navWrap .navbar .submenu{
-    _display: none; padding: 10px 0;
-    transition: 0.3s; opacity: 0; visibility: hidden; 
-    position: absolute; top: 70px; left: 0; width: 100%;
+    display: none; padding: 10px 0;
+    /* transition: 0.3s; opacity: 0; visibility: hidden; 
+    position: absolute; top: 70px; left: 0; width: 100%; */
 
 }
 .navWrap .navbar li:hover .submenu{
-    _display: block;
-    opacity: 1; visibility: visible; top: 40px;
+    display: block;
+    /* opacity: 1; visibility: visible; top: 40px; */
 }
 /* 적용이 안됨!!! 위치값이 이상함!!!! */
 .navWrap .navbar:hover .submenu li{display: flex; justify-content: center; align-items: center;}

@@ -9,7 +9,7 @@ $(document).ready(function(){
     });
     $(".prev1").click(function(){
         visualslider.goToPrevSlide()
-    }); // visualslider
+    }); // visual slider
 
     var news1Slider = $(".news1Slider").bxSlider({
         controls:false,
@@ -20,7 +20,7 @@ $(document).ready(function(){
     });
     $(".right").click(function(){
         news1Slider.goToNextSlide()
-    });
+    }); // contents slider
 
     $("nav > ul > li").hover(function(){
         $(this).find(".submenu").show();

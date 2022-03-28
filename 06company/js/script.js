@@ -22,11 +22,11 @@ $(document).ready(function(){
         news1Slider.goToNextSlide()
     }); // contents slider
 
-    $("nav > ul > li").hover(function(){
-        $(this).find(".submenu").show();
-    },function(){
-        $(this).find(".submenu").hide();
-    });
+    // $("nav > ul > li").hover(function(){
+    //     $(this).find(".submenu").show();
+    // },function(){
+    //     $(this).find(".submenu").hide();
+    // });
 
     $(".lang div").click(function(){
         console.log($(this).index());
@@ -146,6 +146,14 @@ $(document).ready(function(){
     
     
     view(searchParam('tab'));
+
+    $(".navbar").hover(function(){
+        $(".headerWrap").addClass("on")
+        $(".header").addClass("onHover")
+    },function(){
+        $(".headerWrap").removeClass("on")
+        $(".header").removeClass("onHover")
+    })
 
 
 }); // ready

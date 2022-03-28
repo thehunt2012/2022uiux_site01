@@ -7,7 +7,7 @@
     .header{z-index: 99999; padding: 0px 16px;}
     .header.fixed{display: none;}
     .navWrap .navbar .submenu{display: none;}
-    .navWrap .navbar li:hover .submenu{display: none;}
+    .navWrap .navbar li:hover .submenu{display: none !important;}
 
     .headerWrap{
         width: 100%; margin: 0 auto;

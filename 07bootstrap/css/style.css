@@ -1,0 +1,50 @@
+@charset "utf-8";
+body{font-family: 'Noto Sans KR', sans-serif;}
+h2{font-weight: 700; font-size: 3.8vw; letter-spacing: -0.0325em;}
+p{font-size: 18px; letter-spacing: -0.05em;}
+:root{
+    --bg-color1: #FEDE22;
+}
+.bg-gray1{background: var(--bs-gray-100);}
+.bg-gray2{background: var(--bs-gray-200);}
+.btn.primary-button{
+    background:var(--bg-color1); border-radius: 20px;
+}
+.visual{
+    height: 1200px; position: relative;
+    background-image: url(../images/main-bg3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.visual .txt{
+    position: absolute; top: 380px;
+}
+.visual .btn{border-radius: 10px;}
+.visual .icon1{
+    background-image: url(../images/img_kabang_210628.png);
+    background-position: -341px -292px;
+    width: 24px; height: 24px;
+}
+.visual .icon2{
+    background-image: url(../images/img_kabang_210628.png);
+    background-position: -371px -292px;
+    width: 24px; height: 24px;
+}
+@media screen and (max-width:960px){
+    h2{font-size: 48px;}
+}
+
+@media screen and (max-width:568px){
+    h2{font-size: 32px;}
+    p{font-size: 16px;}
+
+    .visual{
+        background-size: cover;
+        height: initial;
+        background-repeat: no-repeat;
+        position: initial;
+    }
+    .visual .txt{position: initial; transform: none;}
+
+}

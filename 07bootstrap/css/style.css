@@ -44,7 +44,7 @@ p{font-size: 18px; letter-spacing: -0.05em;}
     background-position: -100px 600px;
 }
 
-.card-slide .owl-item{padding: 10px; transition: 0.3s; opacity: 0.5; background: #888; box-sizing: border-box;}
+.card-slide .owl-item{padding: 20px; transition: 0.3s; opacity: 0.5; _background: #888; box-sizing: border-box;}
 .card-slide .owl-item.center{padding: 0; opacity: 1;box-sizing: border-box;}
 
 .bg-color2{background:var(--bg-color2)}

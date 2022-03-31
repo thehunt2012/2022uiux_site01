@@ -17,16 +17,13 @@ p{font-size: 18px; letter-spacing: -0.05em;}
     background:var(--bg-color3); border-radius: 20px;
 }
 .visual{
-    height: 1200px; position: relative;
+    height: 1200px;
     background-image: url(../images/main-bg3.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    overflow-x: hidden;
 }
-.visual .txt{
-    position: absolute; top: 380px;
-}
+.visual .txt{margin-top: 310px;}
 .visual .btn{border-radius: 10px;}
 .visual .icon1{
     background-image: url(../images/img_kabang_210628.png);
@@ -44,8 +41,8 @@ p{font-size: 18px; letter-spacing: -0.05em;}
     background-position: -100px 600px;
 }
 
-.card-slide .owl-item{padding: 20px; transition: 0.3s; opacity: 0.5; _background: #888; box-sizing: border-box;}
-.card-slide .owl-item.center{padding: 0; opacity: 1;box-sizing: border-box;}
+.card-slide .owl-item{padding:20px; transition: 0.3s; opacity: 0.5;}
+.card-slide .owl-item.center{padding:20px; opacity: 1;transform: scale(1.1);}
 
 .bg-color2{background:var(--bg-color2)}
 
@@ -55,41 +52,42 @@ p{font-size: 18px; letter-spacing: -0.05em;}
     margin: 50px auto;
 }
 
-.card-slide{position: relative;}
 
 .owl-theme .owl-nav.disabled + .owl-dots{margin-top: 40px;}
 .owl-theme .owl-dots .owl-dot span{background: #c4c4c4; width: 12px; height: 12px;}
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
     background: #FEDE22; width: 24px; height: 12px;
 }
-.owl-carousel .owl-nav.disabled{display: block;}
-.owl-carousel .owl-nav button.owl-next span{
-    background-image: url(../images/img-right.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute; top: 50%; right: -80px; transform: translateY(-50%);
 
+.card-slide{position: relative;}
+.card-slide .next{
+    position: absolute; top: 40%; right: -10%; transform: translateY(-50%);
+    cursor: pointer;
 }
-.owl-carousel .owl-nav button.owl-prev{
-    background-image: url(../images/img-left.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute; top: 50%; left: -80px; transform: translateY(-50%);
+.card-slide .prev{
+    position: absolute; top: 40%; left: -10%; transform: translateY(-50%);
+    cursor: pointer;
 }
 
-@media screen and (max-width:960px){
+@media screen and (max-width:1200px){
+    p{font-size: 16px;}
+}
+
+@media screen and (max-width:992px){
     h2{font-size: 40px;}
+    p{font-size: 15px;}
+    .card-slide .next,.card-slide .prev{display: none;}
 }
 
 @media screen and (max-width:568px){
     h2{font-size: 32px;}
-    p{font-size: 16px;}
+    p{font-size: 14px;}
 
     .visual{
         background-size: cover;
         height: initial;
         background-repeat: no-repeat;
-        position: initial;
     }
-    .visual .txt{position: initial; transform: none;}
+    .visual .txt{margin-top: 0;}
+    .card-slide .next,.card-slide .prev{display: none;}
 }

@@ -154,7 +154,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 
 /*  */
 
-.navWrap{width: 1000px; display: flex; position: relative; z-index: 5;}
+.navWrap{width: 1000px; display: flex; position: relative; z-index: 5; background: #444;}
 .navWrap .navbar{margin-left: auto;}
 .navWrap .navbar > ul{width: 620px; display: flex;}
 .navWrap .navbar > ul > li{position: relative;}
@@ -174,7 +174,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 .navWrap .navbar .submenu{
     _display: none; padding: 10px 0;
     transition: 0.3s; opacity: 0; visibility: hidden; 
-    position: absolute; top: 40px; left: 0; width: 100%;
+    position: absolute; top: 40px; left: 0; width: 100%; z-index: 55; background: #444;
 
 }
 .navWrap .navbar li:hover .submenu{
@@ -184,7 +184,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 
 .navWrap .navbar .submenu li{display: flex; justify-content: center; align-items: center;}
 .navWrap .navbar .submenu a{
-    line-height: 20px; font-size: 16px; padding: 10px 0; 
+    line-height: 20px; font-size: 16px; padding: 10px 0;
     color: #2b2b2b; letter-spacing: -0.05em; position: relative;
 }
 .navWrap .navbar .submenu a:after{

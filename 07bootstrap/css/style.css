@@ -1,6 +1,6 @@
 @charset "utf-8";
-body{font-family: 'Noto Sans KR', sans-serif; overflow-x: hidden;}
-h2{font-weight: 700; font-size: 3.8vw; letter-spacing: -0.0325em;}
+body{font-family: 'Noto Sans KR', sans-serif; _overflow-x: hidden;}
+h2{font-weight: 700; font-size: 3.5vw; letter-spacing: -0.0325em;}
 p{font-size: 18px; letter-spacing: -0.05em;}
 :root{
     --bg-color1: #FEDE22;
@@ -22,6 +22,7 @@ p{font-size: 18px; letter-spacing: -0.05em;}
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    overflow-x: hidden;
 }
 .visual .txt{
     position: absolute; top: 380px;
@@ -43,8 +44,8 @@ p{font-size: 18px; letter-spacing: -0.05em;}
     background-position: -100px 600px;
 }
 
-.card-slide .owl-item{padding: 30px; transition: 0.3s; opacity: 0.5;}
-.card-slide .owl-item.center{padding: 0; opacity: 1;}
+.card-slide .owl-item{padding: 10px; transition: 0.3s; opacity: 0.5; background: #888; box-sizing: border-box;}
+.card-slide .owl-item.center{padding: 0; opacity: 1;box-sizing: border-box;}
 
 .bg-color2{background:var(--bg-color2)}
 
@@ -52,6 +53,28 @@ p{font-size: 18px; letter-spacing: -0.05em;}
     content: ""; display: block; width: 300px;
     height: 2px; background: #000;
     margin: 50px auto;
+}
+
+.card-slide{position: relative;}
+
+.owl-theme .owl-nav.disabled + .owl-dots{margin-top: 40px;}
+.owl-theme .owl-dots .owl-dot span{background: #c4c4c4; width: 12px; height: 12px;}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background: #FEDE22; width: 24px; height: 12px;
+}
+.owl-carousel .owl-nav.disabled{display: block;}
+.owl-carousel .owl-nav button.owl-next span{
+    background-image: url(../images/img-right.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; top: 50%; right: -80px; transform: translateY(-50%);
+
+}
+.owl-carousel .owl-nav button.owl-prev{
+    background-image: url(../images/img-left.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; top: 50%; left: -80px; transform: translateY(-50%);
 }
 
 @media screen and (max-width:960px){

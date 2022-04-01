@@ -2,6 +2,7 @@
 body{font-family: 'Noto Sans KR', sans-serif; _overflow-x: hidden;}
 h2{font-weight: 700; font-size: 3.5vw; letter-spacing: -0.0325em;}
 p{font-size: 18px; letter-spacing: -0.05em;}
+::selection {background: #FEDE22;}
 :root{
     --bg-color1: #FEDE22;
     --bg-color2: #333B58;
@@ -68,6 +69,9 @@ p{font-size: 18px; letter-spacing: -0.05em;}
     position: absolute; top: 40%; left: -10%; transform: translateY(-50%);
     cursor: pointer;
 }
+
+.lazy-load{transform: translateY(100px); opacity: 0; transition:1s;}
+.lazy-load.fade{transform: translateY(0); opacity: 1;}
 
 @media screen and (max-width:1200px){
     p{font-size: 16px;}

@@ -45,10 +45,33 @@ $(document).ready(function(){
             $(".navbar > ul > li > a").css("margin"," 0 15px");
          }else{
             $(".navbar > ul").html(`
-                     <li><a href="sub_salvationarmy.html">구세군</a></li>
-                     <li><a href="sub_participation.html">후원하기</a></li>
-                     <li><a href="sub_goodPeople.html">좋은 사람들</a></li>
-                     <li><a href="sub_goodStory.html">좋은 이야기</a></li>
+            <li><a href="sub_salvationarmy.html">구세군</a></li>
+            <li>
+                <a href="sub_participation.html?tab=0">후원하기</a>
+                <ul class="submenu">
+                    <li><a href="sub_participation.html?tab=0">후원하기</a></li>
+                    <li><a href="sub_participation.html?tab=1">국내후원</a></li>
+                    <li><a href="sub_participation.html?tab=2">해외후원</a></li>
+                    <li><a href="sub_participation.html?tab=3">캠페인후원</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="sub_goodPeople.html">좋은 사람들</a>
+                <ul class="submenu">
+                    <li><a href="sub_goodPeople.html?tab=0">사관/병사</a></li>
+                    <li><a href="sub_goodPeople.html?tab=1">함께 하는 사람들</a></li>
+                    <li><a href="sub_goodPeople.html?tab=2">홍보대사/자문위원</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="sub_goodStory.html">좋은 이야기</a>
+                <ul class="submenu">
+                    <li><a href="sub_goodStory.html?tab=0">후원소식</a></li>
+                    <li><a href="sub_goodStory.html?tab=1">후원결과보고</a></li>
+                    <li><a href="sub_goodStory.html?tab=2">경영보고</a></li>
+                    <li><a href="sub_goodStory.html?tab=3">윤리경영</a></li>
+                </ul>
+            </li>
                      `)
          }
  
@@ -87,9 +110,9 @@ $(document).ready(function(){
                 console.log(scrollY)
         
                 if(scrollY > 200){
-                    $(".header").addClass("fixed");
+                    $(".header").addClass("fixed1").addClass("onView");
                 }else{
-                    $(".header").removeClass("fixed");
+                    $(".header").removeClass("fixed1").removeClass("onView");
                 }
             });
         }else{
@@ -149,10 +172,10 @@ $(document).ready(function(){
 
     $(".navbar").hover(function(){
         $(".headerWrap").addClass("on")
-        $(".header").addClass("onHover")
+        $(".header").addClass("onView1")
     },function(){
         $(".headerWrap").removeClass("on")
-        $(".header").removeClass("onHover")
+        $(".header").removeClass("onView1")
     })
 
 

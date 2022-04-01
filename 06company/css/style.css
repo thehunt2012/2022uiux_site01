@@ -53,19 +53,20 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 /* header */
 
 .header{
-    width: 100%; position: absolute; top: 25px;
+    width: 100%; position: absolute;
     z-index: 999; transition: 0.3s;
 }
+
 .headerWrap{
-    width: 1280px; margin: 0 auto;
+    width: 1280px; margin: 0 auto; padding: 25px;
     display: flex; justify-content: space-between;
 }
 .headerWrap:after{
-    content: ""; position: absolute; left: 0; top: 75px;
+    content: ""; position: absolute; left: 0; top: 85px;
     width: 100%; height: 0px; background: #fff; transition: 0.3s;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); 
 }
-.headerWrap.on:after{content: ""; height: 180px;}
+.headerWrap.on:after{content: ""; height: 240px; border-top: 1px solid #000;}
 
 .headerWrap h1 a{
     display: block;
@@ -76,85 +77,32 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
     width: 152px; height: 40px;
     text-indent: -9999px;
 }
-.header.fixed{
-    background: #fff; position: fixed;
-    width: 100%; height: 80px; top: 0; padding: 15px 0;
+
+.header.fixed1{position: fixed;}
+.header.onView{
+    background: #fff;
+    padding: 0px;top: 0; border-bottom: 1px solid #000;
 }
-.header.fixed h1 a{
-    display: block;
+
+.header.onView h1 a{background-image: url(../images/header_logo2.png);}
+.header.onView .navWrap a{color: #2b2b2b;}
+.header.onView .lang div{color: #E2000E;}
+.header.onView .lang div.active{color: #fff;}
+
+.header.onView1{
+    background: #fff;
+    padding: 0px;top: 0;
+    
+}
+.header.onView1 h1 a{
     background-image: url(../images/header_logo2.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 152px; height: 40px; margin:0 0 20px;
-    text-indent: -9999px;
 }
-.header.fixed:before{
-    content: ""; display: block;
-    width: 100%; height: 1px; background: #c4c4c4;
-    position: absolute; left: 0; bottom: 0;
-}
-.header.fixed:after:hover{
-    content: ""; display: block; width: 100%; height: 100px; background:#fff;
-    position: absolute; left: 0; bottom: 100px;
-}
-.header.fixed .navWrap a{color: #2b2b2b; position: relative;}
-
-.header.fixed .submenu{display: none;}
-.header.fixed .navWrap .navbar .submenu a{display: none; color: #2b2b2b;}
-.header.fixed .navWrap .navbar .submenu > li > a:after{
-    content: ""; position: absolute; height: 2px; width: 100%;
-    background: #2b2b2b; transition: 0.3s; transform: scale(0);
-    bottom: -5px;
-}
-.header.fixed .navWrap .navbar .submenu > li > a:after:hover{transform: scale(1);}
-
-.header.fixed .lang div{color: #E2000E;}
-.header.fixed .lang div.active{color: #fff;}
+.header.onView1 .navWrap a{color: #2b2b2b;}
+.header.onView1 .lang div{color: #E2000E;}
+.header.onView1 .lang div.active{color: #fff;}
 
 
-/*  */
-
-.header.onHover{
-    background: #fff; position: fixed;
-    width: 100%; height: 80px; top: 0; padding: 25px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-.header.onHover h1 a{
-    display: block;
-    background-image: url(../images/header_logo2.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 152px; height: 40px;
-    text-indent: -9999px;
-}
-.header.onHover:before{
-    content: ""; display: block;
-    width: 100%; height: 1px; background: #c5c5c5;
-    position: absolute; left: 0; bottom: -15px; z-index: 999;
-}
-.header.onHover:after:hover{
-    content: ""; display: block; width: 100%; height: 100px; background:#fff;
-    position: absolute; left: 0; bottom: 100px;
-}
-.header.onHover .navWrap a{color: #2b2b2b; position: relative;}
-
-.header.onHover .submenu{display: none;}
-.header.onHover .navWrap .navbar .submenu a{display: none; color: #2b2b2b;}
-.header.onHover .navWrap .navbar .submenu > li > a:after{
-    content: ""; position: absolute; height: 2px; width: 100%;
-    background: #2b2b2b; transition: 0.3s; transform: scale(0);
-    bottom: -5px;
-}
-.header.onHover .navWrap .navbar .submenu > li > a:after:hover{transform: scale(1);}
-
-.header.onHover .lang div{color: #E2000E;}
-.header.onHover .lang div.active{color: #fff;}
-
-/*  */
-
-.navWrap{width: 1000px; display: flex; position: relative; z-index: 5; background: #444;}
+.navWrap{width: 1000px; display: flex; position: relative; z-index: 5;}
 .navWrap .navbar{margin-left: auto;}
 .navWrap .navbar > ul{width: 620px; display: flex;}
 .navWrap .navbar > ul > li{position: relative;}
@@ -167,19 +115,17 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 .navWrap .navbar > ul > li > a:after{
     content: ""; position: absolute; height: 2px; width: 100%;
     background: #2b2b2b; transition: 0.3s; transform: scale(0);
-    bottom: -24px;
+    bottom: -15px;
 }
-.navWrap .navbar > ul > li > a:hover:after{transform: scale(1);}
+.navWrap .navbar > ul > li:hover > a:after{transform: scale(1);}
 
 .navWrap .navbar .submenu{
-    _display: none; padding: 10px 0;
+    padding: 40px 0;
     transition: 0.3s; opacity: 0; visibility: hidden; 
-    position: absolute; top: 40px; left: 0; width: 100%; z-index: 55; background: #444;
-
+    position: absolute; width: 100%;
 }
-.navWrap .navbar li:hover .submenu{
-    _display: block;
-    opacity: 1; visibility: visible; top: 40px;
+.navWrap .navbar:hover .submenu{
+    opacity: 1; visibility: visible;
 }
 
 .navWrap .navbar .submenu li{display: flex; justify-content: center; align-items: center;}
@@ -188,10 +134,9 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
     color: #2b2b2b; letter-spacing: -0.05em; position: relative;
 }
 .navWrap .navbar .submenu a:after{
-    content: ""; position: absolute; height: 2px; width: 100%;
-    background: #888; transition: 0.3s; transform: scale(0);
+    content: ""; height: 1px; width: 100%; display: block; margin-top: 5px;
+    background: #2b2b2b; transition: 0.3s; transform: scale(0);
     bottom: -5px;
-    /* bottom: 3px; left: 0; */
 }
 .navWrap .navbar .submenu a:hover:after{transform: scale(1);}
 

@@ -4,7 +4,7 @@
     body{height: 100%; background: #fff;}
 
     /* header */
-    .header{z-index: 99999; padding: 0px 16px;}
+    .header{z-index: 99999; padding: 25px 0;}
     .header.fixed{display: none;}
     .navWrap .navbar .submenu{display: none;}
     .navWrap .navbar li:hover .submenu{display: none !important;}
@@ -13,6 +13,7 @@
         width: 100%; margin: 0 auto;
         display: flex; justify-content:space-between;
     }
+    .headerWrap h1{padding-left: 16px;}
     .headerWrap h1 a{background-size: 150px;}
     .headerWrap .toggle{
         width: 36px; height: 36px; cursor: pointer; position: absolute; top: 0px;

@@ -1,8 +1,8 @@
 # 2022uiux_site01
-1. company https://thehunt2012.github.io/2022uiux_site01/01website
-2. college https://thehunt2012.github.io/2022uiux_site01/02college
-3. company https://thehunt2012.github.io/2022uiux_site01/03website
-4. tour https://thehunt2012.github.io/2022uiux_site01/04tour
-5. parallax https://thehunt2012.github.io/2022uiux_site01/05parallax_2
-6. company https://thehunt2012.github.io/2022uiux_site01/06company
-7. bootstrap https://thehunt2012.github.io/2022uiux_site01/07bootstrap
+1. college https://thehunt2012.github.io/2022uiux_site01/01college
+2. tour https://thehunt2012.github.io/2022uiux_site01/02tour
+3. company https://thehunt2012.github.io/2022uiux_site01/03company
+4. bootstrap https://thehunt2012.github.io/2022uiux_site01/04bootstrap
+5. company https://thehunt2012.github.io/2022uiux_site01/website_01
+6. company https://thehunt2012.github.io/2022uiux_site01/website_02
+7. parallax https://thehunt2012.github.io/2022uiux_site01/parallax_02

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dal.Komm</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-color1 fixed-top">
+          <div class="container py-4">
+            <a class="navbar-brand" href="#"><img src="images/dalkomm (1).svg" alt=""></a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                    <li class="nav-item active px-lg-4">
+                        <a class="nav-link" href="#!">Dal.Komm</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link" href="#!">메뉴 · 매장</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link" href="#!">창업안내</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link" href="#!">새로운 소식</a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link" href="#!">SHOP</a>
+                    </li>
+                </ul>
+            </div>
+      </div>
+    </nav>
+    <div id="fullpage">
+        <div class="section page1">
+            <div class="container position-relative ">
+                <div class="row wrap">
+                    <div class="col-md-10">
+                        <div class="swiper swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/tms_img_20220330163225_5.png" alt="" class="img-fluid">
+                                    <div class="txtWrap position-absolute text-end">
+                                        <p>나의 달콤 커피나무<br>앱 출석체크로 매일매일 열리는 혜택</p>
+                                        <a href="#!">이벤트 안내 보기</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/tms_img_20220330164120_4.png" alt="" class="img-fluid">
+                                    <div class="txtWrap position-absolute text-end">
+                                        <p>Oh, JEJU<br>달콤한 제주 한모금</p>
+                                        <a href="#!">메뉴 보러가기</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/tms_img_20220330163705_1.png" alt="" class="img-fluid">
+                                    <div class="txtWrap position-absolute text-end">
+                                        <p>시그니처 텀블러 출시<br>건강한 지구를 위한 텀블러 습관</p>
+                                        <a href="#!">지금 바로 구매하기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mTxt position-absolute">
+                    <h1>Dal.Komm <br>
+                        Life Happens
+                    </h1>
+                    <h1 class="outline">Coffee Helps</h1>
+                </div>
+            </div>
+        </div>
+        <!-- section1 -->
+        <div class="section">
+            test
+        </div>
+    </div>
+    
+
+
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+    <script>
+        $("#fullpage").fullpage()
+
+        const swiper = new Swiper('.swiper',{
+                spaceBetween: 30,
+                effect: "fade",
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+    </script>
+</body>
+</html>

@@ -5,12 +5,13 @@ body{
     background: #FBF4E4;
 }
 h1,h2,p{color:#F43B00;}
-h1{font-size: 4.5vw;}
 :root{
     --bg-color1: #FBF4E4;
     --bg-color2: #F43B00;
     --bg-color3: #333;
 }
+
+
 .bg-color1{background: var(--bg-color1);}
 
 .navbar .nav-item a{
@@ -21,7 +22,7 @@ h1{font-size: 4.5vw;}
 .navbar-light .navbar-nav .nav-link:hover{color:#F43B00}
 
 .page1 .wrap{transform: translateY(50px);}
-.page1 .txtWrap{bottom: 55px; right: -10px;}
+.page1 .txtWrap{bottom: 10%; right: -10px;}
 .page1 .txtWrap p{font-size: 20px; letter-spacing: -0.05em;}
 .page1 .txtWrap a{
     font-size: 20px; letter-spacing: -0.05em; 
@@ -29,7 +30,7 @@ h1{font-size: 4.5vw;}
     border-bottom: 2px solid #F43B00;
 }
 .page1 .mTxt{right: 0px; top: 50%;transform: translateY(-330px); z-index: 1;}
-.page1 .mTxt h1{font-family: 'Shrikhand', cursive; letter-spacing:-0.03em;}
+.page1 .mTxt h1{font-family: 'Shrikhand', cursive; font-size: 4.8vw;}
 .page1 .mTxt .outline{-webkit-text-stroke: 2px var(--bg-color2); -webkit-text-fill-color: transparent;}
 
 .page1 .swiper-container{overflow: visible !important;}
@@ -38,17 +39,131 @@ h1{font-size: 4.5vw;}
     z-index: -1;
 }
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
-    top: -35px; left: -480px;
+    top: -7%; left: -45%;
 }
-.swiper-pagination-bullet{background: var(--bg-color3); width: 10px; height: 10px;}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin-right: 6px;
+}
+.swiper-pagination-bullet{background: var(--bg-color3); width: 10px; height: 10px; margin-right: 15px;}
 .swiper-pagination-bullet-active{
     width: 20px; height: 10px; border-radius: 8px;
     background: var(--bg-color2);
 }
+.page1 .scrollBtn{
+    position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+    animation: xScroll 0.8s infinite alternate;
+}
+@keyframes xScroll{
+    to{bottom: 50px;}
+}
+/* section #1 end */
+
+.page2 .txtWrap h2{
+    font-family: 'IBM Plex Sans KR', sans-serif; 
+    font-size: 36px; letter-spacing: -0.05em;
+}
+.page2 .txtWrap .bigTitle{
+    font-family: 'Paytone One', sans-serif; 
+    font-size: 6.2vw; line-height: 120px;
+    letter-spacing: -0.02em;
+}
+.page2 .txtWrap .txt{font-size: 20px; letter-spacing: -0.05em;}
+/* section #2 end */
+
+.page3 .txtWrap{transform: translateY(40%);}
+.page3 .txtWrap h2{
+    font-family: 'IBM Plex Sans KR', sans-serif; 
+    font-size: 64px; letter-spacing: -0.05em;
+}
+.page3 .txtWrap p{font-size: 20px; letter-spacing: -0.05em;}
+.page3 .img-moving{position: relative; height: 450px; top: 50px;}
+.page3 .img-moving .menu{
+    background-image: url(../images/menu.png);
+    background-repeat: repeat-x;
+    background-size: cover;
+    position: absolute; z-index: 5;
+    top: 100px; bottom: 0; left: 0; right: 0;
+    animation: moving 25s linear infinite;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: moving;
+}
+.page3 .img-moving .menuBottom{
+    position: absolute;
+    bottom: -100px; left: 0; right: 0;
+    height: 250px;
+    background: white;
+}
+/* section #2 end */
+
+.page4{
+    background: url(../images/bg_dal_story.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: auto
+}
+.page4 .txtWrap h2{
+    font-family: 'IBM Plex Sans KR', sans-serif; 
+    color:#2A31A0;
+}
+.page4 .txtWrap p{
+    font-family: 'IBM Plex Sans KR', sans-serif; 
+    color:#2A31A0; font-size: 64px;
+    letter-spacing: -0.05em; line-height: 90px;
+}
 
 
-
-@media screen and (max-width:800px){
+@keyframes moving{
+    0%{background-position: 0px 0px;}
+    100%{background-position: 2426px 0px;}
+}
+@media screen and (max-width:1200px){
+    .page1 .txtWrap{right: -90px;}
+    .page2 .txtWrap .bigTitle{line-height:90px;}
+}
+@media screen and (max-width:992px){
     .page1 .wrap{transform: translateY(0);}
-    .page1 .mTxt{transform: translateY(0);}
+    .page1 .mTxt{transform: translateY(-200px);}
+    .page1 .txtWrap{right: -100px;}
+    .page1 .txtWrap p{font-size: 18px;}
+    .page1 .txtWrap a{font-size: 18px;}
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+        top: -10%; left: -40%;
+    }
+
+    .page2 .txtWrap .bigTitle{line-height:70px;}
+
+    .page3 .txtWrap h2{font-size: 48px;}
+}
+@media screen and (max-width:768px){
+    .page1 .mTxt{transform: translateY(-250px);}
+    .page1 .txtWrap{bottom: -120px; left: 50%; transform: translateX(-50%);}
+    .page1 .txtWrap p{font-size: 16px;}
+    .page1 .txtWrap a{font-size: 16px;}
+
+    .page2 .txtWrap .bigTitle{line-height:50px;}
+    .page2 .txtWrap .txt{font-size: 18px;}
+
+    .page3 .txtWrap h2{font-size: 36px;}
+    .page3 .txtWrap p{font-size: 18px;}
+    .page3 .img-moving .menu{background-size: auto 300px;}
+    .page3 .img-moving .menuBottom{bottom: -70px;}
+}
+@media screen and (max-width:576px){
+    .page1 .mTxt{transform: translateY(-240px); right: 30px;}
+    .page1 .mTxt h1{font-size: 28px;}
+    .page1 .scrollBtn img{width: 45px; height: 25px;}
+
+    .page2 .txtWrap h2{font-size: 24px;}
+    .page2 .txtWrap .bigTitle{line-height:35px;}
+    .page2 .txtWrap .txt{font-size: 16px;}
+
+    .page3 .txtWrap h2{font-size: 24px;}
+    .page3 .txtWrap p{font-size: 16px;}
 }

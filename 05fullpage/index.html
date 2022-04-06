@@ -12,7 +12,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fullpage.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
@@ -49,29 +55,29 @@
       </div>
     </nav>
     <div id="fullpage">
-        <div class="section page1">
-            <div class="container position-relative ">
+        <div class="section page1" data-anchor="page1">
+            <div class="container position-relative px-5 px-lg-0">
                 <div class="row wrap">
                     <div class="col-md-10">
                         <div class="swiper swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img src="images/tms_img_20220330163225_5.png" alt="" class="img-fluid">
-                                    <div class="txtWrap position-absolute text-end">
+                                    <div class="txtWrap position-absolute text-md-end text-center">
                                         <p>나의 달콤 커피나무<br>앱 출석체크로 매일매일 열리는 혜택</p>
                                         <a href="#!">이벤트 안내 보기</a>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="images/tms_img_20220330164120_4.png" alt="" class="img-fluid">
-                                    <div class="txtWrap position-absolute text-end">
+                                    <div class="txtWrap position-absolute text-md-end text-center">
                                         <p>Oh, JEJU<br>달콤한 제주 한모금</p>
                                         <a href="#!">메뉴 보러가기</a>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="images/tms_img_20220330163705_1.png" alt="" class="img-fluid">
-                                    <div class="txtWrap position-absolute text-end">
+                                    <div class="txtWrap position-absolute text-md-end text-center">
                                         <p>시그니처 텀블러 출시<br>건강한 지구를 위한 텀블러 습관</p>
                                         <a href="#!">지금 바로 구매하기</a>
                                     </div>
@@ -88,11 +94,58 @@
                     <h1 class="outline">Coffee Helps</h1>
                 </div>
             </div>
+            <div class="scrollBtn">
+                <a href="#page2"><img src="images/scroll_btn.png" alt=""></a>
+            </div>
         </div>
-        <!-- section1 -->
-        <div class="section">
-            test
+        <!-- section #1 end-->
+        <div class="section page2" data-anchor="page2">
+            <div class="container px-4 px-lg-0">
+                <div class="txtWrap text-center">
+                    <h2>달콤,상상이 일상이 되는 곳</h2>
+                    <p class="bigTitle">
+                        Dal.Komm Life begins <br>
+                        with imagination
+                    </p>
+                    <p class="txt py-2 py-lg-5">
+                        가장 트랜디한 커피전문점, <br>
+                        그리고 다양한 음악과 문화를 소비하는 플랫폼으로서 맛과 식의 경험을 넘어 향유할 수 있는 공간이 되어 <br>
+                        여러분의 달콤한 상상, 행복한 상상을 응원하겠습니다.
+                    </p>
+                </div>
+            </div>
         </div>
+        <!-- section #2 end-->
+        <div class="section page3" data-anchor="page3">
+            <div class="container">
+                <div class="txtWrap text-center">
+                    <h2 class="mb-4">달콤이 선사하는 다채로운 경험</h2>
+                    <p>
+                        커피의 본질적인 것을 통한 커피의 전문성을 부각 시키는 컨텐츠와 함께 <br>
+                        비쥬얼, 맛, 건강함, 그리고 마시는 재미까지 함께 선사합니다
+                    </p>
+                </div>
+            </div>
+            <div class="img-moving">
+                <div class="menu"></div>
+                <div class="menuBottom"></div>
+            </div>
+        </div>
+        <!-- section #3 end-->
+        <div class="section page4" data-anchor="page4">
+            <div class="container">
+                <div class="txtWrap text-center">
+                    <h2>
+                        환상의 바리스타
+                        <img src="images/Dal_K.svg" alt="">
+                        와 얼렁뚱땅 파티쉐
+                        <img src="images/Fox_M.svg" alt="">
+                    </h2>
+                    <p>그들의 이야기로 펼쳐지는 <br> 달콤의 상상력을 기대해주세요</p>
+                </div>
+            </div>
+        </div>
+        <!-- section #4 end-->
     </div>
     
 
@@ -105,7 +158,13 @@
     <script src="js/isotope.pkgd.min.js"></script>
 
     <script>
-        $("#fullpage").fullpage()
+        $("#fullpage").fullpage({
+            navigation:true,
+            abchor:["page1","page2","page3","page4"],
+            responsiveWidth:992,
+            navigationTooltips:['여기','이름','뭘로','하지'],
+            showActiveTooltip:true
+        });
 
         const swiper = new Swiper('.swiper',{
                 spaceBetween: 30,
@@ -115,7 +174,6 @@
                     el: '.swiper-pagination',
                     clickable: true,
                 },
-
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',

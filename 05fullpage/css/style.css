@@ -5,6 +5,7 @@ body{
     background: #FBF4E4;
 }
 h1,h2,p{color:#F43B00;}
+::selection {background: #59b8f7;}
 :root{
     --bg-color1: #FBF4E4;
     --bg-color2: #F43B00;
@@ -59,6 +60,30 @@ h1,h2,p{color:#F43B00;}
 }
 /* section #1 end */
 
+.page2{position: relative;}
+.page2 .cicle{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+}
+.page2 .cicle.cicle-img{
+    background-image: url(../images/circle_img.png);
+    top: 116px; right: -113px;
+    width: 419px; height: 424px;
+}
+.page2 .cicle.cicle-big{
+    background-image: url(../images/circle_big.svg);
+    bottom: 90px; left: -77px;
+    width: 293px; height: 325px;
+}
+.page2 .cicle.cicle-small{
+    background-image: url(../images/circle_small.svg);
+    bottom: 80px; left: 285px;
+    width: 77px; height: 61px;
+}
+
+.page2 .txtWrap{transform: translateY(80px); z-index: 9999;}
 .page2 .txtWrap h2{
     font-family: 'IBM Plex Sans KR', sans-serif; 
     font-size: 36px; letter-spacing: -0.05em;
@@ -71,61 +96,85 @@ h1,h2,p{color:#F43B00;}
 .page2 .txtWrap .txt{font-size: 20px; letter-spacing: -0.05em;}
 /* section #2 end */
 
-.page3 .txtWrap{transform: translateY(40%);}
+.page3{
+    background: url(../images/bg_dal_story.svg);
+    background-repeat: no-repeat;
+    background-position: center 500px;
+}
+.page3 .txtWrap{transform: translateY(-130px);}
 .page3 .txtWrap h2{
+    font-family: 'IBM Plex Sans KR', sans-serif; 
+    color:#2A31A0; transform: translateY(-10px);
+}
+.page3 .txtWrap p{
+    font-family: 'IBM Plex Sans KR', sans-serif; 
+    color:#2A31A0; font-size: 64px;
+    letter-spacing: -0.05em; line-height: 80px;
+}
+/* section #3 end */
+
+.page4 .txtWrap{transform: translateY(55%);}
+.page4 .txtWrap h2{
     font-family: 'IBM Plex Sans KR', sans-serif; 
     font-size: 64px; letter-spacing: -0.05em;
 }
-.page3 .txtWrap p{font-size: 20px; letter-spacing: -0.05em;}
-.page3 .img-moving{position: relative; height: 450px; top: 50px;}
-.page3 .img-moving .menu{
-    background-image: url(../images/menu.png);
-    background-repeat: repeat-x;
-    background-size: cover;
+.page4 .txtWrap p{font-size: 20px; letter-spacing: -0.05em;}
+.page4 .img-moving{position: relative; height: 450px; top: 85px;}
+.page4 .img-moving .menu{
+    background: transparent url(../images/menu.png) repeat-x left top;
+    background-size: auto 375px;
     position: absolute; z-index: 5;
     top: 100px; bottom: 0; left: 0; right: 0;
-    animation: moving 25s linear infinite;
-    animation-duration: 25s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
-    animation-name: moving;
+    animation: moving 20s linear infinite;
 }
-.page3 .img-moving .menuBottom{
+.page4 .img-moving .menuBottom{
     position: absolute;
-    bottom: -100px; left: 0; right: 0;
+    bottom: -118px; left: 0; right: 0;
     height: 250px;
     background: white;
 }
-/* section #2 end */
-
-.page4{
-    background: url(../images/bg_dal_story.svg);
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: auto
-}
-.page4 .txtWrap h2{
-    font-family: 'IBM Plex Sans KR', sans-serif; 
-    color:#2A31A0;
-}
-.page4 .txtWrap p{
-    font-family: 'IBM Plex Sans KR', sans-serif; 
-    color:#2A31A0; font-size: 64px;
-    letter-spacing: -0.05em; line-height: 90px;
-}
-
-
 @keyframes moving{
     0%{background-position: 0px 0px;}
-    100%{background-position: 2426px 0px;}
+    100%{background-position: 3567px 0px;}
 }
+/* section #4 end */
+
+.page5{height: 500px !important;}
+.page5 .top h4{
+    font-size: 18px; font-weight: 700;
+    color: #111; letter-spacing: -0.05em;
+}
+.page5 .top a{
+    font-size: 16px; color: #888; letter-spacing: -0.05em;
+}
+.page5 .top a:hover{color: #111;}
+.page5 .top .contact{color: #F43B00;}
+.page5 .top .contact:hover{color: #F43B00;}
+
+.page5 .app-store .btn{
+    background: #fff; border: #e5e5e5 solid 1px;
+    border-radius: 30px;
+}
+.page5 .select-family{
+    width: 307px;
+    height: 87px;
+    line-height: 87px;
+    border-bottom: 2px solid #111;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    background-image: url(../images/select-plus.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-color: #fff;
+}
+.page5 .copyright a{font-size: 14px; font-weight: 700; color: #333;}
+.page5 .copyright span{font-size: 14px; color: #999;}
+
 @media screen and (max-width:1200px){
     .page1 .txtWrap{right: -90px;}
     .page2 .txtWrap .bigTitle{line-height:90px;}
+    .page2 .cicle.cicle-big{bottom: 146px;}
 }
 @media screen and (max-width:992px){
     .page1 .wrap{transform: translateY(0);}
@@ -138,8 +187,12 @@ h1,h2,p{color:#F43B00;}
     }
 
     .page2 .txtWrap .bigTitle{line-height:70px;}
+    .page2 .cicle.cicle-img{width: 388px;}
+    .page2 .cicle.cicle-big{bottom: 110px; left: -100px; width: 265px;}
+    .page2 .cicle.cicle-small{left: 195px;}
 
-    .page3 .txtWrap h2{font-size: 48px;}
+    .page3 .txtWrap h2{font-size: 32px;}
+    .page3 .txtWrap p{font-size: 54px; line-height: 70px;}
 }
 @media screen and (max-width:768px){
     .page1 .mTxt{transform: translateY(-250px);}
@@ -149,21 +202,43 @@ h1,h2,p{color:#F43B00;}
 
     .page2 .txtWrap .bigTitle{line-height:50px;}
     .page2 .txtWrap .txt{font-size: 18px;}
+    .page2 .cicle.cicle-img{width: 344px;}
+    .page2 .cicle.cicle-big{left: -150px;}
+    .page2 .cicle.cicle-small{left: 105px;}
 
-    .page3 .txtWrap h2{font-size: 36px;}
-    .page3 .txtWrap p{font-size: 18px;}
-    .page3 .img-moving .menu{background-size: auto 300px;}
-    .page3 .img-moving .menuBottom{bottom: -70px;}
+    .page3 .txtWrap h2{font-size: 24px;}
+    .page3 .txtWrap h2 img{width: 12%;;}
+    .page3 .txtWrap p{font-size: 40px; line-height: 55px;}
+
+    .page4 .txtWrap h2{font-size: 36px;}
+    .page4 .txtWrap p{font-size: 18px;}
+    .page4 .img-moving .menu{background-size: auto 300px;}
+    .page4 .img-moving .menuBottom{bottom: -128px; height: 300px;}
+
+    .page5 .top a{font-size: 14px;}
+    .page5 .copyright a,
+    .page5 .copyright span{font-size: 12px;}
 }
 @media screen and (max-width:576px){
     .page1 .mTxt{transform: translateY(-240px); right: 30px;}
-    .page1 .mTxt h1{font-size: 28px;}
+    .page1 .mTxt h1{font-size: 36px;}
     .page1 .scrollBtn img{width: 45px; height: 25px;}
 
     .page2 .txtWrap h2{font-size: 24px;}
     .page2 .txtWrap .bigTitle{line-height:35px;}
     .page2 .txtWrap .txt{font-size: 16px;}
+    .page2 .cicle.cicle-img{height: 310px;}
+    .page2 .cicle.cicle-big{width: 244px; bottom: 15px; left: -150px;}
 
-    .page3 .txtWrap h2{font-size: 24px;}
-    .page3 .txtWrap p{font-size: 16px;}
+    .page3 .txtWrap h2{font-size: 20px;}
+    .page3 .txtWrap p{font-size: 36px; line-height: 45px;}
+
+    .page3 .txtWrap{transform: translateY(-100px);}
+    .page4 .txtWrap h2{font-size: 24px;}
+    .page4 .txtWrap p{font-size: 16px;}
+
+    .page5 .top h4{font-size: 15px;}
+    .page5 .top a{font-size: 12px;}
+    .page5 .copyright a,
+    .page5 .copyright span{font-size: 10px;}
 }

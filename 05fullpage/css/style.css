@@ -10,10 +10,12 @@ h1,h2,p{color:#F43B00;}
     --bg-color1: #FBF4E4;
     --bg-color2: #F43B00;
     --bg-color3: #333;
+    --bg-color4: #FAF8F6;
 }
 
 
 .bg-color1{background: var(--bg-color1);}
+.bg-color4{background: var(--bg-color4);}
 
 .navbar .nav-item a{
     font-size: 18px; font-weight: 700;
@@ -21,6 +23,8 @@ h1,h2,p{color:#F43B00;}
 }
 .navbar-light .navbar-nav .nav-link{color:#111;}
 .navbar-light .navbar-nav .nav-link:hover{color:#F43B00}
+.navbar-light .navbar-nav .nav-link:focus{color:#F43B00}
+/* 왜 안됨 */
 
 .page1 .wrap{transform: translateY(50px);}
 .page1 .txtWrap{bottom: 10%; right: -10px;}
@@ -139,7 +143,6 @@ h1,h2,p{color:#F43B00;}
 }
 /* section #4 end */
 
-.page5{height: 500px !important;}
 .page5 .top h4{
     font-size: 18px; font-weight: 700;
     color: #111; letter-spacing: -0.05em;
@@ -156,20 +159,43 @@ h1,h2,p{color:#F43B00;}
     border-radius: 30px;
 }
 .page5 .select-family{
-    width: 307px;
-    height: 87px;
-    line-height: 87px;
-    border-bottom: 2px solid #111;
+    width: 307px; height: 87px;
+    line-height: 87px; border-bottom: 2px solid #111;
     background-color: transparent;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 18px; font-weight: bold;
     background-image: url(../images/select-plus.svg);
     background-repeat: no-repeat;
     background-position: 100% 50%;
-    background-color: #fff;
+    cursor: pointer;
 }
 .page5 .copyright a{font-size: 14px; font-weight: 700; color: #333;}
 .page5 .copyright span{font-size: 14px; color: #999;}
+/* section #5 end */
+
+
+/* sub */
+
+section .locat{top: 200px; left: 10px;}
+section .locat a{font-size: 18px; letter-spacing: -0.03em;}
+
+section.content-one h3{
+    font-size: 64px; font-weight: 700;
+    color: #111; letter-spacing: -0.05em;
+}
+section.content-one p{color: #333; letter-spacing: -0.03em;}
+section.content-one .btn{
+    border: 1px solid #F43B00; color: #F43B00;
+    font-weight: 700; letter-spacing: -0.03em;
+}
+section.content-one .btn:hover{background: #F43B00; color: #fff;}
+/* sub #1 end */
+
+.content-two h3{
+    font-size: 64px; font-weight: 700; 
+    color: #111; letter-spacing: -0.05em;
+}
+
+
 
 @media screen and (max-width:1200px){
     .page1 .txtWrap{right: -90px;}
@@ -218,6 +244,10 @@ h1,h2,p{color:#F43B00;}
     .page5 .top a{font-size: 14px;}
     .page5 .copyright a,
     .page5 .copyright span{font-size: 12px;}
+
+    /* sub */
+    section.content-one h3{font-size: 48px;}
+    section.content-one p{padding: 0 80px; font-size: 16px;}
 }
 @media screen and (max-width:576px){
     .page1 .mTxt{transform: translateY(-240px); right: 30px;}
@@ -241,4 +271,9 @@ h1,h2,p{color:#F43B00;}
     .page5 .top a{font-size: 12px;}
     .page5 .copyright a,
     .page5 .copyright span{font-size: 10px;}
+    
+    /* sub */
+    section .locat a{font-size: 16px;}
+    section.content-one h3{font-size: 36px;}
+    section.content-one p{padding: 0 10px; font-size: 14px;}
 }

@@ -37,62 +37,62 @@ $(document).ready(function(){
 
         if(i == 1){
             $(".navbar > ul").html(`
-                    <li><a href="sub_salvationarmy.html">ABOUT US</a></li>
+                    <li><a href="sub01_salvationarmy.html">ABOUT US</a></li>
                     <li>
-                        <a href="sub_participation.html">PARTICIPATION</a>
+                        <a href="sub02_participation.html">PARTICIPATION</a>
                         <ul class="submenu">
-                            <li><a href="sub_participation.html?tab=0">후원하기</a></li>
-                            <li><a href="sub_participation.html?tab=1">국내후원</a></li>
-                            <li><a href="sub_participation.html?tab=2">해외후원</a></li>
-                            <li><a href="sub_participation.html?tab=3">캠페인후원</a></li>
+                            <li><a href="sub02_participation.html?tab=0">후원하기</a></li>
+                            <li><a href="sub02_participation.html?tab=1">국내후원</a></li>
+                            <li><a href="sub02_participation.html?tab=2">해외후원</a></li>
+                            <li><a href="sub02_participation.html?tab=3">캠페인후원</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="sub_goodPeople.html">GOOD-PEOPLE</a>
+                        <a href="sub03_goodPeople.html">GOOD-PEOPLE</a>
                         <ul class="submenu">
-                            <li><a href="sub_goodPeople.html?tab=0">사관/병사</a></li>
-                            <li><a href="sub_goodPeople.html?tab=1">함께 하는 사람들</a></li>
-                            <li><a href="sub_goodPeople.html?tab=2">홍보대사/자문위원</a></li>
+                            <li><a href="sub03_goodPeople.html?tab=0">사관/병사</a></li>
+                            <li><a href="sub03_goodPeople.html?tab=1">함께 하는 사람들</a></li>
+                            <li><a href="sub03_goodPeople.html?tab=2">홍보대사/자문위원</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="sub_goodStory.html">GOOD-STORY</a>
+                        <a href="sub04_goodStory.html">GOOD-STORY</a>
                         <ul class="submenu">
-                            <li><a href="sub_goodStory.html?tab=0">후원소식</a></li>
-                            <li><a href="sub_goodStory.html?tab=1">후원결과보고</a></li>
-                            <li><a href="sub_goodStory.html?tab=2">경영보고</a></li>
-                            <li><a href="sub_goodStory.html?tab=3">윤리경영</a></li>
+                            <li><a href="sub04_goodStory.html?tab=0">후원소식</a></li>
+                            <li><a href="sub04_goodStory.html?tab=1">후원결과보고</a></li>
+                            <li><a href="sub04_goodStory.html?tab=2">경영보고</a></li>
+                            <li><a href="sub04_goodStory.html?tab=3">윤리경영</a></li>
                         </ul>
                     </li>
                      `)
             $(".navbar > ul > li > a").css("margin"," 0 15px");
          }else{
             $(".navbar > ul").html(`
-            <li><a href="sub_salvationarmy.html">구세군</a></li>
+            <li><a href="sub01_salvationarmy.html">구세군</a></li>
             <li>
-                <a href="sub_participation.html?tab=0">후원하기</a>
+                <a href="sub02_participation.html?tab=0">후원하기</a>
                 <ul class="submenu">
-                    <li><a href="sub_participation.html?tab=0">후원하기</a></li>
-                    <li><a href="sub_participation.html?tab=1">국내후원</a></li>
-                    <li><a href="sub_participation.html?tab=2">해외후원</a></li>
-                    <li><a href="sub_participation.html?tab=3">캠페인후원</a></li>
+                    <li><a href="sub02_participation.html?tab=0">후원하기</a></li>
+                    <li><a href="sub02_participation.html?tab=1">국내후원</a></li>
+                    <li><a href="sub02_participation.html?tab=2">해외후원</a></li>
+                    <li><a href="sub02_participation.html?tab=3">캠페인후원</a></li>
                 </ul>
             </li>
             <li>
-                <a href="sub_goodPeople.html">좋은 사람들</a>
+                <a href="sub03_goodPeople.html">좋은 사람들</a>
                 <ul class="submenu">
-                    <li><a href="sub_goodPeople.html?tab=0">사관/병사</a></li>
-                    <li><a href="sub_goodPeople.html?tab=1">함께 하는 사람들</a></li>
-                    <li><a href="sub_goodPeople.html?tab=2">홍보대사/자문위원</a></li>
+                    <li><a href="sub03_goodPeople.html?tab=0">사관/병사</a></li>
+                    <li><a href="sub03_goodPeople.html?tab=1">함께 하는 사람들</a></li>
+                    <li><a href="sub03_goodPeople.html?tab=2">홍보대사/자문위원</a></li>
                 </ul>
             </li>
             <li>
-                <a href="sub_goodStory.html">좋은 이야기</a>
+                <a href="sub04_goodStory.html">좋은 이야기</a>
                 <ul class="submenu">
-                    <li><a href="sub_goodStory.html?tab=0">후원소식</a></li>
-                    <li><a href="sub_goodStory.html?tab=1">후원결과보고</a></li>
-                    <li><a href="sub_goodStory.html?tab=2">경영보고</a></li>
-                    <li><a href="sub_goodStory.html?tab=3">윤리경영</a></li>
+                    <li><a href="sub04_goodStory.html?tab=0">후원소식</a></li>
+                    <li><a href="sub04_goodStory.html?tab=1">후원결과보고</a></li>
+                    <li><a href="sub04_goodStory.html?tab=2">경영보고</a></li>
+                    <li><a href="sub04_goodStory.html?tab=3">윤리경영</a></li>
                 </ul>
             </li>
                      `)

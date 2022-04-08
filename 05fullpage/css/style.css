@@ -23,8 +23,7 @@ h1,h2,p{color:#F43B00;}
 }
 .navbar-light .navbar-nav .nav-link{color:#111;}
 .navbar-light .navbar-nav .nav-link:hover{color:#F43B00}
-.navbar-light .navbar-nav .nav-link:focus{color:#F43B00}
-/* 왜 안됨 */
+.navbar-light .navbar-nav .nav-link.active{color:#F43B00}
 
 .page1 .wrap{transform: translateY(50px);}
 .page1 .txtWrap{bottom: 10%; right: -10px;}
@@ -62,6 +61,10 @@ h1,h2,p{color:#F43B00;}
 @keyframes xScroll{
     to{bottom: 50px;}
 }
+.page1 .p1-slide{transform: translateY(0); transition: 0.8s; opacity: 0;}
+.page1 .p1-slide.move{transform: translateY(50px); opacity: 1;}
+.page1 .p1-title{transform: translateY(80px); transition: 1s; opacity: 0;}
+.page1 .p1-title.move{transform: translateY(0); opacity: 1;}
 /* section #1 end */
 
 .page2{position: relative;}
@@ -98,6 +101,8 @@ h1,h2,p{color:#F43B00;}
     letter-spacing: -0.02em;
 }
 .page2 .txtWrap .txt{font-size: 20px; letter-spacing: -0.05em;}
+.page2 .p2-text{transform: translateY(100px); transition: 0.8s; opacity: 0;}
+.page2 .p2-text.move{transform: translateY(0); opacity: 1;}
 /* section #2 end */
 
 .page3{
@@ -115,6 +120,8 @@ h1,h2,p{color:#F43B00;}
     color:#2A31A0; font-size: 64px;
     letter-spacing: -0.05em; line-height: 80px;
 }
+.page3 .p3-text{transform: translateY(250px); transition: 0.8s; opacity: 0;}
+.page3 .p3-text.move{transform: translateY(0); opacity: 1;}
 /* section #3 end */
 
 .page4 .txtWrap{transform: translateY(55%);}
@@ -141,6 +148,8 @@ h1,h2,p{color:#F43B00;}
     0%{background-position: 0px 0px;}
     100%{background-position: 3567px 0px;}
 }
+.page4 .p4-text{transform: translateY(250px); transition: 1s; opacity: 0;}
+.page4 .p4-text.move{transform: translateY(0); opacity: 1;}
 /* section #4 end */
 
 .page5 .top h4{
@@ -175,25 +184,32 @@ h1,h2,p{color:#F43B00;}
 
 /* sub */
 
-section .locat{top: 200px; left: 10px;}
-section .locat a{font-size: 18px; letter-spacing: -0.03em;}
+.sub .locat{top: 200px; left: 10px;}
+.sub .locat a{font-size: 18px; letter-spacing: -0.03em;}
 
-section.content-one h3{
+.content-one h3{
     font-size: 64px; font-weight: 700;
     color: #111; letter-spacing: -0.05em;
 }
-section.content-one p{color: #333; letter-spacing: -0.03em;}
-section.content-one .btn{
+.content-one p{color: #333; letter-spacing: -0.03em;}
+.content-one .btn{
     border: 1px solid #F43B00; color: #F43B00;
     font-weight: 700; letter-spacing: -0.03em;
 }
-section.content-one .btn:hover{background: #F43B00; color: #fff;}
+.content-one .btn:hover{background: #F43B00; color: #fff;}
 /* sub #1 end */
 
 .content-two h3{
     font-size: 64px; font-weight: 700; 
     color: #111; letter-spacing: -0.05em;
 }
+.content-two .profile img{width: 130px;}
+.content-two .profile p{
+    font-size: 22px; font-weight: 700;
+    color: #111; letter-spacing: -0.05em;
+}
+.content-two .profile dt{font-size: 18px; color: #111;}
+.content-two .profile dd{color: #222; letter-spacing: -0.03em;}
 
 
 
@@ -219,6 +235,9 @@ section.content-one .btn:hover{background: #F43B00; color: #fff;}
 
     .page3 .txtWrap h2{font-size: 32px;}
     .page3 .txtWrap p{font-size: 54px; line-height: 70px;}
+
+    /* sub */
+
 }
 @media screen and (max-width:768px){
     .page1 .mTxt{transform: translateY(-250px);}
@@ -246,8 +265,12 @@ section.content-one .btn:hover{background: #F43B00; color: #fff;}
     .page5 .copyright span{font-size: 12px;}
 
     /* sub */
-    section.content-one h3{font-size: 48px;}
-    section.content-one p{padding: 0 80px; font-size: 16px;}
+    .content-one h3{font-size: 48px;}
+    .content-one p{padding: 0 80px; font-size: 16px;}
+
+    .content-two h3{font-size: 48px;}
+    .content-two .profile dt{font-size: 16px;}
+    .content-two .profile dd{font-size: 14px;}
 }
 @media screen and (max-width:576px){
     .page1 .mTxt{transform: translateY(-240px); right: 30px;}
@@ -273,7 +296,8 @@ section.content-one .btn:hover{background: #F43B00; color: #fff;}
     .page5 .copyright span{font-size: 10px;}
     
     /* sub */
-    section .locat a{font-size: 16px;}
-    section.content-one h3{font-size: 36px;}
-    section.content-one p{padding: 0 10px; font-size: 14px;}
+    .sub .locat a{font-size: 16px;}
+    .content-one h3{font-size: 36px;}
+    .content-one p{padding: 0 10px; font-size: 14px;}
+
 }

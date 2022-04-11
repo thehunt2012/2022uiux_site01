@@ -3,7 +3,6 @@ $(document).ready(function(){
         navigation:true,
         abchor:["page1","page2","page3","page4"],
         responsiveWidth:992,
-        _navigationTooltips:['여기','이름','뭘로','하지'],
         showActiveTooltip:true,
         afterLoad:function(anchorslink,index){
             console.log(index)
@@ -45,5 +44,6 @@ $(document).ready(function(){
             prevEl: '.swiper-button-prev',
         },
     });
+    
     
 });

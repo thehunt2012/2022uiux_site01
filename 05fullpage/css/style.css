@@ -11,6 +11,7 @@ h1,h2,p{color:#F43B00;}
     --bg-color2: #F43B00;
     --bg-color3: #333;
     --bg-color4: #FAF8F6;
+    --bg-color5: #111111;
 }
 
 
@@ -35,7 +36,10 @@ h1,h2,p{color:#F43B00;}
 }
 .page1 .mTxt{right: 0px; top: 50%;transform: translateY(-330px); z-index: 1;}
 .page1 .mTxt h1{font-family: 'Shrikhand', cursive; font-size: 4.8vw;}
-.page1 .mTxt .outline{-webkit-text-stroke: 2px var(--bg-color2); -webkit-text-fill-color: transparent;}
+.page1 .mTxt .outline{
+    -webkit-text-stroke: 2px var(--bg-color2); 
+    -webkit-text-fill-color: transparent;
+}
 
 .page1 .swiper-container{overflow: visible !important;}
 .page1 .swiper-slide:not(.swiper-slide-active) .txtWrap {
@@ -214,7 +218,21 @@ h1,h2,p{color:#F43B00;}
 .sub01.content-two .profile dd{color: #222; letter-spacing: -0.03em;}
 /* sub01 #2 end */
 
+.sub02.content-one .season label{-webkit-text-fill-color: #111;}
+.sub02.content-one label{
+    font-size: 48px; font-weight: 700;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--bg-color5);
+    cursor: pointer;
+}
+.sub02.content-one label:hover{-webkit-text-fill-color: #111;}
+.sub02.content-one sup{
+    vertical-align: top; color: #444; 
+    font-size: 16px; font-weight: 700;
+}
 /* sub02 #1 end */
+
+.sub02.content-two .txtWrap p{font-size: 20px; color: #111;}
 /* sub02 #2 end */
 
 
@@ -239,7 +257,11 @@ h1,h2,p{color:#F43B00;}
 .sub04.content .news2{border-top: 1px solid #ccc;}
 .sub04.content .news3{border-top: 1px solid #ccc;}
 .sub04.content .news4{border-top: 1px solid #ccc;}
-.sub04.content .news5{border-top: 1px solid #ccc;}
+.sub04.content .news5{border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;}
+
+.sub04.content p{color: #111;}
+.sub04.content h2{color: #111; font-size: 36px; font-weight: 700;}
+.sub04.content .txt{font-size: 20px;}
 /* sub04 end */
 
 
@@ -254,6 +276,9 @@ h1,h2,p{color:#F43B00;}
     .page1 .txtWrap{right: -90px;}
     .page2 .txtWrap .bigTitle{line-height:90px;}
     .page2 .cicle.cicle-big{bottom: 146px;}
+
+    .sub04.content h2{font-size: 30px;}
+    .sub04.content .txt{font-size: 16px;}
 }
 @media screen and (max-width:992px){
     .page1 .wrap{transform: translateY(0);}
@@ -274,6 +299,8 @@ h1,h2,p{color:#F43B00;}
     .page3 .txtWrap p{font-size: 54px; line-height: 70px;}
 
     /* sub */
+    .sub02.content-one label{font-size: 36px;}
+    
     .sub03.content-one h2{font-size: 30px;}
     .sub03.content-one .list p{font-size: 18px;}
 
@@ -311,7 +338,12 @@ h1,h2,p{color:#F43B00;}
     .sub01.content-two .profile dt{font-size: 16px;}
     .sub01.content-two .profile dd{font-size: 14px;}
 
+    .sub02.content-one label{font-size: 28px;}
+    .sub02.content-two .txtWrap p{font-size: 18px;}
+
     .sub03.content-two h2{font-size: 36px;}
+
+    .sub04.content h2{font-size: 28px;}
 }
 @media screen and (max-width:576px){
     .page1 .mTxt{transform: translateY(-240px); right: 30px;}
@@ -340,5 +372,9 @@ h1,h2,p{color:#F43B00;}
     .sub .locat a{font-size: 16px;}
     .sub01.content-one h3{font-size: 36px;}
     .sub01.content-one p{padding: 0 10px; font-size: 14px;}
+
+    .sub02.content-one label{font-size: 24px;}
+
+    .sub04.content h2{font-size: 24px;}
 
 }

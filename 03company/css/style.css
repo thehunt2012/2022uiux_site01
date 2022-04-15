@@ -111,7 +111,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 
 .navWrap{width: 1000px; display: flex; position: relative; z-index: 5;}
 .navWrap .navbar{margin-left: auto; padding: 20px 0;}
-.navWrap .navbar > ul{width: 620px; display: flex;}
+.navWrap .navbar > ul{display: flex;}
 .navWrap .navbar > ul > li{position: relative;}
 .navWrap .navbar > ul > li > a{
     font-size: 20px; font-weight: bold;

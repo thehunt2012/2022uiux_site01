@@ -22,20 +22,15 @@ $(document).ready(function(){
         news1Slider.goToNextSlide()
     }); // contents slider
 
-    // $("nav > ul > li").hover(function(){
-    //     $(this).find(".submenu").show();
-    // },function(){
-    //     $(this).find(".submenu").hide();
-    // });
 
-    $(".lang div").click(function(){
+    $(".lang div").click(function () {
         console.log($(this).index());
         let i = $(this).index();
 
         $(".lang div").removeClass("active");
         $(this).addClass("active");
 
-        if(i == 1){
+        if (i == 1) {
             $(".navbar > ul").html(`
                     <li><a href="sub01_salvationarmy.html">ABOUT US</a></li>
                     <li>
@@ -64,9 +59,10 @@ $(document).ready(function(){
                             <li><a href="sub04_goodStory.html?tab=3">윤리경영</a></li>
                         </ul>
                     </li>
-                     `)
-            $(".navbar > ul > li > a").css("margin"," 0 15px");
-         }else{
+                        `)
+            $(".mobile_menu > ul").remove();
+            $(".navbar > ul").clone().appendTo(".mobile_menu")
+        } else {
             $(".navbar > ul").html(`
             <li><a href="sub01_salvationarmy.html">구세군</a></li>
             <li>
@@ -95,11 +91,13 @@ $(document).ready(function(){
                     <li><a href="sub04_goodStory.html?tab=3">윤리경영</a></li>
                 </ul>
             </li>
-                     `)
-         }
- 
+            `)
+            $(".mobile_menu >ul").remove();
+            $(".navbar > ul").clone().appendTo(".mobile_menu")
+        }
+
     });
-    $(".navbar > ul").clone().appendTo(".mobile_menu")
+    
 
     $(".toggle").click(function(){
         $(".mobile_menu").css("right",0);
@@ -122,6 +120,22 @@ $(document).ready(function(){
         $(".header").removeClass("fixed");
 
         wSize();
+    });
+    $(".navbar > ul").clone().appendTo(".mobile_menu")
+    const menuElem = $(".mobile_menu > ul > li > a");
+    menuElem.click(function(e){
+        e.preventDefault();
+
+        menuElem.parent().find(".submenu").slideUp();
+            if($(this).hasClass("active")){
+                $(this).parent().find(".submenu").slideUp();
+                $(this).removeClass("active")
+            }else{
+                $(this).parent().find(".submenu").slideDown();
+                menuElem.removeClass("active")
+                $(this).addClass("active")
+            }
+
     })
 
     function wSize(){
@@ -173,31 +187,28 @@ $(document).ready(function(){
         }
     }) //swiper
 
-    // $(".sub-nav-content .depth2").hide().eq(0).show();
-    // $(".sub-nav li").click(function(){
-    function view(i){
-        //var i = 1;
+    function view(i) {
 
         $(".sub-nav li").removeClass("active").eq(i).addClass("active");
         $(".sub-nav-content .depth2").hide().eq(i).show();
-        }
-    // });
-    $(".sub-nav li").click(function(){
+    }
+
+    $(".sub-nav li").click(function () {
         let i = $(this).index();
 
         view(i);
     })
     function searchParam(key) {
         return new URLSearchParams(location.search).get(key);
-      };
-    
-    
+    };
+
+
     view(searchParam('tab'));
 
-    $(".navbar").hover(function(){
+    $(".navbar").hover(function () {
         $(".headerWrap").addClass("on")
         $(".header").addClass("onView1")
-    },function(){
+    }, function () {
         $(".headerWrap").removeClass("on")
         $(".header").removeClass("onView1")
     })

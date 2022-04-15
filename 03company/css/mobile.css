@@ -6,8 +6,8 @@
     /* header */
     .header{z-index: 99999; padding: 25px 0;}
     .header.fixed{display: none;}
-    .navWrap .navbar .submenu{display: none;}
-    .navWrap .navbar li:hover .submenu{display: none !important;}
+    .navWrap .navbar{display: none;}
+    .navWrap .mobile_menu .submenu{display: none;}
 
     .headerWrap{
         width: 100%; margin: 0 auto;
@@ -25,19 +25,19 @@
     }
     .headerWrap .toggle .bar1{transform: translateY(-10px);}
     .headerWrap .toggle .bar3{transform: translateY(10px);}
-    .toggle{display: flex;  top: 0; right: 20px;z-index: 2;}
+    .toggle{display: flex; top: 0; right: 20px; z-index: 2;}
 
     .navWrap .close{
         width: 36px; height: 36px; cursor: pointer;
         display: flex; justify-content: center; align-items: center;
-        position: absolute; top: 40px; right: 20px;
+        position: absolute; top: 25px; right: 20px;
     }
     .navWrap .close div{
         width: 30px; height: 3px; background: #fff;
         border-radius: 5px; position: absolute;
     }
-    .navWrap .close .bar1{transform:rotate(45deg);}
-    .navWrap .close .bar2{transform:rotate(-45deg);}
+    .navWrap .mobile_menu .close .bar1{transform:rotate(45deg);}
+    .navWrap .mobile_menu .close .bar2{transform:rotate(-45deg);}
 
     .navWrap{width: 100%;}
     .navWrap .mobile_menu{
@@ -46,23 +46,39 @@
         background: #383F4B;
         top:0; right: -100%; transition:0.3s;
         z-index: 11; box-shadow: 0 0 10px rgba(0,0,0,0.8);
+        display: block;
     }
-    .navWrap .navbar{display: none;}
-    /* .navWrap .navbar > ul{display: block; width: 100%; position: absolute; top: 100px; left: 0;}
-    .navWrap .navbar > ul > li{width: 100%;}
-    .navWrap .navbar > ul > li > a{
-        font-weight: normal; font-size: 18px; letter-spacing: -0.08em;
-        margin-bottom: 15px; text-align: left; display: block;
+    .navWrap .mobile_menu > ul{
+        display: block; width: 100%;
+        position: absolute; top: 100px; left: 0;
     }
-    .navWrap .navbar > ul > li a:after{
+    .navWrap .mobile_menu > ul > li{width: 100%;}
+    .navWrap .mobile_menu > ul > li > a{
+        font-size: 18px; letter-spacing: -0.08em;
+        text-align: left; display: block; padding: 15px;
+        color: #fff; line-height: 30px; margin-bottom: 10px;
+        position: relative;
+    }
+    .navWrap .mobile_menu > ul > li > a:after{
         content: ""; display: block; width: 100%; height: 1px;
-        background: #535963; position: absolute; top: 45px; left: -5px; transform: scale(1);
-    } */
+        background: #535963; position: absolute; top: 60px; left: 0;
+        transform: scale(1);
+    }
+    .navWrap .mobile_menu .submenu a{
+       color: #ccc; padding: 15px; 
+       line-height: 45px; position: relative;
+    }
+    .navWrap .mobile_menu .submenu li a::after{
+        position: absolute; content: ""; display: block;
+        width: 0; height: 1px; background: #595e68;
+        transition: 0.5s; left: 0; 
+    }
+    .navWrap .mobile_menu .submenu li:hover > a::after{width: 100%;}
     .navWrap .lang{
         position: fixed; right: 20px; bottom: 30px; display: none; 
         transition: 0.3s; z-index: 11;
     }
-    .lang div{width: 40px; height: 40px; font-size: 12px; padding: 9px 7px;}
+    .navWrap .lang div{width: 40px; height: 40px; font-size: 12px; padding: 9px 7px;}
 
     .overLayer{
         width: 100%; height: 100%;

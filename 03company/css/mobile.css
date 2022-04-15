@@ -40,14 +40,15 @@
     .navWrap .close .bar2{transform:rotate(-45deg);}
 
     .navWrap{width: 100%;}
-    .navWrap .navbar{
+    .navWrap .mobile_menu{
         position: fixed; margin:initial;
         width: 60%; height: 100%;
         background: #383F4B;
         top:0; right: -100%; transition:0.3s;
         z-index: 11; box-shadow: 0 0 10px rgba(0,0,0,0.8);
     }
-    .navWrap .navbar > ul{display: block; width: 100%; position: absolute; top: 100px; left: 0;}
+    .navWrap .navbar{display: none;}
+    /* .navWrap .navbar > ul{display: block; width: 100%; position: absolute; top: 100px; left: 0;}
     .navWrap .navbar > ul > li{width: 100%;}
     .navWrap .navbar > ul > li > a{
         font-weight: normal; font-size: 18px; letter-spacing: -0.08em;
@@ -56,7 +57,7 @@
     .navWrap .navbar > ul > li a:after{
         content: ""; display: block; width: 100%; height: 1px;
         background: #535963; position: absolute; top: 45px; left: -5px; transform: scale(1);
-    }
+    } */
     .navWrap .lang{
         position: fixed; right: 20px; bottom: 30px; display: none; 
         transition: 0.3s; z-index: 11;

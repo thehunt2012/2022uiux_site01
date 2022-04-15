@@ -147,13 +147,14 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 }
 .navWrap .navbar .submenu a:hover:after{transform: scale(1);}
 
-.header .lang{display: flex; align-self: center;}
-.lang div{
+.navWrap .lang{display: flex; align-self: center;}
+.navWrap .lang div{
     width: 50px; height: 50px; color: #fff;
     border: 1px solid #E2000E; font-size: 16px;
     padding: 10px 8px; cursor: pointer;
 }
-.lang div.active{background: #E2000E;}
+.navWrap .lang div.active{background: #E2000E;}
+.navWrap .mobile_menu{display: none;}
 
 /* contents */
 

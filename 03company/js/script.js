@@ -99,16 +99,17 @@ $(document).ready(function(){
          }
  
     });
+    $(".navbar > ul").clone().appendTo(".mobile_menu")
 
     $(".toggle").click(function(){
-        $(".navbar").css("right",0);
+        $(".mobile_menu").css("right",0);
         $(".lang").css("display","flex");
         $(".overLayer").show();
     });
 
     $(".close").click(function(){
         $(".toggle").removeClass("active");
-        $(".navbar").css("right", "-100%");
+        $(".mobile_menu").css("right", "-100%");
         $(".overLayer").hide();
         $(".lang").hide();
     });

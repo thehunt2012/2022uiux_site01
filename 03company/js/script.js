@@ -124,8 +124,11 @@ $(document).ready(function(){
     $(".navbar > ul").clone().appendTo(".mobile_menu")
     const menuElem = $(".mobile_menu > ul > li > a");
     menuElem.click(function(e){
-        e.preventDefault();
-
+        console.log($(this).parent().index())
+        
+        if($(this).parent().index() != 0){
+            e.preventDefault();       
+        }
         menuElem.parent().find(".submenu").slideUp();
             if($(this).hasClass("active")){
                 $(this).parent().find(".submenu").slideUp();

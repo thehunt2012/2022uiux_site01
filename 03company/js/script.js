@@ -118,6 +118,9 @@ $(document).ready(function(){
         $(".lang").removeAttr("style");
         $(".overLayer").hide();
         $(".header").removeClass("fixed");
+        $(".mobile_menu").removeAttr("style")
+        $(".header").removeClass("fixed1")
+        $(".header").removeClass("onView")
 
         wSize();
     });
@@ -145,7 +148,7 @@ $(document).ready(function(){
         let wWidth = $(window).width();
         console.log(wWidth);
 
-        if(wWidth > 700){
+        if(wWidth > 768){
             $(window).scroll(function(){
                 let scrollY = window.pageYOffset;
                 console.log(scrollY)

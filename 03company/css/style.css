@@ -2,7 +2,6 @@
 body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hidden;}
 
 /* visual */
-
 .container{
     height: 100vh; min-height: 1000px;
     background-repeat: no-repeat;
@@ -51,7 +50,6 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 .visual .next1{right: 0; margin-right: 60px;}
 
 /* header */
-
 .header{
     width: 100%; position: absolute;
     z-index: 999; transition: 0.3s;
@@ -157,7 +155,6 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 .navWrap .mobile_menu{display: none;}
 
 /* contents */
-
 .contents{
     width: 1280px; height: 1280px; margin: 0 auto;
     margin-top: -380px; margin-bottom: 80px;
@@ -248,7 +245,6 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 .mb-none{margin-bottom:0;}
 
 /* two */
-
 .main-article.two{
     padding: 80px 0;
     background: url(../images/news_bgi.png) no-repeat center fixed;
@@ -340,8 +336,6 @@ body{font-family: 'Noto Sans KR', sans-serif; background: #EFEDE9; overflow-x:hi
 }
 .swiper .viewTxt p{font-size: 16px; letter-spacing: -0.05em;}
 .swiper-pagination{display: none;}
-
-
 
 /* three */
 .main-article.three{background: #fff; padding: 80px 0;}

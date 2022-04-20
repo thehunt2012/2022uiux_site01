@@ -97,7 +97,6 @@ $(document).ready(function(){
         }
 
     });
-    
 
     $(".toggle").click(function(){
         $(".mobile_menu").css("right",0);
@@ -124,6 +123,7 @@ $(document).ready(function(){
 
         wSize();
     });
+
     $(".navbar > ul").clone().appendTo(".mobile_menu")
     const menuElem = $(".mobile_menu > ul > li > a");
     menuElem.click(function(e){
